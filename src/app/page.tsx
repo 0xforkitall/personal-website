@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { Button, Layout } from '../shared';
+import '../shared/index.scss';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -9,6 +11,10 @@ export default function Home() {
                     Get started by editing&nbsp;
                     <code className={styles.code}>src/app/page.tsx</code>
                 </p>
+                <Layout gap="100" direction="column">
+                    <Button variant="primary">Primary button</Button>
+                    <Button variant="secondary">Secondary button</Button>
+                </Layout>
                 <div>
                     <a
                         href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

@@ -1,17 +1,13 @@
 import classNames from 'classnames';
-import React, { type HTMLAttributes } from 'react';
+import { forwardRef } from 'react';
+import type { IButtonProps } from './button.api';
 
-export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
-    /**
-     * Custom class for the component.
-     */
-    className?: string;
-}
+export const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) => {
+    const { className, variant = 'primary', ...otherProps } = props;
 
-export const Button: React.FC<IButtonProps> = ({ className }) => {
     return (
-        <button className={classNames('button', className)}>
-            test and some file some file some file some file some file
-        </button>
+        <button ref={ref} className={classNames('button', `button--variant-${variant}`, className)} {...otherProps} />
     );
-};
+});
+
+Button.displayName = 'Button';

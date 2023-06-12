@@ -1,0 +1,54 @@
+@use "../../styles/utils";
+$forkitall-button-variant: ("primary", "secondary");
+
+:root {
+  /* Properties */
+  --forkitall-button-border-radius: 50px;
+  --forkitall-button-padding: var(--forkitall-spacer-75) var(--forkitall-spacer-125);
+  --forkitall-button-cursor: pointer;
+
+  /* Typography */
+  --forkitall-button-font-size: var(--forkitall-font-size-100);
+  --forkitall-button-line-height: var(--forkitall-line-height-100);
+  --forkitall-button-font-weight: var(--forkitall-font-weight-bold);
+  --forkitall-button-font-family: var(--forkitall-body-font-family);
+  --forkitall-button-font-style: var(--forkitall-font-style-normal);
+
+  /* Primary variant */
+  --forkitall-button-variant-primary-color: var(--forkitall-color-gray-900);
+  --forkitall-button-variant-primary-background-color: var(--forkitall-color-primary-500);
+  --forkitall-button-variant-primary-border: 2px solid var(--forkitall-color-primary-500);
+
+  --forkitall-button-variant-primary-hover-color: var(--forkitall-color-gray-900);
+  --forkitall-button-variant-primary-hover-background-color: var(--forkitall-color-primary-700);
+  --forkitall-button-variant-primary-hover-border: 2px solid var(--forkitall-color-primary-700);
+
+  /* Secondary variant */
+  --forkitall-button-variant-secondary-color: var(--forkitall-color-gray-100);
+  --forkitall-button-variant-secondary-background-color: var(--forkitall-color-gray-900);
+  --forkitall-button-variant-secondary-border: 2px solid var(--forkitall-color-primary-500);
+
+  --forkitall-button-variant-secondary-hover-color: var(--forkitall-color-gray-100);
+  --forkitall-button-variant-secondary-hover-background-color: var(--forkitall-color-gray-900);
+  --forkitall-button-variant-secondary-hover-border: 2px solid var(--forkitall-color-primary-700);
+}
+
+.button {
+  display: flex;
+  @include utils.apply-typography("button");
+  @include utils.apply-properties("button", ("border-radius", "padding", "cursor"));
+}
+
+@mixin button-style-variant($variant, $modifier: "") {
+  @include utils.apply-properties("button-variant-#{$variant}", ("color", "background-color", "border"), $modifier);
+}
+
+@each $variant in $forkitall-button-variant {
+  .button--variant-#{$variant} {
+    @include button-style-variant($variant);
+
+    &:hover {
+      @include button-style-variant($variant, "hover");
+    }
+  }
+}

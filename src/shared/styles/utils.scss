@@ -1,0 +1,11 @@
+@mixin apply-properties($prefix, $property-list, $modifier: "") {
+  $processed-prefix: if($modifier != "", "#{$prefix}-#{$modifier}", "#{$prefix}");
+
+  @each $property in $property-list {
+    #{$property}: var(--forkitall-#{$processed-prefix}-#{$property});
+  }
+}
+
+@mixin apply-typography($prefix) {
+  @include apply-properties($prefix, ("font-family", "font-size", "line-height", "font-weight", "font-style"));
+}

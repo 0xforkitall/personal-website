@@ -1,0 +1,66 @@
+:root {
+  /* Font sizes */
+  --forkitall-font-size-base: 16px;
+
+  --forkitall-font-size-87: calc(var(--forkitall-font-size-base) * 7 / 8); // 14px
+  --forkitall-font-size-100: var(--forkitall-font-size-base); // 16px
+  --forkitall-font-size-125: calc(var(--forkitall-font-size-base) * 5 / 4); // 20px
+  --forkitall-font-size-150: calc(var(--forkitall-font-size-base) * 3 / 2); // 24px
+  --forkitall-font-size-200: calc(var(--forkitall-font-size-base) * 2); // 32px
+  --forkitall-font-size-300: calc(var(--forkitall-font-size-base) * 3); // 48px
+  --forkitall-font-size-400: calc(var(--forkitall-font-size-base) * 4); // 64px
+
+  /* Line heights */
+  --forkitall-line-height-87: var(--forkitall-font-size-87);
+  --forkitall-line-height-100: var(--forkitall-font-size-100);
+  --forkitall-line-height-125: var(--forkitall-font-size-125);
+  --forkitall-line-height-150: var(--forkitall-font-size-150);
+  --forkitall-line-height-200: var(--forkitall-font-size-200);
+  --forkitall-line-height-300: var(--forkitall-font-size-300);
+  --forkitall-line-height-400: var(--forkitall-font-size-400);
+
+  /* Font weights */
+  --forkitall-font-weight-light: 300;
+  --forkitall-font-weight-medium: 400;
+  --forkitall-font-weight-bold: 600;
+  --forkitall-font-weight-inherit: inherit;
+
+  /* Font styles */
+  --forkitall-font-style-normal: normal;
+  --forkitall-font-style-italic: italic;
+
+  /* Body typography */
+  --forkitall-body-font-family: Source Code Pro, monospace, arial;
+  --forkitall-body-font-size: var(--forkitall-font-size-100);
+  --forkitall-body-line-height: var(--forkitall-line-height-100);
+  --forkitall-body-font-weight: var(--forkitall-font-weight-medium);
+  --forkitall-body-font-style: var(--forkitall-font-style-normal);
+  --forkitall-body-text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: local("Source Code Pro Light"), local("Source Code Pro Light"),
+    url("../assets/fonts/SourceCodePro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: local("Source Code Pro Regular"), local("Source Code Pro Regular"),
+    url("../assets/fonts/SourceCodePro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: local("Source Code Pro SemiBold"), local("Source Code Pro SemiBold"),
+    url("../assets/fonts/SourceCodePro-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
