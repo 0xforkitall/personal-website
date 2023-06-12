@@ -1,13 +1,5 @@
 {
-  "extends": "@0xforkitall/ts-config",
-  "include": [
-    "src",
-    ".eslintrc.js",
-    "**/*.config.js",
-    "public/*.js",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "extends": "@0xforkitall/dev-config/tsconfig.json",
+  "include": ["src", ".eslintrc.js", "**/*.config.js", "public/*.js", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

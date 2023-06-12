@@ -17,10 +17,8 @@
     "typescript": "5.1.3"
   },
   "devDependencies": {
+    "@0xforkitall/dev-config": "0.1.1",
     "@0xforkitall/eslint-config": "0.1.7",
-    "@0xforkitall/lintstaged-config": "0.1.0",
-    "@0xforkitall/prettier-config": "0.1.0",
-    "@0xforkitall/ts-config": "0.1.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.9",
     "@types/react-dom": "18.2.4",

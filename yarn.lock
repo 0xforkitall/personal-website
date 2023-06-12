@@ -2,27 +2,17 @@
 # yarn lockfile v1
 
 
+"@0xforkitall/dev-config@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/dev-config/-/dev-config-0.1.1.tgz#12f525469cd3447d8a527a7f964872b29bcdbaac"
+  integrity sha512-y2jYIh6pTLi95zR9kE4xGqXJGrsoJbcVG8GJRNYY1mO3Zz8K3wAGqMtVFbV6WVnrnpcrO6u71im3yngyIs4lKQ==
+
 "@0xforkitall/eslint-config@0.1.7":
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/@0xforkitall/eslint-config/-/eslint-config-0.1.7.tgz#a52e8d35465d3eadadde520ec6977c602e0d6cae"
   integrity sha512-p6F0EAJmPKqypl6fgsuIfczgZLHjFbxQB1uTuwRH4XCQZi8ishk3VBw6MxhZQLoLR4K82BuosmwyudYpyhg+og==
   dependencies:
     eslint-config-prettier "^8.8.0"
-
-"@0xforkitall/lintstaged-config@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/lintstaged-config/-/lintstaged-config-0.1.0.tgz#7e6c531d03505ea5b5b0a110e657fd0c1637e4d7"
-  integrity sha512-+8H5y9pnZVdhNEuKzpOAGJNSmlLuL4/bMhd//eG/4pEhm/KOLm4AplJbeLIurur4RdMn+w9C3W38xph/dW0i4g==
-
-"@0xforkitall/prettier-config@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/prettier-config/-/prettier-config-0.1.0.tgz#aa77ecba6cf88e66b63c7a73225601101d612b7d"
-  integrity sha512-yPxaOGRP2Qpwm4nOko8aqV1xHSjhIZuhcg6QAbDBILTji/o8tELeAJZgBbWmAd3wlrACxG3nIxNCxHtHAOGy/A==
-
-"@0xforkitall/ts-config@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/ts-config/-/ts-config-0.1.0.tgz#569e665a8cf26d90bd864d85b7df44451414f7bc"
-  integrity sha512-MTl9UQhuNTGz3gLQmAuLCdPbGvv2YjHfm076/fOqSH3NHv9IpOXh2B8/dazpzPJnOZHHqEU1drZt3875E9Vsew==
 
 "@babel/runtime@^7.20.7":
   version "7.22.5"

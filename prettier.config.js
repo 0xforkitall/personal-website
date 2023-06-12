@@ -1,1 +1,1 @@
-module.exports = require('@0xforkitall/prettier-config');
+module.exports = require('@0xforkitall/dev-config/prettier-config.js');
