@@ -1,6 +1,7 @@
 :root {
   /* Font sizes */
   --forkitall-font-size-base: 16px;
+  --forkitall-font-size-inherit: inherit;
 
   --forkitall-font-size-87: calc(var(--forkitall-font-size-base) * 7 / 8); // 14px
   --forkitall-font-size-100: var(--forkitall-font-size-base); // 16px
@@ -11,15 +12,6 @@
   --forkitall-font-size-300: calc(var(--forkitall-font-size-base) * 3); // 48px
   --forkitall-font-size-400: calc(var(--forkitall-font-size-base) * 4); // 64px
 
-  /* Line heights */
-  --forkitall-line-height-87: var(--forkitall-font-size-87);
-  --forkitall-line-height-100: var(--forkitall-font-size-100);
-  --forkitall-line-height-125: var(--forkitall-font-size-125);
-  --forkitall-line-height-150: var(--forkitall-font-size-150);
-  --forkitall-line-height-200: var(--forkitall-font-size-200);
-  --forkitall-line-height-300: var(--forkitall-font-size-300);
-  --forkitall-line-height-400: var(--forkitall-font-size-400);
-
   /* Font weights */
   --forkitall-font-weight-light: 300;
   --forkitall-font-weight-medium: 400;
@@ -29,11 +21,12 @@
   /* Font styles */
   --forkitall-font-style-normal: normal;
   --forkitall-font-style-italic: italic;
+  --forkitall-font-style-inherit: inherit;
 
   /* Body typography */
   --forkitall-body-font-family: Source Code Pro, monospace, arial;
   --forkitall-body-font-size: var(--forkitall-font-size-100);
-  --forkitall-body-line-height: var(--forkitall-line-height-100);
+  --forkitall-body-line-height: 1.5;
   --forkitall-body-font-weight: var(--forkitall-font-weight-medium);
   --forkitall-body-font-style: var(--forkitall-font-style-normal);
   --forkitall-body-text-rendering: optimizeLegibility;

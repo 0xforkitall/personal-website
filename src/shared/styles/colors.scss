@@ -9,6 +9,9 @@
   --forkitall-color-gray-900: #1e1e1e;
 
   /* Aliases */
+  --forkitall-color-white: var(--forkitall-color-gray-100);
+  --forkitall-color-black: var(--forkitall-color-gray-900);
+  --forkitall-color-primary: var(--forkitall-color-primary-500);
   --forkitall-color-body-background-color: var(--forkitall-color-gray-900);
   --forkitall-color-body-color: var(--forkitall-color-gray-100);
 }

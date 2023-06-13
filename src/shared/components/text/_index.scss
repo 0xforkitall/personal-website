@@ -1,5 +1,6 @@
 @use "../../styles/utils";
-$forkitall-text-size: ("h1", "h2", "h3", "h4", "h5", "xl", "l", "m", "s");
+$forkitall-text-size: ("h1", "h2", "h3", "h4", "h5", "xl", "l", "m", "s", "inherit");
+$forkitall-text-color: ("black", "white", "primary");
 
 :root {
   /* Headers */
@@ -44,5 +45,11 @@ $forkitall-text-size: ("h1", "h2", "h3", "h4", "h5", "xl", "l", "m", "s");
 @each $size in $forkitall-text-size {
   .text--size-#{$size} {
     @include utils.apply-typography("text-size-#{$size}");
+  }
+}
+
+@each $color in $forkitall-text-color {
+  .text--color-#{$color} {
+    color: var(--forkitall-color-#{$color});
   }
 }

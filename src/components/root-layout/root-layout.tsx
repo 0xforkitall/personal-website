@@ -11,7 +11,7 @@ export interface IRootLayoutProps {
 export const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body id="root">{children}</body>
         </html>
     );
 };

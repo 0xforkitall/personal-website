@@ -15,20 +15,20 @@ $forkitall-button-variant: ("primary", "secondary");
   --forkitall-button-font-style: var(--forkitall-font-style-normal);
 
   /* Primary variant */
-  --forkitall-button-variant-primary-color: var(--forkitall-color-gray-900);
+  --forkitall-button-variant-primary-color: var(--forkitall-color-black);
   --forkitall-button-variant-primary-background-color: var(--forkitall-color-primary-500);
   --forkitall-button-variant-primary-border: 2px solid var(--forkitall-color-primary-500);
 
-  --forkitall-button-variant-primary-hover-color: var(--forkitall-color-gray-900);
+  --forkitall-button-variant-primary-hover-color: var(--forkitall-color-black);
   --forkitall-button-variant-primary-hover-background-color: var(--forkitall-color-primary-700);
   --forkitall-button-variant-primary-hover-border: 2px solid var(--forkitall-color-primary-700);
 
   /* Secondary variant */
-  --forkitall-button-variant-secondary-color: var(--forkitall-color-gray-100);
+  --forkitall-button-variant-secondary-color: var(--forkitall-color-white);
   --forkitall-button-variant-secondary-background-color: transparent;
   --forkitall-button-variant-secondary-border: 2px solid var(--forkitall-color-primary-500);
 
-  --forkitall-button-variant-secondary-hover-color: var(--forkitall-color-gray-100);
+  --forkitall-button-variant-secondary-hover-color: var(--forkitall-color-white);
   --forkitall-button-variant-secondary-hover-background-color: transparent;
   --forkitall-button-variant-secondary-hover-border: 2px solid var(--forkitall-color-primary-700);
 }
