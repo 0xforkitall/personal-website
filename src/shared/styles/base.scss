@@ -1,0 +1,13 @@
+body {
+  /* Typography */
+  font-family: var(--forkitall-body-font-family);
+  font-size: var(--forkitall-body-font-size);
+  line-height: var(--forkitall-body-line-height);
+  font-weight: var(--forkitall-body-font-weight);
+  font-style: var(--forkitall-body-font-style);
+  text-rendering: var(--forkitall-body-text-rendering);
+
+  /* Colors */
+  background-color: var(--forkitall-color-body-background-color);
+  color: var(--forkitall-color-body-color);
+}

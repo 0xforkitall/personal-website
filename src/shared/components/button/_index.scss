@@ -25,11 +25,11 @@ $forkitall-button-variant: ("primary", "secondary");
 
   /* Secondary variant */
   --forkitall-button-variant-secondary-color: var(--forkitall-color-gray-100);
-  --forkitall-button-variant-secondary-background-color: var(--forkitall-color-gray-900);
+  --forkitall-button-variant-secondary-background-color: transparent;
   --forkitall-button-variant-secondary-border: 2px solid var(--forkitall-color-primary-500);
 
   --forkitall-button-variant-secondary-hover-color: var(--forkitall-color-gray-100);
-  --forkitall-button-variant-secondary-hover-background-color: var(--forkitall-color-gray-900);
+  --forkitall-button-variant-secondary-hover-background-color: transparent;
   --forkitall-button-variant-secondary-hover-border: 2px solid var(--forkitall-color-primary-700);
 }
 

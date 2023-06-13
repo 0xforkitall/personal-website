@@ -1,0 +1,48 @@
+@use "../../styles/utils";
+$forkitall-text-size: ("h1", "h2", "h3", "h4", "h5", "xl", "l", "m", "s");
+
+:root {
+  /* Headers */
+  --forkitall-text-size-h1-font-size: var(--forkitall-font-size-400);
+  --forkitall-text-size-h1-line-height: var(--forkitall-line-height-400);
+  --forkitall-text-size-h1-font-weight: var(--forkitall-font-weight-bold);
+
+  --forkitall-text-size-h2-font-size: var(--forkitall-font-size-300);
+  --forkitall-text-size-h2-line-height: var(--forkitall-line-height-300);
+  --forkitall-text-size-h2-font-weight: var(--forkitall-font-weight-bold);
+
+  --forkitall-text-size-h3-font-size: var(--forkitall-font-size-250);
+  --forkitall-text-size-h3-line-height: var(--forkitall-line-height-250);
+  --forkitall-text-size-h3-font-weight: var(--forkitall-font-weight-bold);
+
+  --forkitall-text-size-h4-font-size: var(--forkitall-font-size-200);
+  --forkitall-text-size-h4-line-height: var(--forkitall-line-height-200);
+  --forkitall-text-size-h4-font-weight: var(--forkitall-font-weight-bold);
+
+  --forkitall-text-size-h5-font-size: var(--forkitall-font-size-150);
+  --forkitall-text-size-h5-line-height: var(--forkitall-line-height-150);
+  --forkitall-text-size-h5-font-weight: var(--forkitall-font-weight-bold);
+
+  /* Paragraphs */
+  --forkitall-text-size-xl-font-size: var(--forkitall-font-size-150);
+  --forkitall-text-size-xl-line-height: var(--forkitall-line-height-150);
+  --forkitall-text-size-xl-font-weight: var(--forkitall-font-weight-medium);
+
+  --forkitall-text-size-l-font-size: var(--forkitall-font-size-125);
+  --forkitall-text-size-l-line-height: var(--forkitall-line-height-125);
+  --forkitall-text-size-l-font-weight: var(--forkitall-font-weight-medium);
+
+  --forkitall-text-size-m-font-size: var(--forkitall-font-size-100);
+  --forkitall-text-size-m-line-height: var(--forkitall-line-height-100);
+  --forkitall-text-size-m-font-weight: var(--forkitall-font-weight-medium);
+
+  --forkitall-text-size-s-font-size: var(--forkitall-font-size-87);
+  --forkitall-text-size-s-line-height: var(--forkitall-line-height-87);
+  --forkitall-text-size-s-font-weight: var(--forkitall-font-weight-medium);
+}
+
+@each $size in $forkitall-text-size {
+  .text--size-#{$size} {
+    @include utils.apply-typography("text-size-#{$size}");
+  }
+}
