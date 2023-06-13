@@ -1,0 +1,14 @@
+.topbar {
+  padding-top: var(--forkitall-spacer-50);
+  padding-bottom: var(--forkitall-spacer-50);
+}
+
+.topbarLink {
+  border-bottom: 2px solid transparent;
+  padding: var(--forkitall-spacer-25) 0;
+}
+
+.topbarLinkActive {
+  color: var(--forkitall-color-primary-500);
+  border-bottom-color: var(--forkitall-color-primary-500);
+}

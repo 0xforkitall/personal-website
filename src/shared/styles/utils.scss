@@ -1,11 +1,22 @@
-@mixin apply-properties($prefix, $property-list, $modifier: "") {
+@mixin apply-properties($prefix, $property-list, $modifier: "", $fallback-prefix: "") {
   $processed-prefix: if($modifier != "", "#{$prefix}-#{$modifier}", "#{$prefix}");
 
   @each $property in $property-list {
-    #{$property}: var(--forkitall-#{$processed-prefix}-#{$property});
+    $value: "--forkitall-#{$processed-prefix}-#{$property}";
+
+    @if ($fallback-prefix != "") {
+      #{$property}: var(#{$value}, var(--forkitall-#{$fallback-prefix}-#{$property}));
+    } @else {
+      #{$property}: var(#{$value});
+    }
   }
 }
 
 @mixin apply-typography($prefix) {
-  @include apply-properties($prefix, ("font-family", "font-size", "line-height", "font-weight", "font-style"));
+  @include apply-properties(
+    $prefix,
+    ("font-family", "font-size", "line-height", "font-weight", "font-style"),
+    "",
+    "body"
+  );
 }

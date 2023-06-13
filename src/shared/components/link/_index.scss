@@ -1,0 +1,34 @@
+@use "../../styles/utils";
+$forkitall-link-size: ("xl", "l", "m", "s");
+
+:root {
+  /* Properties */
+  --forkitall-link-cursor: pointer;
+
+  /* Sizes */
+  --forkitall-link-size-xl-font-size: var(--forkitall-text-size-xl-font-size);
+  --forkitall-link-size-xl-line-height: var(--forkitall-text-size-xl-line-height);
+  --forkitall-link-size-xl-font-weight: var(--forkitall-text-size-xl-font-weight);
+
+  --forkitall-link-size-l-font-size: var(--forkitall-text-size-l-font-size);
+  --forkitall-link-size-l-line-height: var(--forkitall-text-size-l-line-height);
+  --forkitall-link-size-l-font-weight: var(--forkitall-text-size-l-font-weight);
+
+  --forkitall-link-size-m-font-size: var(--forkitall-text-size-m-font-size);
+  --forkitall-link-size-m-line-height: var(--forkitall-text-size-m-line-height);
+  --forkitall-link-size-m-font-weight: var(--forkitall-text-size-m-font-weight);
+
+  --forkitall-link-size-s-font-size: var(--forkitall-text-size-s-font-size);
+  --forkitall-link-size-s-line-height: var(--forkitall-text-size-s-line-height);
+  --forkitall-link-size-s-font-weight: var(--forkitall-text-size-s-font-weight);
+}
+
+.link {
+  @include utils.apply-properties("link", ("cursor"));
+}
+
+@each $size in $forkitall-link-size {
+  .link--size-#{$size} {
+    @include utils.apply-typography("link-size-#{$size}");
+  }
+}

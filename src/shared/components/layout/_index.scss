@@ -15,10 +15,10 @@ $forkitall-stack-layout-shrink: (0, 1);
 
 @each $gap in $forkitall-stack-layout-gap {
   .layout--gap-#{$gap} {
-    gap: var(--epic-spacer-#{$gap});
+    gap: var(--forkitall-spacer-#{$gap});
   }
   .layout--row-gap-#{$gap} {
-    row-gap: var(--epic-spacer-#{$gap});
+    row-gap: var(--forkitall-spacer-#{$gap});
   }
 }
 

@@ -1,0 +1,14 @@
+$ecb-image-object-fit: (contain, cover, unset);
+$ecb-image-object-position: (bottom, top);
+
+@each $objectFit in $ecb-image-object-fit {
+  .image--object-fit-#{$objectFit} {
+    object-fit: $objectFit;
+  }
+}
+
+@each $objectPosition in $ecb-image-object-position {
+  .image--object-position-#{$objectPosition} {
+    object-position: $objectPosition;
+  }
+}
