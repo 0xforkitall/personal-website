@@ -2,3 +2,8 @@
   --forkitall-topbar-height: 72px;
   height: 100vh;
 }
+
+.landingPageSection {
+  padding-top: var(--forkitall-spacer-400);
+  padding-bottom: var(--forkitall-spacer-600);
+}

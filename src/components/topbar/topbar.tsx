@@ -1,6 +1,6 @@
+import { Container, Image, Layout, Link } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
-import { Container, Image, Layout, Link } from '../../shared';
 import { topbarLinks } from './topbar-links';
 import styles from './topbar.module.css';
 

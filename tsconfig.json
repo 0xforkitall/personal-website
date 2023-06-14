@@ -1,5 +1,10 @@
 {
   "extends": "@0xforkitall/dev-config/tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@*": ["./src/*"]
+    }
+  },
   "include": ["src", ".eslintrc.js", "**/*.config.js", "public/*.js", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

@@ -1,6 +1,19 @@
 import { type HTMLAttributes } from 'react';
 
-export type LayoutGap = '0' | '25' | '50' | '75' | '100' | '125' | '150' | '200' | '250' | '300' | '400';
+export type LayoutGap =
+    | '0'
+    | '25'
+    | '50'
+    | '75'
+    | '100'
+    | '125'
+    | '150'
+    | '200'
+    | '250'
+    | '300'
+    | '400'
+    | '500'
+    | '600';
 
 export interface ILayoutProps extends HTMLAttributes<HTMLDivElement> {
     /**

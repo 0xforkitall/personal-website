@@ -1,6 +1,6 @@
+import { Button, Layout, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
-import { Button, Layout, Text } from '../../../../shared';
 import styles from './home-section.module.css';
 
 export interface IHomeSectionProps {

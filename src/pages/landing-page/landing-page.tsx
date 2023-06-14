@@ -1,8 +1,9 @@
-import { Topbar } from '../../components/topbar';
-import { Container, Layout } from '../../shared';
+import { Topbar } from '@components/topbar';
+import { Container, Layout } from '@shared';
 import styles from './landing-page.module.css';
 import { AboutSection } from './sections/about-section';
 import { HomeSection } from './sections/home-section';
+import { SkillsSection } from './sections/skills-section';
 
 export const metadata = {
     title: '0xforkitall - Expert Blockchain Frontend Developer | Innovative Solutions for the Decentralized World',
@@ -16,7 +17,8 @@ export const LandingPage = () => {
             <Topbar />
             <Container className={styles.landingPageContent} grow="1" direction="column">
                 <HomeSection />
-                <AboutSection />
+                <AboutSection className={styles.landingPageSection} />
+                <SkillsSection className={styles.landingPageSection} />
             </Container>
         </Layout>
     );

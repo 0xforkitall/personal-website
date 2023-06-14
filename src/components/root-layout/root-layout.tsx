@@ -1,5 +1,5 @@
+import '@shared/index.scss';
 import React, { type ReactNode } from 'react';
-import '../../shared/index.scss';
 
 export interface IRootLayoutProps {
     /**
