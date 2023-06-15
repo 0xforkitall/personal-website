@@ -1,4 +1,5 @@
-import { Container, Image, Layout, Link } from '@shared';
+import { routes } from '@constants/routes';
+import { Container, Layout, Link, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import { topbarLinks } from './topbar-links';
@@ -19,16 +20,22 @@ export const Topbar: React.FC<ITopbarProps> = ({ className }) => {
             justifyContent="space-between"
             alignItems="center"
         >
-            <Image src="/logo.png" alt="0xforkitall logo" width={56} height={56} />
+            <Link href={routes.landingPage}>
+                <Text size="h4" tag="h4" color="primary">
+                    0xf
+                </Text>
+            </Link>
             <Layout gap="200" direction="row">
-                {topbarLinks.map((link) => (
+                {topbarLinks.map(({ id, route, disabled, name }) => (
                     <Link
-                        key={link.id}
+                        key={id}
+                        href={route}
                         className={classNames(styles.topbarLink, {
-                            [`${styles.topbarLinkActive}`]: link.id === 'home',
+                            [`${styles.topbarLinkActive}`]: id === 'home',
+                            [`${styles.topbarLinkDisabled}`]: disabled,
                         })}
                     >
-                        {`// ${link.name}`}
+                        {`// ${name}`}
                     </Link>
                 ))}
             </Layout>

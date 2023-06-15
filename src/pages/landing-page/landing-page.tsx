@@ -15,11 +15,13 @@ export const LandingPage = () => {
     return (
         <Layout className={styles.landingPage} direction="column">
             <Topbar />
-            <Container className={styles.landingPageContent} grow="1" direction="column">
-                <HomeSection />
-                <AboutSection className={styles.landingPageSection} />
-                <SkillsSection className={styles.landingPageSection} />
-            </Container>
+            <Layout className={styles.landingPageContent}>
+                <Container grow="1" direction="column">
+                    <HomeSection />
+                    <AboutSection className={styles.landingPageSection} />
+                    <SkillsSection className={styles.landingPageSection} />
+                </Container>
+            </Layout>
         </Layout>
     );
 };

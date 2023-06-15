@@ -12,3 +12,8 @@
   color: var(--forkitall-color-primary-500);
   border-bottom-color: var(--forkitall-color-primary-500);
 }
+
+.topbarLinkDisabled {
+  color: var(--forkitall-color-muted);
+  cursor: default;
+}

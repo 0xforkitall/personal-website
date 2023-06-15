@@ -1,2 +1,3 @@
 export { Button } from './button';
-export { type IButtonProps } from './button.api';
+export { ButtonLink } from './button-link';
+export type { IButtonBaseProps, IButtonLinkProps, IButtonProps } from './button.api';

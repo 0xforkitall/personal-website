@@ -1,9 +1,11 @@
 @use "../../styles/utils";
+@use "../text";
 $forkitall-link-size: ("xl", "l", "m", "s");
 
 :root {
   /* Properties */
   --forkitall-link-cursor: pointer;
+  --forkitall-link-text-decoration: none;
 
   /* Sizes */
   --forkitall-link-size-xl-font-size: var(--forkitall-text-size-xl-font-size);
@@ -24,11 +26,17 @@ $forkitall-link-size: ("xl", "l", "m", "s");
 }
 
 .link {
-  @include utils.apply-properties("link", ("cursor"));
+  @include utils.apply-properties("link", ("cursor", "text-decoration"));
 }
 
 @each $size in $forkitall-link-size {
   .link--size-#{$size} {
     @include utils.apply-typography("link-size-#{$size}");
+  }
+}
+
+@each $color in text.$forkitall-text-color {
+  .link--color-#{$color} {
+    color: var(--forkitall-color-#{$color});
   }
 }

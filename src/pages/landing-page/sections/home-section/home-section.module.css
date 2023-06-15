@@ -1,5 +1,5 @@
 .homeSection {
-  height: calc(100vh - var(--forkitall-topbar-height));
+  min-height: calc(100vh - var(--forkitall-topbar-height));
   position: relative;
 }
 

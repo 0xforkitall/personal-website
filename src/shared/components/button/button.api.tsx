@@ -1,6 +1,6 @@
-import { type HTMLAttributes } from 'react';
+import { type AnchorHTMLAttributes, type HTMLAttributes } from 'react';
 
-export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
+export interface IButtonBaseProps {
     /**
      * Variant of the component.
      * @default primary
@@ -11,3 +11,7 @@ export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
      */
     className?: string;
 }
+
+export interface IButtonProps extends IButtonBaseProps, HTMLAttributes<HTMLButtonElement> {}
+
+export interface IButtonLinkProps extends IButtonBaseProps, AnchorHTMLAttributes<HTMLAnchorElement> {}

@@ -6,6 +6,7 @@ $forkitall-button-variant: ("primary", "secondary");
   --forkitall-button-border-radius: 50px;
   --forkitall-button-padding: var(--forkitall-spacer-75) var(--forkitall-spacer-125);
   --forkitall-button-cursor: pointer;
+  --forkitall-button-text-decoration: none;
 
   /* Typography */
   --forkitall-button-font-size: var(--forkitall-font-size-100);
@@ -36,7 +37,7 @@ $forkitall-button-variant: ("primary", "secondary");
 .button {
   display: flex;
   @include utils.apply-typography("button");
-  @include utils.apply-properties("button", ("border-radius", "padding", "cursor"));
+  @include utils.apply-properties("button", ("border-radius", "padding", "cursor", "text-decoration"));
 }
 
 @mixin button-style-variant($variant, $modifier: "") {
