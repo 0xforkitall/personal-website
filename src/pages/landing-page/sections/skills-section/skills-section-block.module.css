@@ -1,0 +1,12 @@
+.skillsSectionBlock {
+  padding: var(--forkitall-spacer-200) var(--forkitall-spacer-100);
+  border: 1px solid var(--forkitall-color-white);
+  text-align: center;
+}
+
+.skillIconWrapper {
+  width: 120px;
+  height: 120px;
+  background-color: darkcyan;
+  border-radius: 50%;
+}

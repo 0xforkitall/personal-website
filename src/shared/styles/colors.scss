@@ -1,19 +1,57 @@
 :root {
   /* Primary colors */
+  --forkitall-color-primary-100: #e9ffe6;
+  --forkitall-color-primary-300: #bdffb3;
   --forkitall-color-primary-500: #91ff80;
-  --forkitall-color-primary-700: #65b359;
+  --forkitall-color-primary-700: #66b35a;
+  --forkitall-color-primary-900: #2b4c26;
 
   /* Gray colors */
-  --forkitall-color-gray-100: #f1f1f1;
-  --forkitall-color-gray-300: #d2d2d2;
+  --forkitall-color-gray-100: #e4e4e4;
+  --forkitall-color-gray-300: #afafaf;
   --forkitall-color-gray-500: #797979;
-  --forkitall-color-gray-900: #1e1e1e;
+  --forkitall-color-gray-700: #494949;
+  --forkitall-color-gray-900: #181818;
+
+  /* Blue colors */
+  --forkitall-color-blue-100: #e6f6ff;
+  --forkitall-color-blue-300: #b3e3ff;
+  --forkitall-color-blue-500: #80d0ff;
+  --forkitall-color-blue-700: #4d7d99;
+  --forkitall-color-blue-900: #1a2a33;
+
+  /* Yellow colors */
+  --forkitall-color-yellow-100: #fffbd8;
+  --forkitall-color-yellow-300: #fff389;
+  --forkitall-color-yellow-500: #ffeb3b;
+  --forkitall-color-yellow-700: #998d23;
+  --forkitall-color-yellow-900: #332f0c;
+
+  /* Orange colors */
+  --forkitall-color-orange-100: #ffeacc;
+  --forkitall-color-orange-300: #ffc166;
+  --forkitall-color-orange-500: #ff9800;
+  --forkitall-color-orange-700: #995b00;
+  --forkitall-color-orange-900: #331e00;
+
+  /* Red colors */
+  --forkitall-color-red-100: #fdd9d7;
+  --forkitall-color-red-300: #f88e86;
+  --forkitall-color-red-500: #f44336;
+  --forkitall-color-red-700: #922820;
+  --forkitall-color-red-900: #310d0b;
 
   /* Aliases */
   --forkitall-color-white: var(--forkitall-color-gray-100);
   --forkitall-color-black: var(--forkitall-color-gray-900);
   --forkitall-color-muted: var(--forkitall-color-gray-500);
+
   --forkitall-color-primary: var(--forkitall-color-primary-500);
+
+  --forkitall-color-accent-1: var(--forkitall-color-blue-300);
+  --forkitall-color-accent-2: var(--forkitall-color-yellow-300);
+  --forkitall-color-accent-3: var(--forkitall-color-red-300);
+
   --forkitall-color-body-background-color: var(--forkitall-color-gray-900);
   --forkitall-color-body-color: var(--forkitall-color-gray-100);
 }
