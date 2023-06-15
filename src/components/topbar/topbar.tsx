@@ -1,5 +1,8 @@
+'use client';
+
 import { routes } from '@constants/routes';
 import { Container, Layout, Link, Text } from '@shared';
+import { useDidScroll } from '@shared/hooks';
 import classNames from 'classnames';
 import React from 'react';
 import { topbarLinks } from './topbar-links';
@@ -7,16 +10,22 @@ import styles from './topbar.module.css';
 
 export interface ITopbarProps {
     /**
+     * Element that is scrolling on the current page.
+     */
+    scrollingElementId: string;
+    /**
      * Custom class for the component.
      */
     className?: string;
 }
 
-export const Topbar: React.FC<ITopbarProps> = ({ className }) => {
+export const Topbar: React.FC<ITopbarProps> = ({ scrollingElementId, className }) => {
+    const didScroll = useDidScroll({ scrollingElementId });
+
     return (
         <Container
             gap="100"
-            className={classNames(styles.topbar, className)}
+            className={classNames(styles.topbar, { [`${styles.topbarScroll}`]: didScroll }, className)}
             justifyContent="space-between"
             alignItems="center"
         >

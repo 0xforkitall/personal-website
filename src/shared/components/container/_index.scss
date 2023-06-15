@@ -1,9 +1,18 @@
+@use "../../styles/breakpoints";
 @use "../../styles/utils";
 
 :root {
+  /* Properties */
   --forkitall-container-max-width: 1400px;
   --forkitall-container-padding-right: var(--forkitall-spacer-300);
   --forkitall-container-padding-left: var(--forkitall-spacer-300);
+
+  /* Responsive */
+  --forkitall-container-breakpoint-l-padding-right: var(--forkitall-spacer-150);
+  --forkitall-container-breakpoint-l-padding-left: var(--forkitall-spacer-150);
+
+  --forkitall-container-breakpoint-s-padding-right: var(--forkitall-spacer-100);
+  --forkitall-container-breakpoint-s-padding-left: var(--forkitall-spacer-100);
 }
 
 .container {
@@ -11,4 +20,13 @@
   margin-right: auto;
   margin-left: auto;
   @include utils.apply-properties("container", ("padding-right", "padding-left", "max-width"));
+}
+
+.container {
+  @media screen and (max-width: breakpoints.$forkitall-breakpoint-l) {
+    @include utils.apply-properties("container", ("padding-right", "padding-left"), "breakpoint-l");
+  }
+  @media screen and (max-width: breakpoints.$forkitall-breakpoint-s) {
+    @include utils.apply-properties("container", ("padding-right", "padding-left"), "breakpoint-s");
+  }
 }

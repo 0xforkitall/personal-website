@@ -1,0 +1,39 @@
+@use "../../styles/utils";
+$forkitall-chip-size: ("s", "m", "l");
+
+:root {
+  /* Properties */
+  --forkitall-chip-background-color: var(--forkitall-color-surface);
+  --forkitall-chip-border-radius: 50px;
+  --forkitall-chip-cursor: default;
+
+  /* Hover */
+  --forkitall-chip-hover-background-color: var(--forkitall-color-gray-700);
+
+  /* Sizes */
+  --forkitall-chip-size-s-font-size: var(--forkitall-font-size-87);
+  --forkitall-chip-size-s-line-height: var(--forkitall-body-line-height);
+  --forkitall-chip-size-s-padding: var(--forkitall-spacer-25) var(--forkitall-spacer-50);
+
+  --forkitall-chip-size-m-font-size: var(--forkitall-font-size-100);
+  --forkitall-chip-size-m-line-height: var(--forkitall-body-line-height);
+  --forkitall-chip-size-m-padding: var(--forkitall-spacer-50) var(--forkitall-spacer-75);
+
+  --forkitall-chip-size-l-font-size: var(--forkitall-font-size-125);
+  --forkitall-chip-size-l-line-height: var(--forkitall-body-line-height);
+  --forkitall-chip-size-l-padding: var(--forkitall-spacer-75) var(--forkitall-spacer-100);
+}
+
+.chip {
+  @include utils.apply-properties("chip", ("background-color", "border-radius", "cursor"));
+
+  &:hover {
+    @include utils.apply-properties("chip", ("background-color"), "hover");
+  }
+}
+
+@each $size in $forkitall-chip-size {
+  .chip--size-#{$size} {
+    @include utils.apply-properties("chip", ("font-size", "line-height", "padding"), "size-#{$size}");
+  }
+}

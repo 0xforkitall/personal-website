@@ -16,6 +16,6 @@
   top: calc(100vh / 6);
   width: 400px;
   height: 400px;
-  background-color: darkgrey;
+  background-color: var(--forkitall-color-surface);
   border-radius: 50px;
 }

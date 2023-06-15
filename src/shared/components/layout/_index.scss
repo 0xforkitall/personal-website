@@ -1,11 +1,12 @@
 $forkitall-layout-display: (flex, grid);
-$forkitall-stack-layout-gap: ("0", "25", "50", "75", "100", "125", "150", "200", "250", "300", "400", "500", "600");
-$forkitall-stack-layout-direction: (row, row-reverse, column, column-reverse);
-$forkitall-stack-layout-align-items: (center, space-between, end, start);
-$forkitall-stack-layout-justify-content: (center, space-between, end, start);
-$forkitall-stack-layout-wrap: (wrap, nowrap);
-$forkitall-stack-layout-grow: (0, 1);
-$forkitall-stack-layout-shrink: (0, 1);
+$forkitall-layout-gap: ("0", "25", "50", "75", "100", "125", "150", "200", "250", "300", "400", "500", "600");
+$forkitall-layout-direction: (row, row-reverse, column, column-reverse);
+$forkitall-layout-align-items: (center, space-between, end, start);
+$forkitall-layout-justify-content: (center, space-between, end, start);
+$forkitall-layout-wrap: (wrap, nowrap);
+$forkitall-layout-grow: (0, 1);
+$forkitall-layout-shrink: (0, 1);
+$forkitall-layout-basis: (0, 1);
 
 @each $display in $forkitall-layout-display {
   .layout--display-#{$display} {
@@ -13,7 +14,7 @@ $forkitall-stack-layout-shrink: (0, 1);
   }
 }
 
-@each $gap in $forkitall-stack-layout-gap {
+@each $gap in $forkitall-layout-gap {
   .layout--gap-#{$gap} {
     gap: var(--forkitall-spacer-#{$gap});
   }
@@ -22,41 +23,51 @@ $forkitall-stack-layout-shrink: (0, 1);
   }
 }
 
-@each $direction in $forkitall-stack-layout-direction {
+@each $direction in $forkitall-layout-direction {
   .layout--direction-#{$direction} {
     flex-direction: $direction;
   }
 }
 
-@each $alignItems in $forkitall-stack-layout-align-items {
+@each $alignItems in $forkitall-layout-align-items {
   .layout--align-items-#{$alignItems} {
     align-items: $alignItems;
   }
 }
 
-@each $justifyContent in $forkitall-stack-layout-justify-content {
+@each $justifyContent in $forkitall-layout-justify-content {
   .layout--justify-content-#{$justifyContent} {
     justify-content: $justifyContent;
   }
 }
 
-@each $wrap in $forkitall-stack-layout-wrap {
+@each $wrap in $forkitall-layout-wrap {
   .layout--wrap-#{$wrap} {
     flex-wrap: $wrap;
   }
 }
 
-@each $grow in $forkitall-stack-layout-grow {
+@each $grow in $forkitall-layout-grow {
   .layout--grow-#{$grow} {
     flex-grow: $grow;
   }
 }
 
-@each $shrink in $forkitall-stack-layout-shrink {
+@each $basis in $forkitall-layout-basis {
+  .layout--basis-#{$basis} {
+    flex-basis: $basis;
+  }
+}
+
+@each $shrink in $forkitall-layout-shrink {
   .layout--shrink-#{$shrink} {
     flex-shrink: $shrink;
   }
   .layout--shrink-1 {
     min-width: 0;
   }
+}
+
+.layout--full-width {
+  width: 100%;
 }

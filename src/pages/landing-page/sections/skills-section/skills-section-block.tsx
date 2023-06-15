@@ -1,4 +1,4 @@
-import { Layout, Text } from '@shared';
+import { Chip, Layout, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import type { ISkill } from './skills-definition';
@@ -16,22 +16,36 @@ export interface ISkillsSectionBlockProps {
 }
 
 export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, className }) => {
-    const { name, description, color } = skill;
+    const { name, description, color, topics } = skill;
 
     return (
         <Layout
             className={classNames(styles.skillsSectionBlock, className)}
-            gap="100"
+            gap="200"
             direction="column"
-            alignItems="center"
+            grow="1"
+            basis="0"
+            justifyContent="space-between"
         >
-            <div className={styles.skillIconWrapper} style={{ backgroundColor: `var(--forkitall-color-${color}` }} />
-            <Text size="h4" tag="h4">
-                {name}
-            </Text>
-            <Text size="m" tag="p">
-                {description}
-            </Text>
+            <Layout gap="100" direction="column" alignItems="center">
+                <div
+                    className={styles.skillIconWrapper}
+                    style={{ backgroundColor: `var(--forkitall-color-${color}` }}
+                />
+                <Text size="h4" tag="h4">
+                    {name}
+                </Text>
+                <Text size="m" tag="p">
+                    {description}
+                </Text>
+            </Layout>
+            <Layout gap="50" direction="row" wrap="wrap" justifyContent="start" fullWidth={true}>
+                {topics.map((topic) => (
+                    <Chip key={topic} size="s">
+                        {topic}
+                    </Chip>
+                ))}
+            </Layout>
         </Layout>
     );
 };

@@ -1,4 +1,5 @@
 export * from './button';
+export * from './chip';
 export * from './container';
 export * from './image';
 export * from './layout';

@@ -38,21 +38,29 @@ export interface ILayoutProps extends HTMLAttributes<HTMLDivElement> {
      */
     alignItems?: 'center' | 'start' | 'end' | 'baseline';
     /**
-     * Justify property of the stack layout.
+     * Justify property of the layout.
      */
     justifyContent?: 'start' | 'space-between' | 'center' | 'end';
     /**
-     * Flex grow property of the stack layout.
+     * Flex grow property of the layout.
      */
     grow?: '0' | '1';
     /**
-     * Flex shrink property of the stack layout.
+     * Flex basis property of the layout.
+     */
+    basis?: '0' | '1';
+    /**
+     * Flex shrink property of the layout.
      */
     shrink?: '0' | '1';
     /**
-     * Wrap property of the stack layout.
+     * Wrap property of the layout.
      */
     wrap?: 'wrap' | 'nowrap';
+    /**
+     * Sets the layout width to 100%.
+     */
+    fullWidth?: boolean;
     /**
      * Custom class for the component.
      */
