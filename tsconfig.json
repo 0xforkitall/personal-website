@@ -3,7 +3,13 @@
   "compilerOptions": {
     "paths": {
       "@*": ["./src/*"]
-    }
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": ["src", ".eslintrc.js", "**/*.config.js", "public/*.js", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

@@ -1,0 +1,18 @@
+@use "../../styles/utils";
+
+$forkitall-icon-color: ("white", "black");
+
+:root {
+  --forkitall-icon-size: 24px;
+}
+
+.icon {
+  width: var(--forkitall-icon-size);
+  height: var(--forkitall-icon-size);
+}
+
+@each $color in $forkitall-icon-color {
+  .icon--color-#{$color} {
+    color: var(--forkitall-color-#{$color});
+  }
+}

@@ -5,8 +5,8 @@
 }
 
 .skillIconWrapper {
+  --forkitall-icon-size: 80px;
   width: 120px;
   height: 120px;
-  background-color: darkcyan;
   border-radius: 50%;
 }

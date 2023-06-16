@@ -1,4 +1,4 @@
-import { Chip, Layout, Text } from '@shared';
+import { Chip, Icon, Layout, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import type { ISkill } from './skills-definition';
@@ -16,7 +16,7 @@ export interface ISkillsSectionBlockProps {
 }
 
 export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, className }) => {
-    const { name, description, color, topics } = skill;
+    const { name, description, color, topics, icon } = skill;
 
     return (
         <Layout
@@ -28,10 +28,14 @@ export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, 
             justifyContent="space-between"
         >
             <Layout gap="100" direction="column" alignItems="center">
-                <div
+                <Layout
                     className={styles.skillIconWrapper}
                     style={{ backgroundColor: `var(--forkitall-color-${color}` }}
-                />
+                    alignItems="center"
+                    justifyContent="center"
+                >
+                    <Icon icon={icon} color="black" />
+                </Layout>
                 <Text size="h4" tag="h4">
                     {name}
                 </Text>
