@@ -1,7 +1,13 @@
 .topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
   padding-top: var(--forkitall-spacer-50);
   padding-bottom: var(--forkitall-spacer-50);
   border-bottom: 1px solid var(--forkitall-color-primary);
+  background-color: var(--forkitall-color-body-background-color);
   transition: all 0.25s;
 }
 

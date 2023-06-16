@@ -1,12 +1,9 @@
 .landingPage {
   --forkitall-topbar-height: 64px;
-  height: 100vh;
-  max-height: 100vh;
 }
 
 .landingPageContent {
-  height: calc(100vh - var(--forkitall-topbar-height));
-  overflow: auto;
+  margin-top: var(--forkitall-topbar-height);
 }
 
 .landingPageSection {

@@ -20,3 +20,30 @@
     "body"
   );
 }
+
+@mixin style-scrollbar() {
+  overscroll-behavior: auto;
+  scrollbar-width: thin;
+  -ms-overflow-style: scrollbar;
+
+  &::-webkit-scrollbar {
+    width: var(--forkitall-scrollbar-width);
+  }
+
+  &::-webkit-scrollbar:vertical {
+    width: var(--forkitall-scrollbar-width);
+  }
+
+  &::-webkit-scrollbar:horizontal {
+    width: var(--forkitall-scrollbar-width);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--forkitall-scrollbar-track-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--forkitall-scrollbar-thumb-color);
+    border-radius: var(--forkitall-scrollbar-thumb-border-radius);
+  }
+}

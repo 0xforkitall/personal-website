@@ -12,15 +12,15 @@ export interface ITopbarProps {
     /**
      * Element that is scrolling on the current page.
      */
-    scrollingElementId: string;
+    elementSelector?: string;
     /**
      * Custom class for the component.
      */
     className?: string;
 }
 
-export const Topbar: React.FC<ITopbarProps> = ({ scrollingElementId, className }) => {
-    const didScroll = useDidScroll({ scrollingElementId });
+export const Topbar: React.FC<ITopbarProps> = ({ elementSelector, className }) => {
+    const didScroll = useDidScroll({ elementSelector });
 
     return (
         <Container

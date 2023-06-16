@@ -4,20 +4,23 @@ import { useEffect, useState } from 'react';
 
 export interface IUseDidScrollParams {
     /**
-     * Element scrolling on the current page, defaults to the html tag when not set.
+     * Selector element to attach the scroll listener to, defaults to the window object.
      */
-    scrollingElementId?: string;
+    elementSelector?: string;
 }
 
-export const useDidScroll = ({ scrollingElementId }: IUseDidScrollParams) => {
+export const useDidScroll = ({ elementSelector }: IUseDidScrollParams = {}) => {
     const [didScroll, setDidScroll] = useState(false);
 
     useEffect(() => {
-        const element = scrollingElementId != null ? document.getElementById(scrollingElementId) : undefined;
-        const scrollingElement = element ?? document.documentElement;
+        const element = elementSelector != null ? document.querySelector(elementSelector) : undefined;
+        const scrollingElement = element ?? window;
 
         const handleScroll = () => {
-            setDidScroll(scrollingElement.scrollTop > 0);
+            const topPosition =
+                scrollingElement === window ? scrollingElement.scrollY : (scrollingElement as HTMLElement).scrollTop;
+
+            setDidScroll(topPosition > 0);
         };
 
         scrollingElement.addEventListener('scroll', handleScroll, { passive: true });
@@ -25,7 +28,7 @@ export const useDidScroll = ({ scrollingElementId }: IUseDidScrollParams) => {
         return () => {
             scrollingElement.removeEventListener('scroll', handleScroll);
         };
-    }, [scrollingElementId]);
+    }, [elementSelector]);
 
     return didScroll;
 };
