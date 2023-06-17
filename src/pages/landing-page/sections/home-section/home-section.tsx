@@ -1,7 +1,9 @@
+import { Canvas } from '@components/canvas';
 import { ButtonLink, IconType, Layout, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
-import styles from './home-section.module.css';
+import { HomeSectionModel } from './home-section-model';
+import styles from './home-section.module.scss';
 
 export interface IHomeSectionProps {
     /**
@@ -39,7 +41,9 @@ export const HomeSection: React.FC<IHomeSectionProps> = ({ className }) => {
                     Work with me
                 </ButtonLink>
             </Layout>
-            <div className={styles.homeImage} />
+            <Canvas>
+                <HomeSectionModel />
+            </Canvas>
         </Layout>
     );
 };

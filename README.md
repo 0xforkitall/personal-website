@@ -32,3 +32,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Credits
+
+-   [Phosphor icons](https://github.com/phosphor-icons/homepage)
+-   [Ethereum logo 3d](https://sketchfab.com/3d-models/ethereum-logo-3d-3b8be89e01514b48bd7a4e52582f6d50)
+-   [PureSky HDRI](https://polyhaven.com/a/kloppenheim_06_puresky)

@@ -1,0 +1,21 @@
+.homeSection {
+  min-height: calc(100vh - var(--forkitall-topbar-height));
+  position: relative;
+}
+
+.homeHero {
+  position: absolute;
+  bottom: calc(100vh / 5);
+  left: 0;
+  z-index: 5;
+}
+
+.homeImage {
+  position: absolute;
+  right: 0;
+  top: calc(100vh / 6);
+  width: 400px;
+  height: 400px;
+  background-color: var(--forkitall-color-surface);
+  border-radius: 50px;
+}
