@@ -1,7 +1,10 @@
+@use "@shared/styles/breakpoints";
+
 .skillsSectionBlock {
   padding: var(--forkitall-spacer-200) var(--forkitall-spacer-100);
   border: 1px solid var(--forkitall-color-white);
   text-align: center;
+  min-width: 400px;
 }
 
 .skillIconWrapper {
@@ -9,4 +12,10 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
+}
+
+@media screen and (max-width: breakpoints.$forkitall-breakpoint-m) {
+  .skillsSectionBlock {
+    min-width: auto;
+  }
 }

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import React from 'react';
 import { skillList } from './skills-definition';
 import { SkillsSectionBlock } from './skills-section-block';
-import styles from './skills-section.module.css';
+import styles from './skills-section.module.scss';
 
 export interface ISkillsSectionProps {
     /**
@@ -22,7 +22,7 @@ export const SkillsSection: React.FC<ISkillsSectionProps> = ({ className }) => {
             alignItems="center"
         >
             <FancyHeader>My skillz</FancyHeader>
-            <Layout gap="0" direction="row">
+            <Layout gap="0" direction="row" wrap="wrap" className={styles.skillsWrapper}>
                 {skillList.map((skill) => (
                     <SkillsSectionBlock className={styles.skillBlock} key={skill.id} skill={skill} />
                 ))}

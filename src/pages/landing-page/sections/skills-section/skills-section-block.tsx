@@ -2,7 +2,7 @@ import { Chip, Icon, Layout, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import type { ISkill } from './skills-definition';
-import styles from './skills-section-block.module.css';
+import styles from './skills-section-block.module.scss';
 
 export interface ISkillsSectionBlockProps {
     /**
