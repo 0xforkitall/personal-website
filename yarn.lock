@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@0xforkitall/dev-config@0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/dev-config/-/dev-config-0.1.2.tgz#86af2eeb725e2d1c7cd310eb938f13d6d4143038"
-  integrity sha512-dPW3VzkTlgzEBrcn9zYFJ6uVliz8yOsqMZaY3Mi6q7j2kvDTYbfFXsq8forqCERz5t52cVKdwytYQbfvZiHPBg==
-
-"@0xforkitall/eslint-config@0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/eslint-config/-/eslint-config-0.1.7.tgz#a52e8d35465d3eadadde520ec6977c602e0d6cae"
-  integrity sha512-p6F0EAJmPKqypl6fgsuIfczgZLHjFbxQB1uTuwRH4XCQZi8ishk3VBw6MxhZQLoLR4K82BuosmwyudYpyhg+og==
+"@0xforkitall/eslint-config@0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/eslint-config/-/eslint-config-0.1.8.tgz#ef1e8d14d7c78ff197a7495715118268f154636e"
+  integrity sha512-hy1nD1RttFIGvU6z8xN0K0F+ffUGSj6/szYcDLJ6vSlV7QlPX+E7OXD9TGDC1g7nzwefZe8uUQHXO2yZEDEZqg==
   dependencies:
     eslint-config-prettier "^8.8.0"
+
+"@0xforkitall/shared-config@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/shared-config/-/shared-config-0.1.0.tgz#2dcdcd4c9152b56e8e7f44a8a504b5e6199de637"
+  integrity sha512-MAql1y7UeZBKaXvMQx1wfVnJTQ+zRvjT3dADCjdfn7XiLyj/A/yleEpcgUro5KJXkQNcgYKVRMqWIZF8WjXAeQ==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"

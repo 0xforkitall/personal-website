@@ -1,5 +1,5 @@
 {
-  "extends": "@0xforkitall/dev-config/tsconfig.json",
+  "extends": "@0xforkitall/shared-config/tsconfig.json",
   "compilerOptions": {
     "paths": {
       "@*": ["./src/*"]
