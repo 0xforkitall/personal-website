@@ -1,11 +1,3 @@
-.landingPage {
-  --forkitall-topbar-height: 64px;
-}
-
-.landingPageContent {
-  margin-top: var(--forkitall-topbar-height);
-}
-
 .landingPageSection {
   padding-top: var(--forkitall-spacer-400);
   padding-bottom: var(--forkitall-spacer-600);

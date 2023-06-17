@@ -1,5 +1,4 @@
-import { Topbar } from '@components/topbar';
-import { Container, Layout } from '@shared';
+import { Container } from '@shared';
 import styles from './landing-page.module.css';
 import { AboutSection } from './sections/about-section';
 import { HomeSection } from './sections/home-section';
@@ -13,13 +12,10 @@ export const metadata = {
 
 export const LandingPage = () => {
     return (
-        <Layout className={styles.landingPage} direction="column">
-            <Topbar />
-            <Container direction="column" className={styles.landingPageContent}>
-                <HomeSection />
-                <AboutSection className={styles.landingPageSection} />
-                <SkillsSection className={styles.landingPageSection} />
-            </Container>
-        </Layout>
+        <Container direction="column">
+            <HomeSection />
+            <AboutSection className={styles.landingPageSection} />
+            <SkillsSection className={styles.landingPageSection} />
+        </Container>
     );
 };
