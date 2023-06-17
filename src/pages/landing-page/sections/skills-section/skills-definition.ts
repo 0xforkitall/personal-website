@@ -52,7 +52,7 @@ export const skillList: ISkill[] = [
         description:
             'Passionate about blockchain technology, contributed to token launches and DeFi projects on EVM compatible chains.',
         topics: ['Web3', 'ethers.js', 'DeFi', 'WalletConnect', 'web3-react', 'dApps', 'wagmi', 'MetaMask'],
-        icon: IconType.CPU,
+        icon: IconType.CUBE,
         color: 'accent-3',
     },
 ];

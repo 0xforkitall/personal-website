@@ -7,7 +7,7 @@ export interface IIconProps {
     icon: IconType;
     /**
      * Color of the icon.
-     * @default white.
+     * @default inherit.
      */
     color?: 'white' | 'black';
     /**

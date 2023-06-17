@@ -3,12 +3,14 @@
 $forkitall-icon-color: ("white", "black");
 
 :root {
+  --forkitall-icon-color: inherit;
   --forkitall-icon-size: 24px;
 }
 
 .icon {
   width: var(--forkitall-icon-size);
   height: var(--forkitall-icon-size);
+  color: var(--forkitall-icon-color);
 }
 
 @each $color in $forkitall-icon-color {

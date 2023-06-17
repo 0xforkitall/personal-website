@@ -1,11 +1,16 @@
 import { type AnchorHTMLAttributes, type HTMLAttributes } from 'react';
+import { type IconType } from '../icon';
 
 export interface IButtonBaseProps {
     /**
      * Variant of the component.
      * @default primary
      */
-    variant?: 'primary' | 'secondary';
+    variant?: 'primary' | 'secondary' | 'neutral';
+    /**
+     * Icon of the button.
+     */
+    icon?: IconType;
     /**
      * Custom class for the component.
      */

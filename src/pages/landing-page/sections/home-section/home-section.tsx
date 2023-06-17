@@ -1,4 +1,4 @@
-import { ButtonLink, Layout, Text } from '@shared';
+import { ButtonLink, IconType, Layout, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import styles from './home-section.module.css';
@@ -30,7 +30,12 @@ export const HomeSection: React.FC<IHomeSectionProps> = ({ className }) => {
                         and I&apos;m a Blockchain Frontend Developer
                     </Text>
                 </Layout>
-                <ButtonLink variant="secondary" href="mailto:0xforkitall@gmail.com" target="_blank">
+                <ButtonLink
+                    variant="secondary"
+                    href="mailto:0xforkitall@gmail.com"
+                    target="_blank"
+                    icon={IconType.ARROW_RIGHT}
+                >
                     Work with me
                 </ButtonLink>
             </Layout>

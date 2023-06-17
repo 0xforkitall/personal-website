@@ -1,12 +1,18 @@
 @use "../../styles/utils";
-$forkitall-button-variant: ("primary", "secondary");
+$forkitall-button-variant: ("primary", "secondary", "neutral");
 
 :root {
   /* Properties */
+  --forkitall-button-display: flex;
+  --forkitall-button-align-items: center;
+  --forkitall-button-gap: var(--forkitall-spacer-75);
   --forkitall-button-border-radius: 50px;
   --forkitall-button-padding: var(--forkitall-spacer-75) var(--forkitall-spacer-125);
   --forkitall-button-cursor: pointer;
   --forkitall-button-text-decoration: none;
+
+  /* Button icon */
+  --forkitall-button-icon-size: 24px;
 
   /* Typography */
   --forkitall-button-font-size: var(--forkitall-font-size-100);
@@ -19,36 +25,56 @@ $forkitall-button-variant: ("primary", "secondary");
   --forkitall-button-variant-primary-color: var(--forkitall-color-black);
   --forkitall-button-variant-primary-background-color: var(--forkitall-color-primary-500);
   --forkitall-button-variant-primary-border: 2px solid var(--forkitall-color-primary-500);
+  --forkitall-button-variant-primary-icon-color: var(--forkitall-color-black);
 
   --forkitall-button-variant-primary-hover-color: var(--forkitall-color-black);
   --forkitall-button-variant-primary-hover-background-color: var(--forkitall-color-primary-700);
   --forkitall-button-variant-primary-hover-border: 2px solid var(--forkitall-color-primary-700);
+  --forkitall-button-variant-primary-hover-icon-color: var(--forkitall-color-black);
 
   /* Secondary variant */
   --forkitall-button-variant-secondary-color: var(--forkitall-color-white);
   --forkitall-button-variant-secondary-background-color: transparent;
   --forkitall-button-variant-secondary-border: 2px solid var(--forkitall-color-primary-500);
+  --forkitall-button-variant-secondary-icon-color: var(--forkitall-color-white);
 
   --forkitall-button-variant-secondary-hover-color: var(--forkitall-color-white);
   --forkitall-button-variant-secondary-hover-background-color: transparent;
   --forkitall-button-variant-secondary-hover-border: 2px solid var(--forkitall-color-primary-700);
+  --forkitall-button-variant-secondary-hover-icon-color: var(--forkitall-color-white);
+
+  /* Neutral variant */
+  --forkitall-button-variant-neutral-color: var(--forkitall-color-white);
+  --forkitall-button-variant-neutral-background-color: transparent;
+  --forkitall-button-variant-neutral-border: 2px solid transparent;
+  --forkitall-button-variant-neutral-icon-color: var(--forkitall-color-white);
+
+  --forkitall-button-variant-neutral-hover-color: var(--forkitall-color-white);
+  --forkitall-button-variant-neutralsecondary-hover-background-color: transparent;
+  --forkitall-button-variant-neutral-hover-border: 2px solid transparent;
+  --forkitall-button-variant-neutral-hover-icon-color: var(--forkitall-color-white);
 }
 
 .button {
-  display: flex;
   @include utils.apply-typography("button");
-  @include utils.apply-properties("button", ("border-radius", "padding", "cursor", "text-decoration"));
+  @include utils.apply-properties(
+    "button",
+    ("display", "align-items", "gap", "border-radius", "padding", "cursor", "text-decoration")
+  );
 }
 
 @mixin button-style-variant($variant, $modifier: "") {
+  --forkitall-icon-size: var(--forkitall-button-icon-size);
   @include utils.apply-properties("button-variant-#{$variant}", ("color", "background-color", "border"), $modifier);
 }
 
 @each $variant in $forkitall-button-variant {
   .button--variant-#{$variant} {
+    --forkitall-icon-color: var(--forkitall-button-variant-#{$variant}-icon-color);
     @include button-style-variant($variant);
 
     &:hover {
+      --forkitall-icon-color: var(--forkitall-button-variant-#{$variant}-hover-icon-color);
       @include button-style-variant($variant, "hover");
     }
   }

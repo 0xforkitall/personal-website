@@ -1,0 +1,15 @@
+.footer {
+  margin-top: var(--forkitall-spacer-500);
+  background-color: var(--forkitall-color-primary-700);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.footerMain {
+  background-color: var(--forkitall-color-primary-700);
+  padding: var(--forkitall-spacer-50) 0;
+}
+
+.footerCopyright {
+  background-color: var(--forkitall-color-body-background-color);
+}
