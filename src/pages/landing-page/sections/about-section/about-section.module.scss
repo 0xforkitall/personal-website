@@ -1,0 +1,22 @@
+@use "@shared/styles/breakpoints";
+
+.aboutImage {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-color: var(--forkitall-color-surface);
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.description {
+  margin-left: var(--forkitall-spacer-400);
+}
+
+@media screen and (max-width: breakpoints.$forkitall-breakpoint-m) {
+  .aboutWrapper {
+    align-items: center;
+  }
+}

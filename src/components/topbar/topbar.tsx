@@ -30,7 +30,7 @@ export const Topbar: React.FC<ITopbarProps> = ({ elementSelector, className }) =
             alignItems="center"
         >
             <Link href={routes.landingPage}>
-                <Text size="h4" tag="h4" color="primary">
+                <Text size="h4" color="primary">
                     0xf
                 </Text>
             </Link>

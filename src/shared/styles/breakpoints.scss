@@ -1,5 +1,15 @@
-$forkitall-breakpoint-xs: 440px;
-$forkitall-breakpoint-s: 640px;
-$forkitall-breakpoint-m: 768px;
-$forkitall-breakpoint-l: 1024px;
-$forkitall-breakpoint-xl: 1440px;
+$forkitall-breakpoint-xs: 440px; // 0px <= XS < 440px
+$forkitall-breakpoint-s: 768px; // 441px <= S < 768px
+$forkitall-breakpoint-m: 1024px; // 769px <= M < 1024px
+$forkitall-breakpoint-l: 1200px; // 1025px <= L < 1200px
+$forkitall-breakpoint-xl: 1440px; // 1200px <= XL < 1440px
+$forkitall-breakpoint-xxl: 9999px; // 1441 <= XL < 9999px
+
+$forkitall-breakpoint-list: (
+  "xs": $forkitall-breakpoint-xs,
+  "s": $forkitall-breakpoint-s,
+  "m": $forkitall-breakpoint-m,
+  "l": $forkitall-breakpoint-l,
+  "xl": $forkitall-breakpoint-xl,
+  "xxl": $forkitall-breakpoint-xxl,
+);

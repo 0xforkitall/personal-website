@@ -1,3 +1,4 @@
+import { type IResponsiveAttribute } from '@shared/types';
 import { type HTMLAttributes } from 'react';
 
 export type LayoutGap =
@@ -14,6 +15,8 @@ export type LayoutGap =
     | '400'
     | '500'
     | '600';
+
+export type LayoutDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse';
 
 export interface ILayoutProps extends HTMLAttributes<HTMLDivElement> {
     /**
@@ -32,7 +35,11 @@ export interface ILayoutProps extends HTMLAttributes<HTMLDivElement> {
     /**
      * Direction of the elements (column by default).
      */
-    direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
+    direction?: LayoutDirection;
+    /**
+     * Direction of the elements of different breakpoints.
+     */
+    responsiveDirection?: IResponsiveAttribute<LayoutDirection>;
     /**
      * Vertical alignment of the elements.
      */

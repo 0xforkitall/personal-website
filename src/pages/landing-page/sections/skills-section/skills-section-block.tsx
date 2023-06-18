@@ -36,12 +36,8 @@ export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, 
                 >
                     <Icon icon={icon} color="black" />
                 </Layout>
-                <Text size="h4" tag="h4">
-                    {name}
-                </Text>
-                <Text size="m" tag="p">
-                    {description}
-                </Text>
+                <Text size="h4">{name}</Text>
+                <Text size="m">{description}</Text>
             </Layout>
             <Layout gap="50" direction="row" wrap="wrap" justifyContent="start" fullWidth={true}>
                 {topics.map((topic) => (

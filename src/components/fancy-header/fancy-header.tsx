@@ -16,7 +16,7 @@ export interface IFancyHeaderProps {
 
 export const FancyHeader: React.FC<IFancyHeaderProps> = ({ className, children }) => {
     return (
-        <Text size="h1" tag="h1" className={classNames(styles.fancyHeader, className)}>
+        <Text size="h1" className={classNames(styles.fancyHeader, className)}>
             {children}
         </Text>
     );

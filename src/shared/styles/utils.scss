@@ -1,3 +1,12 @@
+@use "./breakpoints";
+
+// Applies the property using the CSS custom properties.
+// e.g. prefix: "button-variant-primary", property-list: "color", "background-color"
+// color: var(--forkitall-button-variant-primary-color)
+// background-color: var(--forkitall-button-variant-primary-color)
+// e.g. (with modifier) prefix: "button-variant-primary", property-list: "color", "background-color", modifier: "hover"
+// color: var(--forkitall-button-variant-primary-hover-color)
+// background-color: var(--forkitall-button-variant-primary-hover-background-color)
 @mixin apply-properties($prefix, $property-list, $modifier: "", $fallback-prefix: "") {
   $processed-prefix: if($modifier != "", "#{$prefix}-#{$modifier}", "#{$prefix}");
 
@@ -12,6 +21,7 @@
   }
 }
 
+// Applies the typography properties using the @apply-properties mixin.
 @mixin apply-typography($prefix) {
   @include apply-properties(
     $prefix,
@@ -21,29 +31,90 @@
   );
 }
 
+// Generates the responsive typography classes for each breakpoint given the component name, property name and property list.
+// e.g. component-name: "text", property-name: "size", property-list: "h1", "h2", "h3"
+// @media screen and (max-width: XS) {
+//   .text--size-xs-h1 { font-size: [font-size-h1], line-height: [line-height-h1], ... }
+// }
+// @media screen and (max-width: S) {
+//   .text--size-s-h1 { font-size: [font-size-h1], line-height: [line-height-h1], ... }
+// }
+// [...]
+// @media screen and (max-width: XS) {
+//   .text--size-xs-h2 { font-size: [font-size-h2], line-height: [line-height-h2], ... }
+// }
+@mixin apply-responsive-typography($component-name, $property-name, $property-list) {
+  @each $property in $property-list {
+    @each $breakpoint-name, $breakpoint-width in breakpoints.$forkitall-breakpoint-list {
+      @media screen and (max-width: $breakpoint-width) {
+        .#{$component-name}--#{$property-name}-#{$breakpoint-name}-#{$property} {
+          @include apply-typography("#{$component-name}-#{$property-name}-#{$property}");
+        }
+      }
+    }
+  }
+}
+
+// Generates the default and responsive classes given the component name, property name and property list.
+// e.g. component-name: "layout", property-name: "direction", property-list: "row", "column"
+// Default classes:
+// .layout--flex-direction-row { flex-direction: row }
+// .layout--flex-direction-column { flex-direction: column }
+// Responsive classes:
+// @media screen and (max-width: XS) {
+//   .layout--flex-direction-xs-row { flex-direction: row }
+// }
+// @media screen and (max-width: S) {
+//   .layout--flex-direction-s-row { flex-direction: row }
+// }
+// [...]
+// @media screen and (max-width: XS) {
+//   .layout--flex-direction-xs-column { flex-direction: column }
+// }
+@mixin apply-fixed-properties($component-name, $property-name, $property-list, $is-responsive: false) {
+  @each $property in $property-list {
+    .#{$component-name}--#{$property-name}-#{$property} {
+      #{$property-name}: $property;
+    }
+  }
+
+  @if ($is-responsive) {
+    @each $property in $property-list {
+      @each $breakpoint-name, $breakpoint-width in breakpoints.$forkitall-breakpoint-list {
+        @media screen and (max-width: $breakpoint-width) {
+          .#{$component-name}--#{$property-name}-#{$breakpoint-name}-#{$property} {
+            #{$property-name}: $property;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Styles the scrollbar using the scrollbar global variables
 @mixin style-scrollbar() {
   overscroll-behavior: auto;
   scrollbar-width: thin;
   -ms-overflow-style: scrollbar;
 
   &::-webkit-scrollbar {
-    width: var(--forkitall-scrollbar-width);
+    width: var(--forkitall-global-scrollbar-width);
   }
 
   &::-webkit-scrollbar:vertical {
-    width: var(--forkitall-scrollbar-width);
+    width: var(--forkitall-global-scrollbar-width);
   }
 
   &::-webkit-scrollbar:horizontal {
-    width: var(--forkitall-scrollbar-width);
+    width: var(--forkitall-global-scrollbar-width);
   }
 
   &::-webkit-scrollbar-track {
-    background: var(--forkitall-scrollbar-track-color);
+    background: var(--forkitall-global-scrollbar-track-color);
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--forkitall-scrollbar-thumb-color);
-    border-radius: var(--forkitall-scrollbar-thumb-border-radius);
+    background: var(--forkitall-global-scrollbar-thumb-color);
+    border-radius: var(--forkitall-global-scrollbar-thumb-border-radius);
   }
 }

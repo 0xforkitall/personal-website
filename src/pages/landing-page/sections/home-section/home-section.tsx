@@ -17,18 +17,14 @@ export const HomeSection: React.FC<IHomeSectionProps> = ({ className }) => {
         <Layout className={classNames(styles.homeSection, className)}>
             <Layout direction="column" gap="400" alignItems="start" className={styles.homeHero}>
                 <Layout direction="column" gap="0">
-                    <Text tag="h1">
-                        <Text tag="span" size="h1">
-                            Hi, I&apos;m{' '}
-                        </Text>
-                        <Text tag="span" size="h1" color="primary">
+                    <Text size="h1" responsiveSize={{ s: 'h2' }}>
+                        <Text tag="span">Hi, I&apos;m </Text>
+                        <Text tag="span" color="primary">
                             0xforkitall
                         </Text>
-                        <Text tag="span" size="h1">
-                            ,
-                        </Text>
+                        <Text tag="span">,</Text>
                     </Text>
-                    <Text size="h3" tag="h3">
+                    <Text size="h3" responsiveSize={{ xs: 'h5' }}>
                         and I&apos;m a Blockchain Frontend Developer
                     </Text>
                 </Layout>

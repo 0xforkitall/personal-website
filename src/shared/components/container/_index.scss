@@ -11,8 +11,8 @@
   --forkitall-container-breakpoint-l-padding-right: var(--forkitall-spacer-150);
   --forkitall-container-breakpoint-l-padding-left: var(--forkitall-spacer-150);
 
-  --forkitall-container-breakpoint-s-padding-right: var(--forkitall-spacer-100);
-  --forkitall-container-breakpoint-s-padding-left: var(--forkitall-spacer-100);
+  --forkitall-container-breakpoint-m-padding-right: var(--forkitall-spacer-100);
+  --forkitall-container-breakpoint-m-padding-left: var(--forkitall-spacer-100);
 }
 
 .container {
@@ -26,7 +26,7 @@
   @media screen and (max-width: breakpoints.$forkitall-breakpoint-l) {
     @include utils.apply-properties("container", ("padding-right", "padding-left"), "breakpoint-l");
   }
-  @media screen and (max-width: breakpoints.$forkitall-breakpoint-s) {
-    @include utils.apply-properties("container", ("padding-right", "padding-left"), "breakpoint-s");
+  @media screen and (max-width: breakpoints.$forkitall-breakpoint-m) {
+    @include utils.apply-properties("container", ("padding-right", "padding-left"), "breakpoint-m");
   }
 }

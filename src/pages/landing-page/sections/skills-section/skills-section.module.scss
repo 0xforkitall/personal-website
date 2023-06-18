@@ -1,7 +1,0 @@
-@use "@shared/styles/breakpoints";
-
-@media screen and (max-width: breakpoints.$forkitall-breakpoint-m) {
-  .skillsWrapper {
-    flex-direction: column;
-  }
-}

@@ -1,73 +1,37 @@
+@use "../../styles/utils";
+
 $forkitall-layout-display: (flex, grid);
 $forkitall-layout-gap: ("0", "25", "50", "75", "100", "125", "150", "200", "250", "300", "400", "500", "600");
-$forkitall-layout-direction: (row, row-reverse, column, column-reverse);
+$forkitall-layout-flex-direction: (row, row-reverse, column, column-reverse);
 $forkitall-layout-align-items: (center, space-between, end, start);
 $forkitall-layout-justify-content: (center, space-between, end, start);
-$forkitall-layout-wrap: (wrap, nowrap);
-$forkitall-layout-grow: (0, 1);
-$forkitall-layout-shrink: (0, 1);
-$forkitall-layout-basis: (0, 1);
-
-@each $display in $forkitall-layout-display {
-  .layout--display-#{$display} {
-    display: $display;
-  }
-}
+$forkitall-layout-flex-wrap: (wrap, nowrap);
+$forkitall-layout-flex-grow: (0, 1);
+$forkitall-layout-flex-basis: (0, 1);
+$forkitall-layout-flex-shrink: (0, 1);
 
 @each $gap in $forkitall-layout-gap {
   .layout--gap-#{$gap} {
     gap: var(--forkitall-spacer-#{$gap});
   }
-  .layout--row-gap-#{$gap} {
+  .layout.layout--row-gap-#{$gap} {
     row-gap: var(--forkitall-spacer-#{$gap});
-  }
-}
-
-@each $direction in $forkitall-layout-direction {
-  .layout--direction-#{$direction} {
-    flex-direction: $direction;
-  }
-}
-
-@each $alignItems in $forkitall-layout-align-items {
-  .layout--align-items-#{$alignItems} {
-    align-items: $alignItems;
-  }
-}
-
-@each $justifyContent in $forkitall-layout-justify-content {
-  .layout--justify-content-#{$justifyContent} {
-    justify-content: $justifyContent;
-  }
-}
-
-@each $wrap in $forkitall-layout-wrap {
-  .layout--wrap-#{$wrap} {
-    flex-wrap: $wrap;
-  }
-}
-
-@each $grow in $forkitall-layout-grow {
-  .layout--grow-#{$grow} {
-    flex-grow: $grow;
-  }
-}
-
-@each $basis in $forkitall-layout-basis {
-  .layout--basis-#{$basis} {
-    flex-basis: $basis;
-  }
-}
-
-@each $shrink in $forkitall-layout-shrink {
-  .layout--shrink-#{$shrink} {
-    flex-shrink: $shrink;
-  }
-  .layout--shrink-1 {
-    min-width: 0;
   }
 }
 
 .layout--full-width {
   width: 100%;
 }
+
+.layout--flex-shrink-1 {
+  min-width: 0;
+}
+
+@include utils.apply-fixed-properties("layout", "display", $forkitall-layout-display);
+@include utils.apply-fixed-properties("layout", "flex-direction", $forkitall-layout-flex-direction, true);
+@include utils.apply-fixed-properties("layout", "align-items", $forkitall-layout-align-items);
+@include utils.apply-fixed-properties("layout", "justify-content", $forkitall-layout-justify-content);
+@include utils.apply-fixed-properties("layout", "flex-wrap", $forkitall-layout-flex-wrap);
+@include utils.apply-fixed-properties("layout", "flex-grow", $forkitall-layout-flex-grow);
+@include utils.apply-fixed-properties("layout", "flex-basis", $forkitall-layout-flex-basis);
+@include utils.apply-fixed-properties("layout", "flex-shrink", $forkitall-layout-flex-shrink);

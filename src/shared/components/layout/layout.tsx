@@ -1,3 +1,4 @@
+import { responsiveUtils } from '@shared/utils';
 import classNames from 'classnames';
 import { forwardRef } from 'react';
 import { type ILayoutProps } from './layout.api';
@@ -8,6 +9,7 @@ export const Layout = forwardRef<HTMLDivElement, ILayoutProps>((props, ref) => {
         gap,
         rowGap,
         direction,
+        responsiveDirection,
         alignItems,
         justifyContent,
         grow,
@@ -28,14 +30,18 @@ export const Layout = forwardRef<HTMLDivElement, ILayoutProps>((props, ref) => {
                 `layout--display-${display}`,
                 { 'layout--full-width': fullWidth },
                 { [`layout--gap-${gap}`]: gap != null },
-                { [`layout--direction-${direction}`]: direction != null },
                 { [`layout--row-gap-${rowGap}`]: rowGap != null },
                 { [`layout--align-items-${alignItems}`]: alignItems != null },
-                { [`layout--wrap-${wrap}`]: wrap != null },
-                { [`layout--basis-${basis}`]: basis != null },
+                { [`layout--flex-wrap-${wrap}`]: wrap != null },
+                { [`layout--flex-basis-${basis}`]: basis != null },
                 { [`layout--justify-content-${justifyContent}`]: justifyContent != null },
-                { [`layout--grow-${grow}`]: grow != null },
-                { [`layout--shrink-${shrink}`]: shrink != null },
+                { [`layout--flex-grow-${grow}`]: grow != null },
+                { [`layout--flex-shrink-${shrink}`]: shrink != null },
+                responsiveUtils.responsiveClassnames({
+                    prefix: 'layout--flex-direction',
+                    prop: responsiveDirection,
+                    value: direction,
+                }),
                 className,
             )}
             {...other}

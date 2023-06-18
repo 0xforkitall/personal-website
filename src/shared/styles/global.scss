@@ -1,7 +1,7 @@
 :root {
   /* Scroll bars */
-  --forkitall-scrollbar-width: 6px;
-  --forkitall-scrollbar-track-color: var(--forkitall-color-gray-900);
-  --forkitall-scrollbar-thumb-color: var(--forkitall-color-primary-500);
-  --forkitall-scrollbar-thumb-border-radius: 0px;
+  --forkitall-global-scrollbar-width: 6px;
+  --forkitall-global-scrollbar-track-color: var(--forkitall-color-gray-900);
+  --forkitall-global-scrollbar-thumb-color: var(--forkitall-color-primary-500);
+  --forkitall-global-scrollbar-thumb-border-radius: 0px;
 }

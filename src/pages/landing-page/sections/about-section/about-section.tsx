@@ -1,8 +1,8 @@
 import { FancyHeader } from '@components/fancy-header';
-import { Layout, Text } from '@shared';
+import { Image, Layout, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
-import styles from './about-section.module.css';
+import styles from './about-section.module.scss';
 
 export interface IAboutSectionProps {
     /**
@@ -15,10 +15,12 @@ export const AboutSection: React.FC<IAboutSectionProps> = ({ className }) => {
     return (
         <Layout className={classNames(styles.aboutSection, className)} gap="400" direction="column" alignItems="center">
             <FancyHeader>About me</FancyHeader>
-            <Layout gap="500" direction="row">
-                <div className={styles.aboutImage} />
+            <Layout gap="500" direction="row" responsiveDirection={{ m: 'column' }} className={styles.aboutWrapper}>
+                <div className={styles.aboutImage}>
+                    <Image src="/assets/images/profile-image.png" alt="profile image" fill={true} />
+                </div>
                 <Layout gap="300" direction="column">
-                    <Text size="h3" tag="h3">
+                    <Text size="h3" responsiveSize={{ xs: 'h4' }}>
                         Software Engineer, Frontend Developer and Blockchain Enthusiast
                     </Text>
                     <Layout gap="100" direction="column" className={styles.description}>

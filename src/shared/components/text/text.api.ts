@@ -1,3 +1,4 @@
+import { type IResponsiveAttribute } from '@shared/types';
 import { type HTMLAttributes } from 'react';
 
 export type TextTag = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
@@ -10,8 +11,11 @@ export interface ITextProps extends HTMLAttributes<HTMLParagraphElement | HTMLHe
      */
     size?: TextSize;
     /**
-     * Tag to be used.
-     * @default p
+     * Responsive sizes for the text.
+     */
+    responsiveSize?: IResponsiveAttribute<TextSize>;
+    /**
+     * Tag to be used, defaults to the relative header tag for header sizes or to p.
      */
     tag?: TextTag;
     /**
