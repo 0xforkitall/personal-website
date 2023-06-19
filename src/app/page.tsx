@@ -1,4 +1,4 @@
-import { LandingPage } from '../pages/landing-page';
+import { LandingPage } from '../layouts/landing-page';
 
-export { metadata } from '../pages/landing-page';
+export { metadata } from '../layouts/landing-page';
 export default LandingPage;
