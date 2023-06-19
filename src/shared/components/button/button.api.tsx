@@ -6,7 +6,7 @@ export interface IButtonBaseProps {
      * Variant of the component.
      * @default primary
      */
-    variant?: 'primary' | 'secondary' | 'neutral';
+    variant?: 'primary' | 'outline' | 'neutral-white' | 'neutral-black';
     /**
      * Icon of the button.
      */

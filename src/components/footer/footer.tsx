@@ -24,12 +24,12 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => {
                     responsiveDirection={{ m: 'column' }}
                     alignItems="center"
                 >
-                    <Text size="h4" color="white">
+                    <Text size="h4" color="black">
                         0xforkitall
                     </Text>
-                    <Layout direction="row" gap="0" alignItems="center">
+                    <Layout direction="row" gap="50" alignItems="center">
                         {personalSocials.map(({ id, link, icon }) => (
-                            <ButtonLink key={id} href={link} target="_blank" variant="neutral" icon={icon} />
+                            <ButtonLink key={id} href={link} target="_blank" variant="neutral-black" icon={icon} />
                         ))}
                     </Layout>
                 </Layout>

@@ -7,7 +7,16 @@ export const ButtonLink = forwardRef<HTMLAnchorElement, IButtonLinkProps>((props
     const { children, className, variant = 'primary', icon, ...otherProps } = props;
 
     return (
-        <a ref={ref} className={classNames('button', `button--variant-${variant}`, className)} {...otherProps}>
+        <a
+            ref={ref}
+            className={classNames(
+                'button',
+                `button--variant-${variant}`,
+                { 'button--only-icon': children == null && icon != null },
+                className,
+            )}
+            {...otherProps}
+        >
             {children}
             {icon && <Icon icon={icon} />}
         </a>

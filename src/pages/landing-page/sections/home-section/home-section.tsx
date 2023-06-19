@@ -29,7 +29,7 @@ export const HomeSection: React.FC<IHomeSectionProps> = ({ className }) => {
                     </Text>
                 </Layout>
                 <ButtonLink
-                    variant="secondary"
+                    variant="primary"
                     href="mailto:0xforkitall@gmail.com"
                     target="_blank"
                     icon={IconType.ARROW_RIGHT}
