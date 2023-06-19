@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, Environment } from '@react-three/drei';
+import { Center } from '@react-three/drei';
 import { useFrame, useLoader, useThree } from '@react-three/fiber';
 import React, { useRef } from 'react';
 import type { Mesh } from 'three';
@@ -31,7 +31,8 @@ export const HomeSectionModel: React.FC<IHomeSectionModelProps> = () => {
 
     return (
         <>
-            <Environment files="/assets/hdri/pure-sky.hdr" />
+            <pointLight position={[-10, -10, -10]} color="#33ff33" intensity={10} />
+            <pointLight position={[10, 10, 10]} color="#00c8ff" intensity={10} />
             <Center bottom={true} left={left} position={[x, y, 0]}>
                 <mesh ref={modelRef}>
                     <primitive object={ethereumModel.scene} scale={scale} />
