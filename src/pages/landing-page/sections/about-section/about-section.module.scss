@@ -6,9 +6,10 @@
   height: 300px;
   position: relative;
   background-color: var(--forkitall-color-surface);
-  border-radius: 50%;
+  border-radius: 35px;
   flex-shrink: 0;
   overflow: hidden;
+  box-shadow: 0px 0px 30px -10px var(--forkitall-color-primary);
 }
 
 .description {

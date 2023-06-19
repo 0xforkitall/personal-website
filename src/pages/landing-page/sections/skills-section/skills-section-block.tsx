@@ -16,7 +16,7 @@ export interface ISkillsSectionBlockProps {
 }
 
 export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, className }) => {
-    const { name, description, color, topics, icon } = skill;
+    const { name, description, topics, icon } = skill;
 
     return (
         <Layout
@@ -30,7 +30,7 @@ export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, 
             <Layout gap="100" direction="column" alignItems="center">
                 <Layout
                     className={styles.skillIconWrapper}
-                    style={{ backgroundColor: `var(--forkitall-color-${color}` }}
+                    style={{ backgroundColor: `var(--forkitall-color-primary-300` }}
                     alignItems="center"
                     justifyContent="center"
                 >

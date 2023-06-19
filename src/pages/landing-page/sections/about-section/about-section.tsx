@@ -26,10 +26,10 @@ export const AboutSection: React.FC<IAboutSectionProps> = ({ className }) => {
                     <Layout gap="100" direction="column" className={styles.description}>
                         <Text size="m">
                             With extensive experience in Frontend Development, I am a passionate Software Engineer who
-                            is always seeking the next challenge.
+                            constantly seeks the next challenge.
                         </Text>
                         <Text size="m">
-                            With a strong emphasis on innovation, I have explored the fascinating world of blockchain
+                            I have a strong emphasis on innovation and have explored the fascinating world of blockchain
                             and crypto projects, actively discovering and contributing to new solutions.
                         </Text>
                         <Text size="m">

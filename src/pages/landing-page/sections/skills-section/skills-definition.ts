@@ -21,10 +21,6 @@ export interface ISkill {
      * Icon of the skill.
      */
     icon: IconType;
-    /**
-     * Color to be used for the icon background.
-     */
-    color: string;
 }
 
 export const skillList: ISkill[] = [
@@ -32,27 +28,24 @@ export const skillList: ISkill[] = [
         id: 'software-engineer',
         name: 'Software Engineer',
         description:
-            'Skilled in designing scalable and robust software with expertise in architecture, coding, and deployment.',
+            'Expertise in designing scalable and robust software, including architecture, coding, and deployment',
         topics: ['Software architecture', 'Deployment', 'Agile methodologies', 'CI / CD'],
         icon: IconType.CPU,
-        color: 'accent-1',
     },
     {
         id: 'frontend-developer',
         name: 'Frontend Developer',
         description:
-            'Experienced in creating immersive user experiences through intuitive interfaces and optimised performance.',
+            'Experience in creating immersive user experiences through intuitive interfaces and optimized performance.',
         topics: ['React', 'HTML', 'CSS', 'TypeScript', 'JavaScript', 'Vercel', 'NextJs', 'Core Web Vitals'],
         icon: IconType.ATOM,
-        color: 'accent-2',
     },
     {
         id: 'blockchain-dev',
         name: 'Blockchain Dev',
         description:
-            'Passionate about blockchain technology, contributed to token launches and DeFi projects on EVM compatible chains.',
+            'Passionate about blockchain technology, I actively contributed to token launches and DeFi projects on EVM chains.',
         topics: ['Web3', 'ethers.js', 'DeFi', 'WalletConnect', 'web3-react', 'dApps', 'wagmi', 'MetaMask'],
         icon: IconType.CUBE,
-        color: 'accent-3',
     },
 ];
