@@ -8,16 +8,16 @@ body {
 
 body {
   /* Typography */
-  font-family: var(--forkitall-body-font-family);
-  font-size: var(--forkitall-body-font-size);
-  line-height: var(--forkitall-body-line-height);
-  font-weight: var(--forkitall-body-font-weight);
-  font-style: var(--forkitall-body-font-style);
-  text-rendering: var(--forkitall-body-text-rendering);
+  font-family: var(--0xf-body-font-family);
+  font-size: var(--0xf-body-font-size);
+  line-height: var(--0xf-body-line-height);
+  font-weight: var(--0xf-body-font-weight);
+  font-style: var(--0xf-body-font-style);
+  text-rendering: var(--0xf-body-text-rendering);
 
   /* Colors */
-  background-color: var(--forkitall-color-body-background-color);
-  color: var(--forkitall-color-body-color);
+  background-color: var(--0xf-color-body-background-color);
+  color: var(--0xf-color-body-color);
 
   @include utils.style-scrollbar();
 }

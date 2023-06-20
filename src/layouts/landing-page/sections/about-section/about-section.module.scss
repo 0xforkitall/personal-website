@@ -5,15 +5,15 @@
   width: 300px;
   height: 300px;
   position: relative;
-  background-color: var(--forkitall-color-surface);
+  background-color: var(--0xf-color-surface);
   border-radius: 35px;
   flex-shrink: 0;
   overflow: hidden;
-  box-shadow: 0px 0px 30px -10px var(--forkitall-color-primary);
+  box-shadow: 0px 0px 30px -10px var(--0xf-color-primary);
 }
 
 .description {
-  margin-left: var(--forkitall-spacer-400);
+  margin-left: var(--0xf-spacer-400);
 }
 
 @media screen and (max-width: breakpoints.$forkitall-breakpoint-m) {

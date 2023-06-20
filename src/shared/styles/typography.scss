@@ -1,35 +1,35 @@
 :root {
   /* Font sizes */
-  --forkitall-font-size-base: 16px;
-  --forkitall-font-size-inherit: inherit;
+  --0xf-font-size-base: 16px;
+  --0xf-font-size-inherit: inherit;
 
-  --forkitall-font-size-87: calc(var(--forkitall-font-size-base) * 7 / 8); // 14px
-  --forkitall-font-size-100: var(--forkitall-font-size-base); // 16px
-  --forkitall-font-size-125: calc(var(--forkitall-font-size-base) * 5 / 4); // 20px
-  --forkitall-font-size-150: calc(var(--forkitall-font-size-base) * 3 / 2); // 24px
-  --forkitall-font-size-200: calc(var(--forkitall-font-size-base) * 2); // 32px
-  --forkitall-font-size-250: calc(var(--forkitall-font-size-base) * 5 / 2); // 40px
-  --forkitall-font-size-300: calc(var(--forkitall-font-size-base) * 3); // 48px
-  --forkitall-font-size-400: calc(var(--forkitall-font-size-base) * 4); // 64px
+  --0xf-font-size-87: calc(var(--0xf-font-size-base) * 7 / 8); // 14px
+  --0xf-font-size-100: var(--0xf-font-size-base); // 16px
+  --0xf-font-size-125: calc(var(--0xf-font-size-base) * 5 / 4); // 20px
+  --0xf-font-size-150: calc(var(--0xf-font-size-base) * 3 / 2); // 24px
+  --0xf-font-size-200: calc(var(--0xf-font-size-base) * 2); // 32px
+  --0xf-font-size-250: calc(var(--0xf-font-size-base) * 5 / 2); // 40px
+  --0xf-font-size-300: calc(var(--0xf-font-size-base) * 3); // 48px
+  --0xf-font-size-400: calc(var(--0xf-font-size-base) * 4); // 64px
 
   /* Font weights */
-  --forkitall-font-weight-light: 300;
-  --forkitall-font-weight-medium: 400;
-  --forkitall-font-weight-bold: 600;
-  --forkitall-font-weight-inherit: inherit;
+  --0xf-font-weight-light: 300;
+  --0xf-font-weight-medium: 400;
+  --0xf-font-weight-bold: 600;
+  --0xf-font-weight-inherit: inherit;
 
   /* Font styles */
-  --forkitall-font-style-normal: normal;
-  --forkitall-font-style-italic: italic;
-  --forkitall-font-style-inherit: inherit;
+  --0xf-font-style-normal: normal;
+  --0xf-font-style-italic: italic;
+  --0xf-font-style-inherit: inherit;
 
   /* Body typography */
-  --forkitall-body-font-family: Source Code Pro, monospace, arial;
-  --forkitall-body-font-size: var(--forkitall-font-size-100);
-  --forkitall-body-line-height: 1.5;
-  --forkitall-body-font-weight: var(--forkitall-font-weight-medium);
-  --forkitall-body-font-style: var(--forkitall-font-style-normal);
-  --forkitall-body-text-rendering: optimizeLegibility;
+  --0xf-body-font-family: Source Code Pro, monospace, arial;
+  --0xf-body-font-size: var(--0xf-font-size-100);
+  --0xf-body-line-height: 1.5;
+  --0xf-body-font-weight: var(--0xf-font-weight-medium);
+  --0xf-body-font-style: var(--0xf-font-style-normal);
+  --0xf-body-text-rendering: optimizeLegibility;
 }
 
 @font-face {

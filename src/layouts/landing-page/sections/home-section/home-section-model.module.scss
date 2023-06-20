@@ -1,5 +1,5 @@
 .homeSection {
-  min-height: calc(100vh - var(--forkitall-topbar-height));
+  min-height: calc(100vh - var(--0xf-topbar-height));
   position: relative;
 }
 
@@ -16,6 +16,6 @@
   top: calc(100vh / 6);
   width: 400px;
   height: 400px;
-  background-color: var(--forkitall-color-surface);
+  background-color: var(--0xf-color-surface);
   border-radius: 50px;
 }

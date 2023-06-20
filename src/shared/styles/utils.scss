@@ -2,19 +2,19 @@
 
 // Applies the property using the CSS custom properties.
 // e.g. prefix: "button-variant-primary", property-list: "color", "background-color"
-// color: var(--forkitall-button-variant-primary-color)
-// background-color: var(--forkitall-button-variant-primary-color)
+// color: var(--0xf-button-variant-primary-color)
+// background-color: var(--0xf-button-variant-primary-color)
 // e.g. (with modifier) prefix: "button-variant-primary", property-list: "color", "background-color", modifier: "hover"
-// color: var(--forkitall-button-variant-primary-hover-color)
-// background-color: var(--forkitall-button-variant-primary-hover-background-color)
+// color: var(--0xf-button-variant-primary-hover-color)
+// background-color: var(--0xf-button-variant-primary-hover-background-color)
 @mixin apply-properties($prefix, $property-list, $modifier: "", $fallback-prefix: "") {
   $processed-prefix: if($modifier != "", "#{$prefix}-#{$modifier}", "#{$prefix}");
 
   @each $property in $property-list {
-    $value: "--forkitall-#{$processed-prefix}-#{$property}";
+    $value: "--0xf-#{$processed-prefix}-#{$property}";
 
     @if ($fallback-prefix != "") {
-      #{$property}: var(#{$value}, var(--forkitall-#{$fallback-prefix}-#{$property}));
+      #{$property}: var(#{$value}, var(--0xf-#{$fallback-prefix}-#{$property}));
     } @else {
       #{$property}: var(#{$value});
     }
@@ -98,23 +98,23 @@
   -ms-overflow-style: scrollbar;
 
   &::-webkit-scrollbar {
-    width: var(--forkitall-global-scrollbar-width);
+    width: var(--0xf-global-scrollbar-width);
   }
 
   &::-webkit-scrollbar:vertical {
-    width: var(--forkitall-global-scrollbar-width);
+    width: var(--0xf-global-scrollbar-width);
   }
 
   &::-webkit-scrollbar:horizontal {
-    width: var(--forkitall-global-scrollbar-width);
+    width: var(--0xf-global-scrollbar-width);
   }
 
   &::-webkit-scrollbar-track {
-    background: var(--forkitall-global-scrollbar-track-color);
+    background: var(--0xf-global-scrollbar-track-color);
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--forkitall-global-scrollbar-thumb-color);
-    border-radius: var(--forkitall-global-scrollbar-thumb-border-radius);
+    background: var(--0xf-global-scrollbar-thumb-color);
+    border-radius: var(--0xf-global-scrollbar-thumb-border-radius);
   }
 }

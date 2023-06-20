@@ -30,7 +30,7 @@ export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, 
             <Layout gap="100" direction="column" alignItems="center">
                 <Layout
                     className={styles.skillIconWrapper}
-                    style={{ backgroundColor: `var(--forkitall-color-primary-300` }}
+                    style={{ backgroundColor: `var(--0xf-color-primary-300` }}
                     alignItems="center"
                     justifyContent="center"
                 >

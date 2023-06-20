@@ -12,10 +12,10 @@ $forkitall-layout-flex-shrink: (0, 1);
 
 @each $gap in $forkitall-layout-gap {
   .layout--gap-#{$gap} {
-    gap: var(--forkitall-spacer-#{$gap});
+    gap: var(--0xf-spacer-#{$gap});
   }
   .layout.layout--row-gap-#{$gap} {
-    row-gap: var(--forkitall-spacer-#{$gap});
+    row-gap: var(--0xf-spacer-#{$gap});
   }
 }
 

@@ -4,25 +4,25 @@ $forkitall-link-size: ("xl", "l", "m", "s");
 
 :root {
   /* Properties */
-  --forkitall-link-cursor: pointer;
-  --forkitall-link-text-decoration: none;
+  --0xf-link-cursor: pointer;
+  --0xf-link-text-decoration: none;
 
   /* Sizes */
-  --forkitall-link-size-xl-font-size: var(--forkitall-text-size-xl-font-size);
-  --forkitall-link-size-xl-line-height: var(--forkitall-text-size-xl-line-height);
-  --forkitall-link-size-xl-font-weight: var(--forkitall-text-size-xl-font-weight);
+  --0xf-link-size-xl-font-size: var(--0xf-text-size-xl-font-size);
+  --0xf-link-size-xl-line-height: var(--0xf-text-size-xl-line-height);
+  --0xf-link-size-xl-font-weight: var(--0xf-text-size-xl-font-weight);
 
-  --forkitall-link-size-l-font-size: var(--forkitall-text-size-l-font-size);
-  --forkitall-link-size-l-line-height: var(--forkitall-text-size-l-line-height);
-  --forkitall-link-size-l-font-weight: var(--forkitall-text-size-l-font-weight);
+  --0xf-link-size-l-font-size: var(--0xf-text-size-l-font-size);
+  --0xf-link-size-l-line-height: var(--0xf-text-size-l-line-height);
+  --0xf-link-size-l-font-weight: var(--0xf-text-size-l-font-weight);
 
-  --forkitall-link-size-m-font-size: var(--forkitall-text-size-m-font-size);
-  --forkitall-link-size-m-line-height: var(--forkitall-text-size-m-line-height);
-  --forkitall-link-size-m-font-weight: var(--forkitall-text-size-m-font-weight);
+  --0xf-link-size-m-font-size: var(--0xf-text-size-m-font-size);
+  --0xf-link-size-m-line-height: var(--0xf-text-size-m-line-height);
+  --0xf-link-size-m-font-weight: var(--0xf-text-size-m-font-weight);
 
-  --forkitall-link-size-s-font-size: var(--forkitall-text-size-s-font-size);
-  --forkitall-link-size-s-line-height: var(--forkitall-text-size-s-line-height);
-  --forkitall-link-size-s-font-weight: var(--forkitall-text-size-s-font-weight);
+  --0xf-link-size-s-font-size: var(--0xf-text-size-s-font-size);
+  --0xf-link-size-s-line-height: var(--0xf-text-size-s-line-height);
+  --0xf-link-size-s-font-weight: var(--0xf-text-size-s-font-weight);
 }
 
 .link {
@@ -37,6 +37,6 @@ $forkitall-link-size: ("xl", "l", "m", "s");
 
 @each $color in text.$forkitall-text-color {
   .link--color-#{$color} {
-    color: var(--forkitall-color-#{$color});
+    color: var(--0xf-color-#{$color});
   }
 }

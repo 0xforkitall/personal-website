@@ -1,14 +1,14 @@
 @use "@shared/styles/breakpoints";
 
 .skillsSectionBlock {
-  padding: var(--forkitall-spacer-200) var(--forkitall-spacer-100);
-  border: 1px solid var(--forkitall-color-white);
+  padding: var(--0xf-spacer-200) var(--0xf-spacer-100);
+  border: 1px solid var(--0xf-color-white);
   text-align: center;
   min-width: 400px;
 }
 
 .skillIconWrapper {
-  --forkitall-icon-size: 80px;
+  --0xf-icon-size: 80px;
   width: 120px;
   height: 120px;
   border-radius: 50%;
