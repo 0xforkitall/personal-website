@@ -28,12 +28,7 @@ export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, 
             justifyContent="space-between"
         >
             <Layout gap="100" direction="column" alignItems="center">
-                <Layout
-                    className={styles.skillIconWrapper}
-                    style={{ backgroundColor: `var(--0xf-color-primary-300` }}
-                    alignItems="center"
-                    justifyContent="center"
-                >
+                <Layout className={styles.skillIconWrapper} alignItems="center" justifyContent="center">
                     <Icon icon={icon} color="black" />
                 </Layout>
                 <Text size="h4">{name}</Text>

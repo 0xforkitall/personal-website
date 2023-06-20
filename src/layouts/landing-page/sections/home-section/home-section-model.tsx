@@ -32,7 +32,7 @@ export const HomeSectionModel: React.FC<IHomeSectionModelProps> = () => {
     return (
         <>
             <pointLight position={[-10, -10, -10]} color="#33ff33" intensity={10} />
-            <pointLight position={[10, 10, 10]} color="#00c8ff" intensity={10} />
+            <pointLight position={[10, 10, 10]} color="#36e2e2" intensity={10} />
             <Center bottom={true} left={left} position={[x, y, 0]}>
                 <mesh ref={modelRef}>
                     <primitive object={ethereumModel.scene} scale={scale} />
