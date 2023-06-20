@@ -31,7 +31,9 @@ export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, 
                 <Layout className={styles.skillIconWrapper} alignItems="center" justifyContent="center">
                     <Icon icon={icon} color="black" />
                 </Layout>
-                <Text size="h4">{name}</Text>
+                <Text size="h4" responsiveSize={{ xs: 'h5' }}>
+                    {name}
+                </Text>
                 <Text size="m">{description}</Text>
             </Layout>
             <Layout gap="50" direction="row" wrap="wrap" justifyContent="start" fullWidth={true}>

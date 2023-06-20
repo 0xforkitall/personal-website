@@ -20,7 +20,7 @@ export const AboutSection: React.FC<IAboutSectionProps> = ({ className }) => {
                     <Image src="/assets/images/profile-image.png" alt="profile image" fill={true} />
                 </div>
                 <Layout gap="300" direction="column">
-                    <Text size="h3" responsiveSize={{ xs: 'h4' }}>
+                    <Text size="h3" responsiveSize={{ xs: 'h5' }}>
                         Software Engineer, Frontend Developer and Blockchain Enthusiast
                     </Text>
                     <Layout gap="100" direction="column" className={styles.description}>

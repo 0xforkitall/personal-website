@@ -1,7 +1,7 @@
 import { Text } from '@shared';
 import classNames from 'classnames';
 import React, { type ReactNode } from 'react';
-import styles from './fancy-header.module.css';
+import styles from './fancy-header.module.scss';
 
 export interface IFancyHeaderProps {
     /**
@@ -16,7 +16,7 @@ export interface IFancyHeaderProps {
 
 export const FancyHeader: React.FC<IFancyHeaderProps> = ({ className, children }) => {
     return (
-        <Text size="h1" className={classNames(styles.fancyHeader, className)}>
+        <Text size="h1" className={classNames(styles.fancyHeader, className)} responsiveSize={{ xs: 'h2' }}>
             {children}
         </Text>
     );
