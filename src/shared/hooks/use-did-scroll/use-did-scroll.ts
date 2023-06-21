@@ -9,7 +9,17 @@ export interface IUseDidScrollParams {
     elementSelector?: string;
 }
 
-export const useDidScroll = ({ elementSelector }: IUseDidScrollParams = {}) => {
+type DidScrollListener = (didScroll: boolean) => void;
+
+const didScrollListeners: Set<DidScrollListener> = new Set<DidScrollListener>();
+
+/**
+ * Hook to check if the user scrolled below the specified element-selector or the main window object.
+ * The hook internally uses a listeners set to avoid attaching multiple scroll listeners to the same element.
+ * @param UseDidScrollParams @see IUseDidScrollParams
+ * @returns true if the user scrolled below the specified element-selector, false otherwise
+ */
+export const useDidScroll = ({ elementSelector }: IUseDidScrollParams = {}): boolean => {
     const [didScroll, setDidScroll] = useState(false);
 
     useEffect(() => {
@@ -20,13 +30,21 @@ export const useDidScroll = ({ elementSelector }: IUseDidScrollParams = {}) => {
             const topPosition =
                 scrollingElement === window ? scrollingElement.scrollY : (scrollingElement as HTMLElement).scrollTop;
 
-            setDidScroll(topPosition > 0);
+            didScrollListeners.forEach((listener) => listener(topPosition > 0));
         };
 
-        scrollingElement.addEventListener('scroll', handleScroll, { passive: true });
+        didScrollListeners.add(setDidScroll);
+
+        if (didScrollListeners.size === 1) {
+            scrollingElement.addEventListener('scroll', handleScroll, { passive: true });
+        }
 
         return () => {
-            scrollingElement.removeEventListener('scroll', handleScroll);
+            didScrollListeners.delete(setDidScroll);
+
+            if (didScrollListeners.size === 1) {
+                scrollingElement.removeEventListener('scroll', handleScroll);
+            }
         };
     }, [elementSelector]);
 
