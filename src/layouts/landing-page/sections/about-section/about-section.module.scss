@@ -9,7 +9,7 @@
   border-radius: 35px;
   flex-shrink: 0;
   overflow: hidden;
-  box-shadow: 0px 0px 30px -10px var(--0xf-color-primary);
+  animation: glow 1.5s ease-in-out infinite alternate;
   border: 1px solid var(--0xf-color-primary);
 }
 
@@ -17,8 +17,27 @@
   margin-left: var(--0xf-spacer-400);
 }
 
+.stackedImage {
+  position: relative;
+  width: calc(100vw - var(--0xf-global-scrollbar-width));
+  height: 400px;
+  margin-top: var(--0xf-spacer-600);
+}
+
 @media screen and (max-width: breakpoints.$forkitall-breakpoint-m) {
   .aboutWrapper {
     align-items: center;
+  }
+  .stackedImage {
+    margin-top: 0;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0px 0px 30px -10px var(--0xf-color-primary);
+  }
+  to {
+    box-shadow: 0px 0px 40px -10px var(--0xf-color-primary);
   }
 }

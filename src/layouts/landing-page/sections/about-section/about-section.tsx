@@ -39,6 +39,9 @@ export const AboutSection: React.FC<IAboutSectionProps> = ({ className }) => {
                     </Layout>
                 </Layout>
             </Layout>
+            <div className={styles.stackedImage}>
+                <Image src="/assets/images/stacked-peaks.svg" alt="" fill={true} objectFit="cover" />
+            </div>
         </Layout>
     );
 };

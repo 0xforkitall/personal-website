@@ -13,6 +13,11 @@
   height: 120px;
   border-radius: 50%;
   background-color: var(--0xf-color-secondary-300);
+  transition: transform 1s;
+}
+
+.skillIconWrapper:hover {
+  transform: rotate(360deg);
 }
 
 @media screen and (max-width: breakpoints.$forkitall-breakpoint-m) {

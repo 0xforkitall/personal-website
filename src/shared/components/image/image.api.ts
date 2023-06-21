@@ -2,10 +2,6 @@ import { type ImageProps as INextImageProps } from 'next/image';
 
 export interface IImageProps extends INextImageProps {
     /**
-     * Set the correct url for CMS assets.
-     */
-    isCmsAsset?: boolean;
-    /**
      * Object-fit property for the image.
      * @default unset;
      */
