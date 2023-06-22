@@ -1,0 +1,41 @@
+@use "@shared/styles/breakpoints";
+
+.contactBlock {
+  height: 50px;
+  flex-grow: 1;
+  background-color: var(--0xf-color-surface);
+}
+
+.contactBlockStart {
+  align-self: start;
+}
+.contactBlockEnd {
+  align-self: end;
+}
+
+.contactSectionContent {
+  max-width: 680px;
+  width: 100%;
+  align-self: center;
+  padding: var(--0xf-spacer-100) var(--0xf-spacer-200);
+  background-color: var(--0xf-color-surface);
+}
+
+.contactHeader {
+  align-self: start;
+}
+
+.contactCta {
+  align-self: end;
+}
+
+@media screen and (max-width: breakpoints.$forkitall-breakpoint-sm) {
+  .contactSectionContent {
+    max-width: unset;
+  }
+
+  .contactBlock {
+    width: 50px;
+    height: 75px;
+  }
+}

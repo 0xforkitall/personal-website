@@ -1,6 +1,7 @@
 import { Container } from '@shared';
 import styles from './landing-page.module.css';
 import { AboutSection } from './sections/about-section';
+import { ContactSection } from './sections/contact-section';
 import { HomeSection } from './sections/home-section';
 import { SkillsSection } from './sections/skills-section';
 
@@ -16,6 +17,7 @@ export const LandingPage = () => {
             <HomeSection />
             <AboutSection className={styles.landingPageSection} />
             <SkillsSection className={styles.landingPageSection} />
+            <ContactSection className={styles.landingPageSection} />
         </Container>
     );
 };
