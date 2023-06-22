@@ -23,11 +23,9 @@
     .#{$component-name}--#{$property-name}-#{$property} {
       #{$property-name}: $property;
     }
-  }
 
-  @if ($is-responsive) {
-    @each $property in $property-list {
-      @each $breakpoint-name, $breakpoint-width in breakpoints.$forkitall-breakpoint-list {
+    @if ($is-responsive) {
+      @each $breakpoint-name, $breakpoint-width in breakpoints.$forkitall-breakpoint-lgist {
         @media screen and (max-width: $breakpoint-width) {
           .#{$component-name}--#{$property-name}-#{$breakpoint-name}-#{$property} {
             #{$property-name}: $property;

@@ -7,11 +7,11 @@
   --0xf-container-padding-left: var(--0xf-spacer-300);
 
   /* Responsive */
-  --0xf-container-breakpoint-l-padding-right: var(--0xf-spacer-150);
-  --0xf-container-breakpoint-l-padding-left: var(--0xf-spacer-150);
+  --0xf-container-breakpoint-lg-padding-right: var(--0xf-spacer-150);
+  --0xf-container-breakpoint-lg-padding-left: var(--0xf-spacer-150);
 
-  --0xf-container-breakpoint-m-padding-right: var(--0xf-spacer-100);
-  --0xf-container-breakpoint-m-padding-left: var(--0xf-spacer-100);
+  --0xf-container-breakpoint-md-padding-right: var(--0xf-spacer-100);
+  --0xf-container-breakpoint-md-padding-left: var(--0xf-spacer-100);
 }
 
 .container {
@@ -29,10 +29,10 @@
 }
 
 .container {
-  @media screen and (max-width: breakpoints.$forkitall-breakpoint-l) {
-    @include container-style-responsive("l");
+  @media screen and (max-width: breakpoints.$forkitall-breakpoint-lg) {
+    @include container-style-responsive("lg");
   }
-  @media screen and (max-width: breakpoints.$forkitall-breakpoint-m) {
-    @include container-style-responsive("m");
+  @media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {
+    @include container-style-responsive("md");
   }
 }

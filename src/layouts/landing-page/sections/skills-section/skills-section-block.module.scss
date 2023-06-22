@@ -19,7 +19,7 @@
   transform: rotate(360deg);
 }
 
-@media screen and (max-width: breakpoints.$forkitall-breakpoint-m) {
+@media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {
   .skillsSectionBlock {
     min-width: auto;
   }

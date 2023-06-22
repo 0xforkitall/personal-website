@@ -13,15 +13,15 @@ export interface IResponsiveAttribute<TValue> {
     /**
      * Attribute applied on L breakpoint.
      */
-    l?: TValue;
+    lg?: TValue;
     /**
      * Attribute applied on M breakpoint.
      */
-    m?: TValue;
+    md?: TValue;
     /**
      * Attribute applied on S breakpoint.
      */
-    s?: TValue;
+    sm?: TValue;
     /**
      * Attribute applied on XS breakpoint.
      */

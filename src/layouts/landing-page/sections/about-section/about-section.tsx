@@ -15,7 +15,7 @@ export const AboutSection: React.FC<IAboutSectionProps> = ({ className }) => {
     return (
         <Layout className={classNames(styles.aboutSection, className)} gap="400" direction="column" alignItems="center">
             <FancyHeader>About me</FancyHeader>
-            <Layout gap="500" direction="row" responsiveDirection={{ m: 'column' }} className={styles.aboutWrapper}>
+            <Layout gap="500" direction="row" responsiveDirection={{ md: 'column' }} className={styles.aboutWrapper}>
                 <div className={styles.aboutImage}>
                     <Image src="/assets/images/profile-image.png" alt="profile image" fill={true} />
                 </div>

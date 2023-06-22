@@ -23,7 +23,7 @@ export const SkillsSection: React.FC<ISkillsSectionProps> = ({ className }) => {
         >
             <FancyHeader>My skillz</FancyHeader>
             <Layout gap="0" direction="column">
-                <Layout gap="0" direction="row" wrap="wrap" responsiveDirection={{ m: 'column' }}>
+                <Layout gap="0" direction="row" wrap="wrap" responsiveDirection={{ md: 'column' }}>
                     {skillList.map((skill) => (
                         <SkillsSectionBlock className={styles.skillBlock} key={skill.id} skill={skill} />
                     ))}

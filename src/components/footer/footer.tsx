@@ -21,7 +21,7 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => {
                     direction="row"
                     justifyContent="space-between"
                     className={styles.footerMain}
-                    responsiveDirection={{ m: 'column' }}
+                    responsiveDirection={{ md: 'column' }}
                     alignItems="center"
                 >
                     <Text size="h4" color="black">

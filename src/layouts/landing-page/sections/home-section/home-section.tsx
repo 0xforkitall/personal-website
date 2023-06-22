@@ -17,7 +17,7 @@ export const HomeSection: React.FC<IHomeSectionProps> = ({ className }) => {
         <Layout className={classNames(styles.homeSection, className)}>
             <Layout direction="column" gap="400" alignItems="start" className={styles.homeHero}>
                 <Layout direction="column" gap="0">
-                    <Text size="h1" responsiveSize={{ s: 'h2' }}>
+                    <Text size="h1" responsiveSize={{ sm: 'h2' }}>
                         <Text tag="span">Hi, I&apos;m </Text>
                         <Text tag="span" color="primary">
                             0xforkitall
