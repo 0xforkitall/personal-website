@@ -1,5 +1,5 @@
 import { FancyHeader } from '@components/fancy-header';
-import { Layout } from '@shared';
+import { Image, Layout } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import { skillList } from './skills-definition';
@@ -22,10 +22,15 @@ export const SkillsSection: React.FC<ISkillsSectionProps> = ({ className }) => {
             alignItems="center"
         >
             <FancyHeader>My skillz</FancyHeader>
-            <Layout gap="0" direction="row" wrap="wrap" responsiveDirection={{ m: 'column' }}>
-                {skillList.map((skill) => (
-                    <SkillsSectionBlock className={styles.skillBlock} key={skill.id} skill={skill} />
-                ))}
+            <Layout gap="0" direction="column">
+                <Layout gap="0" direction="row" wrap="wrap" responsiveDirection={{ m: 'column' }}>
+                    {skillList.map((skill) => (
+                        <SkillsSectionBlock className={styles.skillBlock} key={skill.id} skill={skill} />
+                    ))}
+                </Layout>
+                <div className={styles.layeredImage}>
+                    <Image src="/assets/images/layered-steps.svg" alt="" fill={true} objectFit="cover" />
+                </div>
             </Layout>
         </Layout>
     );

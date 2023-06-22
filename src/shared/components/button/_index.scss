@@ -1,4 +1,3 @@
-@use "../../styles/utils";
 $forkitall-button-variant: ("primary", "outline", "neutral-white", "neutral-black");
 
 :root {
@@ -71,19 +70,32 @@ $forkitall-button-variant: ("primary", "outline", "neutral-white", "neutral-blac
 
 .button {
   --0xf-icon-size: var(--0xf-button-icon-size);
-  @include utils.apply-typography("button");
-  @include utils.apply-properties(
-    "button",
-    ("display", "align-items", "gap", "border-radius", "padding", "cursor", "text-decoration")
-  );
+
+  display: var(--0xf-button-display);
+  align-items: var(--0xf-button-align-items);
+  gap: var(--0xf-button-gap);
+  border-radius: var(--0xf-button-border-radius);
+  padding: var(--0xf-button-padding);
+  cursor: var(--0xf-button-cursor);
+  text-decoration: var(--0xf-button-text-decoration);
+
+  font-size: var(--0xf-button-font-size);
+  line-height: var(--0xf-button-line-height);
+  font-weight: var(--0xf-button-font-weight);
+  font-family: var(--0xf-button-font-family);
+  font-style: var(--0xf-button-font-style);
 }
 
 .button--only-icon {
-  @include utils.apply-properties("button", ("padding"), "only-icon");
+  padding: var(--0xf-button-only-icon-padding);
 }
 
 @mixin button-style-variant($variant, $modifier: "") {
-  @include utils.apply-properties("button-variant-#{$variant}", ("color", "background-color", "border"), $modifier);
+  $processed-variant: if($modifier != "", "#{$variant}-#{$modifier}", "#{$variant}");
+
+  color: var(--0xf-button-variant-#{$processed-variant}-color);
+  background-color: var(--0xf-button-variant-#{$processed-variant}-background-color);
+  border: var(--0xf-button-variant-#{$processed-variant}-border);
 }
 
 @each $variant in $forkitall-button-variant {

@@ -9,7 +9,7 @@ export interface IIconProps {
      * Color of the icon.
      * @default inherit.
      */
-    color?: 'white' | 'black';
+    color?: 'white' | 'black' | 'primary';
     /**
      * Custom class for the component.
      */

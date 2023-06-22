@@ -7,46 +7,60 @@ $forkitall-text-color: ("black", "white", "primary");
 :root {
   /* Headers */
   --0xf-text-size-h1-font-size: var(--0xf-font-size-400);
-  --0xf-text-size-h1-line-height: var(--0xf-line-height-400);
+  --0xf-text-size-h1-line-height: 1.5;
   --0xf-text-size-h1-font-weight: var(--0xf-font-weight-bold);
 
   --0xf-text-size-h2-font-size: var(--0xf-font-size-300);
-  --0xf-text-size-h2-line-height: var(--0xf-line-height-300);
+  --0xf-text-size-h2-line-height: 1.5;
   --0xf-text-size-h2-font-weight: var(--0xf-font-weight-bold);
 
   --0xf-text-size-h3-font-size: var(--0xf-font-size-250);
-  --0xf-text-size-h3-line-height: var(--0xf-line-height-250);
+  --0xf-text-size-h3-line-height: 1.5;
   --0xf-text-size-h3-font-weight: var(--0xf-font-weight-bold);
 
   --0xf-text-size-h4-font-size: var(--0xf-font-size-200);
-  --0xf-text-size-h4-line-height: var(--0xf-line-height-200);
+  --0xf-text-size-h4-line-height: 1.5;
   --0xf-text-size-h4-font-weight: var(--0xf-font-weight-bold);
 
   --0xf-text-size-h5-font-size: var(--0xf-font-size-150);
-  --0xf-text-size-h5-line-height: var(--0xf-line-height-150);
+  --0xf-text-size-h5-line-height: 1.5;
   --0xf-text-size-h5-font-weight: var(--0xf-font-weight-bold);
 
   /* Paragraphs */
   --0xf-text-size-xl-font-size: var(--0xf-font-size-150);
-  --0xf-text-size-xl-line-height: var(--0xf-line-height-150);
+  --0xf-text-size-xl-line-height: 1.5;
   --0xf-text-size-xl-font-weight: var(--0xf-font-weight-medium);
 
   --0xf-text-size-l-font-size: var(--0xf-font-size-125);
-  --0xf-text-size-l-line-height: var(--0xf-line-height-125);
+  --0xf-text-size-l-line-height: 1.5;
   --0xf-text-size-l-font-weight: var(--0xf-font-weight-medium);
 
   --0xf-text-size-m-font-size: var(--0xf-font-size-100);
-  --0xf-text-size-m-line-height: var(--0xf-line-height-100);
+  --0xf-text-size-m-line-height: 1.5;
   --0xf-text-size-m-font-weight: var(--0xf-font-weight-medium);
 
   --0xf-text-size-s-font-size: var(--0xf-font-size-87);
-  --0xf-text-size-s-line-height: var(--0xf-line-height-87);
+  --0xf-text-size-s-line-height: 1.5;
   --0xf-text-size-s-font-weight: var(--0xf-font-weight-medium);
+}
+
+@mixin text-style-size($size) {
+  font-size: var(--0xf-text-size-#{$size}-font-size);
+  line-height: var(--0xf-text-size-#{$size}-line-height);
+  font-weight: var(--0xf-text-size-#{$size}-font-weight);
 }
 
 @each $size in $forkitall-text-size {
   .text--size-#{$size} {
-    @include utils.apply-typography("text-size-#{$size}");
+    @include text-style-size($size);
+  }
+
+  @each $breakpoint-name, $breakpoint-width in breakpoints.$forkitall-breakpoint-list {
+    @media screen and (max-width: $breakpoint-width) {
+      .text--size-#{$breakpoint-name}-#{$size} {
+        @include text-style-size($size);
+      }
+    }
   }
 }
 
@@ -55,5 +69,3 @@ $forkitall-text-color: ("black", "white", "primary");
     color: var(--0xf-color-#{$color});
   }
 }
-
-@include utils.apply-responsive-typography("text", "size", $forkitall-text-size);

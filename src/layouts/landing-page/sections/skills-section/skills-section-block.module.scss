@@ -9,10 +9,9 @@
 
 .skillIconWrapper {
   --0xf-icon-size: 80px;
+  --0xf-icon-color: var(--0xf-color-primary);
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  background-color: var(--0xf-color-secondary-300);
   transition: transform 1s;
 }
 

@@ -1,62 +1,9 @@
 @use "./breakpoints";
 
-// Applies the property using the CSS custom properties.
-// e.g. prefix: "button-variant-primary", property-list: "color", "background-color"
-// color: var(--0xf-button-variant-primary-color)
-// background-color: var(--0xf-button-variant-primary-color)
-// e.g. (with modifier) prefix: "button-variant-primary", property-list: "color", "background-color", modifier: "hover"
-// color: var(--0xf-button-variant-primary-hover-color)
-// background-color: var(--0xf-button-variant-primary-hover-background-color)
-@mixin apply-properties($prefix, $property-list, $modifier: "", $fallback-prefix: "") {
-  $processed-prefix: if($modifier != "", "#{$prefix}-#{$modifier}", "#{$prefix}");
-
-  @each $property in $property-list {
-    $value: "--0xf-#{$processed-prefix}-#{$property}";
-
-    @if ($fallback-prefix != "") {
-      #{$property}: var(#{$value}, var(--0xf-#{$fallback-prefix}-#{$property}));
-    } @else {
-      #{$property}: var(#{$value});
-    }
-  }
-}
-
-// Applies the typography properties using the @apply-properties mixin.
-@mixin apply-typography($prefix) {
-  @include apply-properties(
-    $prefix,
-    ("font-family", "font-size", "line-height", "font-weight", "font-style"),
-    "",
-    "body"
-  );
-}
-
-// Generates the responsive typography classes for each breakpoint given the component name, property name and property list.
-// e.g. component-name: "text", property-name: "size", property-list: "h1", "h2", "h3"
-// @media screen and (max-width: XS) {
-//   .text--size-xs-h1 { font-size: [font-size-h1], line-height: [line-height-h1], ... }
-// }
-// @media screen and (max-width: S) {
-//   .text--size-s-h1 { font-size: [font-size-h1], line-height: [line-height-h1], ... }
-// }
-// [...]
-// @media screen and (max-width: XS) {
-//   .text--size-xs-h2 { font-size: [font-size-h2], line-height: [line-height-h2], ... }
-// }
-@mixin apply-responsive-typography($component-name, $property-name, $property-list) {
-  @each $property in $property-list {
-    @each $breakpoint-name, $breakpoint-width in breakpoints.$forkitall-breakpoint-list {
-      @media screen and (max-width: $breakpoint-width) {
-        .#{$component-name}--#{$property-name}-#{$breakpoint-name}-#{$property} {
-          @include apply-typography("#{$component-name}-#{$property-name}-#{$property}");
-        }
-      }
-    }
-  }
-}
-
 // Generates the default and responsive classes given the component name, property name and property list.
-// e.g. component-name: "layout", property-name: "direction", property-list: "row", "column"
+//
+// Examples:
+// 1. component-name: "layout", property-name: "direction", property-list: "row", "column"
 // Default classes:
 // .layout--flex-direction-row { flex-direction: row }
 // .layout--flex-direction-column { flex-direction: column }

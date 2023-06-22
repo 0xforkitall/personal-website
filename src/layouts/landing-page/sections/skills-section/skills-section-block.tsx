@@ -29,7 +29,7 @@ export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, 
         >
             <Layout gap="100" direction="column" alignItems="center">
                 <Layout className={styles.skillIconWrapper} alignItems="center" justifyContent="center">
-                    <Icon icon={icon} color="black" />
+                    <Icon icon={icon} color="primary" />
                 </Layout>
                 <Text size="h4" responsiveSize={{ xs: 'h5' }}>
                     {name}

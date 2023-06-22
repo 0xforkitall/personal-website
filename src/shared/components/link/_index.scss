@@ -26,12 +26,15 @@ $forkitall-link-size: ("xl", "l", "m", "s");
 }
 
 .link {
-  @include utils.apply-properties("link", ("cursor", "text-decoration"));
+  cursor: var(--0xf-link-cursor);
+  text-decoration: var(--0xf-link-text-decoration);
 }
 
 @each $size in $forkitall-link-size {
   .link--size-#{$size} {
-    @include utils.apply-typography("link-size-#{$size}");
+    font-size: var(--0xf-link-size-#{$size}-font-size);
+    line-height: var(--0xf-link-size-#{$size}-line-height);
+    font-weight: var(--0xf-link-size-#{$size}-font-weight);
   }
 }
 
