@@ -1,4 +1,5 @@
 @use "../../styles/utils";
+@use "../../styles/breakpoints";
 
 $forkitall-layout-display: (flex, grid);
 $forkitall-layout-gap: ("0", "25", "50", "75", "100", "125", "150", "200", "250", "300", "400", "500", "600");
@@ -27,11 +28,58 @@ $forkitall-layout-flex-shrink: (0, 1);
   min-width: 0;
 }
 
-@include utils.apply-fixed-properties("layout", "display", $forkitall-layout-display);
-@include utils.apply-fixed-properties("layout", "flex-direction", $forkitall-layout-flex-direction, true);
-@include utils.apply-fixed-properties("layout", "align-items", $forkitall-layout-align-items);
-@include utils.apply-fixed-properties("layout", "justify-content", $forkitall-layout-justify-content);
-@include utils.apply-fixed-properties("layout", "flex-wrap", $forkitall-layout-flex-wrap);
-@include utils.apply-fixed-properties("layout", "flex-grow", $forkitall-layout-flex-grow);
-@include utils.apply-fixed-properties("layout", "flex-basis", $forkitall-layout-flex-basis);
-@include utils.apply-fixed-properties("layout", "flex-shrink", $forkitall-layout-flex-shrink);
+@each $display in $forkitall-layout-display {
+  .layout--display-#{$display} {
+    display: $display;
+  }
+}
+
+@each $align-items in $forkitall-layout-align-items {
+  .layout--align-items-#{$align-items} {
+    align-items: $align-items;
+  }
+}
+
+@each $justify-content in $forkitall-layout-justify-content {
+  .layout--justify-content-#{$justify-content} {
+    justify-content: $justify-content;
+  }
+}
+
+@each $flex-wrap in $forkitall-layout-flex-wrap {
+  .layout--flex-wrap-#{$flex-wrap} {
+    flex-wrap: $flex-wrap;
+  }
+}
+
+@each $flex-grow in $forkitall-layout-flex-grow {
+  .layout--flex-grow-#{$flex-grow} {
+    flex-grow: $flex-grow;
+  }
+}
+
+@each $flex-basis in $forkitall-layout-flex-basis {
+  .layout--flex-basis-#{$flex-basis} {
+    flex-basis: $flex-basis;
+  }
+}
+
+@each $flex-shrink in $forkitall-layout-flex-shrink {
+  .layout--flex-shrink-#{$flex-shrink} {
+    flex-shrink: $flex-shrink;
+  }
+}
+
+@each $flex-direction in $forkitall-layout-flex-direction {
+  .layout--flex-direction-#{$flex-direction} {
+    flex-direction: $flex-direction;
+  }
+
+  @each $breakpoint-name, $breakpoint-width in breakpoints.$forkitall-breakpoint-list {
+    @media screen and (max-width: $breakpoint-width) {
+      .layout--flex-direction-#{$breakpoint-name}-#{$flex-direction} {
+        flex-direction: $flex-direction;
+      }
+    }
+  }
+}

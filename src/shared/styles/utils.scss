@@ -1,41 +1,5 @@
 @use "./breakpoints";
 
-// Generates the default and responsive classes given the component name, property name and property list.
-//
-// Examples:
-// 1. component-name: "layout", property-name: "direction", property-list: "row", "column"
-// Default classes:
-// .layout--flex-direction-row { flex-direction: row }
-// .layout--flex-direction-column { flex-direction: column }
-// Responsive classes:
-// @media screen and (max-width: XS) {
-//   .layout--flex-direction-xs-row { flex-direction: row }
-// }
-// @media screen and (max-width: S) {
-//   .layout--flex-direction-s-row { flex-direction: row }
-// }
-// [...]
-// @media screen and (max-width: XS) {
-//   .layout--flex-direction-xs-column { flex-direction: column }
-// }
-@mixin apply-fixed-properties($component-name, $property-name, $property-list, $is-responsive: false) {
-  @each $property in $property-list {
-    .#{$component-name}--#{$property-name}-#{$property} {
-      #{$property-name}: $property;
-    }
-
-    @if ($is-responsive) {
-      @each $breakpoint-name, $breakpoint-width in breakpoints.$forkitall-breakpoint-list {
-        @media screen and (max-width: $breakpoint-width) {
-          .#{$component-name}--#{$property-name}-#{$breakpoint-name}-#{$property} {
-            #{$property-name}: $property;
-          }
-        }
-      }
-    }
-  }
-}
-
 // Styles the scrollbar using the scrollbar global variables
 @mixin style-scrollbar() {
   overscroll-behavior: auto;
