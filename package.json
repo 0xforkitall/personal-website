@@ -1,7 +1,9 @@
 {
-  "name": "personal-website",
+  "name": "@0xforkitall/portfolio",
   "version": "0.1.0",
   "private": true,
+  "description": "NextJs application to showcase my skills",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -37,6 +39,22 @@
     "lint-staged": "13.2.2",
     "prettier": "2.8.8",
     "prettier-plugin-organize-imports": "3.2.2"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "portfolio",
+    "0xforkitall"
+  ],
+  "homepage": "https://0xforkitall.com",
+  "author": {
+    "name": "0xforkitall",
+    "email": "0xforkitall@gmail.com",
+    "url": "https://0xforkitall.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xforkitall/personal-website.git"
   },
   "engines": {
     "node": "^18.12.0",

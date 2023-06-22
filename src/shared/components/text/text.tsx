@@ -20,14 +20,15 @@ export const Text: React.FC<ITextProps> = (props) => {
     const { className, tag, size, responsiveSize, color = 'white', ...otherProps } = props;
     const Tag = tag ?? sizeToTag[size ?? 'm'];
 
+    const responsiveSizeClassnames = responsiveUtils.responsiveClassnames({
+        prefix: 'text--size',
+        prop: responsiveSize,
+        value: size,
+    });
+
     return (
         <Tag
-            className={classNames(
-                'text',
-                `text--color-${color}`,
-                responsiveUtils.responsiveClassnames({ prefix: 'text--size', prop: responsiveSize, value: size }),
-                className,
-            )}
+            className={classNames('text', `text--color-${color}`, responsiveSizeClassnames, className)}
             {...otherProps}
         />
     );
