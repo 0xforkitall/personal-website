@@ -5,7 +5,7 @@ $forkitall-breakpoint-lg: 1200px; // 1025px <= LG < 1200px
 $forkitall-breakpoint-xl: 1440px; // 1200px <= XL < 1440px
 $forkitall-breakpoint-xxl: 9999px; // 1441 <= XXL < 9999px
 
-$forkitall-breakpoint-lgist: (
+$forkitall-breakpoint-list: (
   "xs": $forkitall-breakpoint-xs,
   "sm": $forkitall-breakpoint-sm,
   "md": $forkitall-breakpoint-md,
