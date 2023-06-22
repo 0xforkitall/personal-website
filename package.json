@@ -21,7 +21,7 @@
     "typescript": "5.1.3"
   },
   "devDependencies": {
-    "@0xforkitall/eslint-config": "0.1.8",
+    "@0xforkitall/eslint-config": "0.2.8",
     "@0xforkitall/shared-config": "0.2.6",
     "@svgr/webpack": "8.0.1",
     "@types/node": "20.2.5",
