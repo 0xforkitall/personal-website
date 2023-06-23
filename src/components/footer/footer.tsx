@@ -29,7 +29,14 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => {
                     </Text>
                     <Layout direction="row" gap="50" alignItems="center">
                         {personalSocials.map(({ id, link, icon }) => (
-                            <ButtonLink key={id} href={link} target="_blank" variant="neutral-black" icon={icon} />
+                            <ButtonLink
+                                key={id}
+                                href={link}
+                                target="_blank"
+                                variant="neutral-black"
+                                icon={icon}
+                                aria-label={`link to ${id}`}
+                            />
                         ))}
                     </Layout>
                 </Layout>

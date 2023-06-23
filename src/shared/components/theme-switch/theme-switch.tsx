@@ -20,6 +20,7 @@ export const ThemeSwitch: React.FC<IThemeSwitchProps> = ({ className }) => {
             className={classNames('theme-switch', className)}
             icon={currentTheme === ColorTheme.DARK ? IconType.SUN : IconType.MOON}
             variant="neutral-white"
+            aria-label="switch color theme"
             onClick={() => updateTheme(currentTheme === ColorTheme.DARK ? ColorTheme.LIGHT : ColorTheme.DARK)}
         />
     );
