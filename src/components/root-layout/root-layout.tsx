@@ -2,6 +2,7 @@ import { Footer } from '@components/footer';
 import { Topbar } from '@components/topbar';
 import { Layout } from '@shared';
 import '@shared/index.scss';
+import { Analytics } from '@vercel/analytics/react';
 import React, { type ReactNode } from 'react';
 import styles from './root-layout.module.css';
 
@@ -19,6 +20,7 @@ export const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
                 <Topbar />
                 <Layout className={styles.rootLayoutPage}>{children}</Layout>
                 <Footer />
+                <Analytics />
             </body>
         </html>
     );
