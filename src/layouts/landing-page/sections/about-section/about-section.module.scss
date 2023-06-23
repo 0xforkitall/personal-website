@@ -10,19 +10,16 @@
   flex-shrink: 0;
   overflow: hidden;
   animation: glow 1.5s ease-in-out infinite alternate;
+  transition: transform 0.5s;
   border: 1px solid var(--0xf-color-primary);
+}
+
+.aboutImage:hover {
+  transform: scale(1.05);
 }
 
 .description {
   margin-left: var(--0xf-spacer-400);
-}
-
-.stackedImage {
-  position: relative;
-  width: calc(100vw - var(--0xf-global-scrollbar-width));
-  height: 400px;
-  margin-top: var(--0xf-spacer-600);
-  opacity: 0.5;
 }
 
 @media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {

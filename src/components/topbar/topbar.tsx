@@ -1,7 +1,7 @@
 'use client';
 
 import { routes } from '@constants/routes';
-import { Container, Layout, Link, Text } from '@shared';
+import { Container, Layout, Link, Text, ThemeSwitch } from '@shared';
 import { useDidScroll } from '@shared/hooks';
 import classNames from 'classnames';
 import React from 'react';
@@ -34,19 +34,22 @@ export const Topbar: React.FC<ITopbarProps> = ({ elementSelector, className }) =
                     0xf
                 </Text>
             </Link>
-            <Layout gap="200" direction="row">
-                {topbarLinks.map(({ id, route, disabled, name }) => (
-                    <Link
-                        key={id}
-                        href={route}
-                        className={classNames(styles.topbarLink, {
-                            [`${styles.topbarLinkActive}`]: id === 'home',
-                            [`${styles.topbarLinkDisabled}`]: disabled,
-                        })}
-                    >
-                        {`// ${name}`}
-                    </Link>
-                ))}
+            <Layout gap="100" direction="row" alignItems="center">
+                <Layout gap="200" direction="row">
+                    {topbarLinks.map(({ id, route, disabled, name }) => (
+                        <Link
+                            key={id}
+                            href={route}
+                            className={classNames(styles.topbarLink, {
+                                [`${styles.topbarLinkActive}`]: id === 'home',
+                                [`${styles.topbarLinkDisabled}`]: disabled,
+                            })}
+                        >
+                            {`// ${name}`}
+                        </Link>
+                    ))}
+                </Layout>
+                <ThemeSwitch />
             </Layout>
         </Container>
     );

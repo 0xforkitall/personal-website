@@ -1,7 +1,10 @@
+'use client';
+
 import { FancyHeader } from '@components/fancy-header';
 import { Image, Layout, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
+import { AboutSectionImage } from './about-section-image';
 import styles from './about-section.module.scss';
 
 export interface IAboutSectionProps {
@@ -39,9 +42,7 @@ export const AboutSection: React.FC<IAboutSectionProps> = ({ className }) => {
                     </Layout>
                 </Layout>
             </Layout>
-            <div className={styles.stackedImage}>
-                <Image src="/assets/images/stacked-peaks.svg" alt="" fill={true} objectFit="cover" />
-            </div>
+            <AboutSectionImage className={styles.stackedImage} />
         </Layout>
     );
 };

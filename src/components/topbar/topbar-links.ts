@@ -9,5 +9,5 @@ export interface ITopbarLink {
 
 export const topbarLinks: ITopbarLink[] = [
     { id: 'home', name: 'home', route: routes.landingPage },
-    { id: 'blog', name: 'blog (soon)', disabled: true, route: '#' },
+    { id: 'blog', name: 'blog', disabled: true, route: '#' },
 ];

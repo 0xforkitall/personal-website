@@ -51,10 +51,10 @@ $forkitall-button-variant: ("primary", "outline", "neutral-white", "neutral-blac
   --0xf-button-variant-neutral-white-border: 2px solid transparent;
   --0xf-button-variant-neutral-white-icon-color: var(--0xf-color-white);
 
-  --0xf-button-variant-neutral-white-hover-color: var(--0xf-color-white);
+  --0xf-button-variant-neutral-white-hover-color: var(--0xf-color-gray-200);
   --0xf-button-variant-neutral-white-hover-background-color: transparent;
   --0xf-button-variant-neutral-white-hover-border: 2px solid transparent;
-  --0xf-button-variant-neutral-white-hover-icon-color: var(--0xf-color-white);
+  --0xf-button-variant-neutral-white-hover-icon-color: var(--0xf-color-gray-200);
 
   /* Neutral-black variant */
   --0xf-button-variant-neutral-black-color: var(--0xf-color-black);
@@ -62,10 +62,10 @@ $forkitall-button-variant: ("primary", "outline", "neutral-white", "neutral-blac
   --0xf-button-variant-neutral-black-border: 2px solid transparent;
   --0xf-button-variant-neutral-black-icon-color: var(--0xf-color-black);
 
-  --0xf-button-variant-neutral-black-hover-color: var(--0xf-color-black);
+  --0xf-button-variant-neutral-black-hover-color: var(--0xf-color-gray-700);
   --0xf-button-variant-neutral-black-hover-background-color: transparent;
   --0xf-button-variant-neutral-black-hover-border: 2px solid transparent;
-  --0xf-button-variant-neutral-black-hover-icon-color: var(--0xf-color-black);
+  --0xf-button-variant-neutral-black-hover-icon-color: var(--0xf-color-gray-700);
 }
 
 .button {

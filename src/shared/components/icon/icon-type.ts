@@ -3,7 +3,9 @@ export enum IconType {
     ATOM = 'ATOM',
     CPU = 'CPU',
     CUBE = 'CUBE',
+    MOON = 'MOON',
     SOCIAL_GITHUB = 'SOCIAL_GITHUB',
     SOCIAL_REDDIT = 'SOCIAL_REDDIT',
     SOCIAL_TWITTER = 'SOCIAL_TWITTER',
+    SUN = 'SUN',
 }

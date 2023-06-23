@@ -8,7 +8,9 @@ export const iconList: Record<IconType, LazyIcon> = {
     [IconType.ATOM]: lazy(() => import('../../assets/icons/atom.svg')),
     [IconType.CPU]: lazy(() => import('../../assets/icons/cpu.svg')),
     [IconType.CUBE]: lazy(() => import('../../assets/icons/cube.svg')),
+    [IconType.MOON]: lazy(() => import('../../assets/icons/moon.svg')),
     [IconType.SOCIAL_GITHUB]: lazy(() => import('../../assets/icons/social-github.svg')),
     [IconType.SOCIAL_REDDIT]: lazy(() => import('../../assets/icons/social-reddit.svg')),
     [IconType.SOCIAL_TWITTER]: lazy(() => import('../../assets/icons/social-twitter.svg')),
+    [IconType.SUN]: lazy(() => import('../../assets/icons/sun.svg')),
 };

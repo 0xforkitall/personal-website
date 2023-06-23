@@ -6,6 +6,7 @@ $forkitall-link-size: ("xl", "l", "m", "s");
   /* Properties */
   --0xf-link-cursor: pointer;
   --0xf-link-text-decoration: none;
+  --0xf-link-color: inherit;
 
   /* Sizes */
   --0xf-link-size-xl-font-size: var(--0xf-text-size-xl-font-size);
@@ -28,6 +29,7 @@ $forkitall-link-size: ("xl", "l", "m", "s");
 .link {
   cursor: var(--0xf-link-cursor);
   text-decoration: var(--0xf-link-text-decoration);
+  color: var(--0xf-link-color);
 }
 
 @each $size in $forkitall-link-size {

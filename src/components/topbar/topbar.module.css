@@ -8,7 +8,7 @@
   padding-bottom: var(--0xf-spacer-50);
   border-bottom: 1px solid var(--0xf-color-primary);
   background-color: var(--0xf-color-body-background-color);
-  transition: all 0.25s;
+  transition: border-radius 0.25s;
 }
 
 .topbarScroll {
@@ -22,11 +22,11 @@
 }
 
 .topbarLinkActive {
-  color: var(--0xf-color-primary-500);
+  --0xf-link-color: var(--0xf-color-primary);
   border-bottom-color: var(--0xf-color-primary);
 }
 
 .topbarLinkDisabled {
-  color: var(--0xf-color-muted);
-  cursor: default;
+  --0xf-link-cursor: default;
+  --0xf-link-color: var(--0xf-color-muted);
 }
