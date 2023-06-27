@@ -5,7 +5,7 @@ $forkitall-button-variant: ("primary", "outline", "neutral-white", "neutral-blac
   --0xf-button-display: flex;
   --0xf-button-align-items: center;
   --0xf-button-gap: var(--0xf-spacer-75);
-  --0xf-button-border-radius: 50px;
+  --0xf-button-border-radius: var(--0xf-global-border-radius-m);
   --0xf-button-padding: var(--0xf-spacer-50) var(--0xf-spacer-125);
   --0xf-button-cursor: pointer;
   --0xf-button-text-decoration: none;

@@ -1,8 +1,8 @@
 .footer {
   margin-top: var(--0xf-spacer-500);
   background-color: var(--0xf-color-primary);
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: var(--0xf-global-border-radius-l);
+  border-top-right-radius: var(--0xf-global-border-radius-l);
 }
 
 .footerMain {

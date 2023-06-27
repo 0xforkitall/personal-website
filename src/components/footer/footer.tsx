@@ -3,7 +3,7 @@ import { personalSocials } from '@constants/socials';
 import { ButtonLink, Container, Layout, LinkNext, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
-import styles from './footer.module.css';
+import styles from './footer.module.scss';
 
 export interface IFooterProps {
     /**
