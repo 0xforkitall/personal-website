@@ -3,8 +3,8 @@
   "name": "0xforkitall",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
+  "theme_color": "#33FF33",
+  "background_color": "#181818",
   "icons": [
     {
       "src": "/favicon.ico",
