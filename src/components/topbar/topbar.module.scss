@@ -15,18 +15,3 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-
-.topbarLink {
-  border-bottom: 2px solid transparent;
-  padding: var(--0xf-spacer-25) 0;
-}
-
-.topbarLinkActive {
-  --0xf-link-color: var(--0xf-color-primary);
-  border-bottom-color: var(--0xf-color-primary);
-}
-
-.topbarLinkDisabled {
-  --0xf-link-cursor: default;
-  --0xf-link-color: var(--0xf-color-muted);
-}

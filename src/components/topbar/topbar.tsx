@@ -1,12 +1,13 @@
 'use client';
 
 import { routes } from '@constants/routes';
-import { Container, Layout, Link, Text, ThemeSwitch } from '@shared';
+import { Container, Layout, LinkNext, ThemeSwitch } from '@shared';
 import { useDidScroll } from '@shared/hooks';
 import classNames from 'classnames';
 import React from 'react';
-import { topbarLinks } from './topbar-links';
-import styles from './topbar.module.css';
+import { topbarLinks } from './topbar-definitions';
+import { TopbarLink } from './topbar-link';
+import styles from './topbar.module.scss';
 
 export interface ITopbarProps {
     /**
@@ -29,24 +30,13 @@ export const Topbar: React.FC<ITopbarProps> = ({ elementSelector, className }) =
             justifyContent="space-between"
             alignItems="center"
         >
-            <Link href={routes.landingPage}>
-                <Text size="h4" color="primary">
-                    0xf
-                </Text>
-            </Link>
+            <LinkNext size="h4" href={routes.landingPage} color="primary">
+                0xf
+            </LinkNext>
             <Layout gap="100" direction="row" alignItems="center">
                 <Layout gap="200" direction="row">
-                    {topbarLinks.map(({ id, route, disabled, name }) => (
-                        <Link
-                            key={id}
-                            href={route}
-                            className={classNames(styles.topbarLink, {
-                                [`${styles.topbarLinkActive}`]: id === 'home',
-                                [`${styles.topbarLinkDisabled}`]: disabled,
-                            })}
-                        >
-                            {`// ${name}`}
-                        </Link>
+                    {topbarLinks.map((link) => (
+                        <TopbarLink key={link.id} link={link} />
                     ))}
                 </Layout>
                 <ThemeSwitch />

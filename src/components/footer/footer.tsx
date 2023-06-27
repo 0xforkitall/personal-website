@@ -1,5 +1,6 @@
+import { routes } from '@constants/routes';
 import { personalSocials } from '@constants/socials';
-import { ButtonLink, Container, Layout, Text } from '@shared';
+import { ButtonLink, Container, Layout, LinkNext, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import styles from './footer.module.css';
@@ -24,9 +25,9 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => {
                     responsiveDirection={{ md: 'column' }}
                     alignItems="center"
                 >
-                    <Text size="h4" color="black">
+                    <LinkNext size="h4" color="black" href={routes.landingPage}>
                         0xforkitall
-                    </Text>
+                    </LinkNext>
                     <Layout direction="row" gap="50" alignItems="center">
                         {personalSocials.map(({ id, link, icon }) => (
                             <ButtonLink
@@ -35,7 +36,7 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => {
                                 target="_blank"
                                 variant="neutral-black"
                                 icon={icon}
-                                aria-label={`link to ${id}`}
+                                aria-label={`${id} link`}
                             />
                         ))}
                     </Layout>

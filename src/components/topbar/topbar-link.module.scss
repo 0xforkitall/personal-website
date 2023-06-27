@@ -1,0 +1,14 @@
+.link {
+  border-bottom: 2px solid transparent;
+  padding: var(--0xf-spacer-25) 0;
+}
+
+.linkActive {
+  --0xf-link-color: var(--0xf-color-primary);
+  border-bottom-color: var(--0xf-color-primary);
+}
+
+.linkDisabled {
+  --0xf-link-color: var(--0xf-color-muted);
+  --0xf-link-cursor: default;
+}

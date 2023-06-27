@@ -9,7 +9,7 @@ export interface ILinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     size?: ITextProps['size'];
     /**
      * Size of the link.
-     * @default white
+     * @default inherit
      */
     color?: ITextProps['color'];
     /**

@@ -1,29 +1,13 @@
 @use "../../styles/utils";
 @use "../text";
-$forkitall-link-size: ("xl", "l", "m", "s");
+
+$forkitall-link-size: text.$forkitall-text-size;
 
 :root {
   /* Properties */
   --0xf-link-cursor: pointer;
   --0xf-link-text-decoration: none;
   --0xf-link-color: inherit;
-
-  /* Sizes */
-  --0xf-link-size-xl-font-size: var(--0xf-text-size-xl-font-size);
-  --0xf-link-size-xl-line-height: var(--0xf-text-size-xl-line-height);
-  --0xf-link-size-xl-font-weight: var(--0xf-text-size-xl-font-weight);
-
-  --0xf-link-size-l-font-size: var(--0xf-text-size-l-font-size);
-  --0xf-link-size-l-line-height: var(--0xf-text-size-l-line-height);
-  --0xf-link-size-l-font-weight: var(--0xf-text-size-l-font-weight);
-
-  --0xf-link-size-m-font-size: var(--0xf-text-size-m-font-size);
-  --0xf-link-size-m-line-height: var(--0xf-text-size-m-line-height);
-  --0xf-link-size-m-font-weight: var(--0xf-text-size-m-font-weight);
-
-  --0xf-link-size-s-font-size: var(--0xf-text-size-s-font-size);
-  --0xf-link-size-s-line-height: var(--0xf-text-size-s-line-height);
-  --0xf-link-size-s-font-weight: var(--0xf-text-size-s-font-weight);
 }
 
 .link {
@@ -34,9 +18,9 @@ $forkitall-link-size: ("xl", "l", "m", "s");
 
 @each $size in $forkitall-link-size {
   .link--size-#{$size} {
-    font-size: var(--0xf-link-size-#{$size}-font-size);
-    line-height: var(--0xf-link-size-#{$size}-line-height);
-    font-weight: var(--0xf-link-size-#{$size}-font-weight);
+    font-size: var(--0xf-text-size-#{$size}-font-size);
+    line-height: var(--0xf-text-size-#{$size}-line-height);
+    font-weight: var(--0xf-text-size-#{$size}-font-weight);
   }
 }
 
