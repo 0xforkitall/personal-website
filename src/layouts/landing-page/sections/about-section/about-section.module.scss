@@ -2,11 +2,11 @@
 
 .aboutImage {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 180px;
+  height: 180px;
   position: relative;
   background-color: var(--0xf-color-surface);
-  border-radius: 50%;
+  border-radius: var(--0xf-global-border-radius-l);
   flex-shrink: 0;
   overflow: hidden;
   animation: glow 1.5s ease-in-out infinite alternate;

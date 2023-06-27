@@ -16,12 +16,15 @@ export interface IUseColorThemeResult {
     updateTheme: (newTheme: ColorTheme) => void;
 }
 
+type ColorThemeListener = (newTheme: ColorTheme) => void;
+
+const colorThemeListeners = new Set<ColorThemeListener>();
+
 export const useColorTheme = (): IUseColorThemeResult => {
-    const [currentTheme, setCurrentTheme] = useState<ColorTheme>();
+    const [currentTheme, setCurrentTheme] = useState(colorThemeUtils.getCurrentTheme());
 
     useEffect(() => {
-        const currentTheme = document.documentElement.className.split(' ').find(colorThemeUtils.classNameToTheme);
-        setCurrentTheme(colorThemeUtils.classNameToTheme(currentTheme));
+        colorThemeListeners.add(setCurrentTheme);
     }, []);
 
     const updateTheme = useCallback((newTheme: ColorTheme) => {
@@ -35,7 +38,7 @@ export const useColorTheme = (): IUseColorThemeResult => {
 
         document.documentElement.className = newClasses;
 
-        setCurrentTheme(newTheme);
+        colorThemeListeners.forEach((listener) => listener(newTheme));
     }, []);
 
     return { currentTheme: currentTheme ?? ColorTheme.DARK, updateTheme };

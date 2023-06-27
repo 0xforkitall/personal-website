@@ -11,7 +11,7 @@ export interface IUseDidScrollParams {
 
 type DidScrollListener = (didScroll: boolean) => void;
 
-const didScrollListeners: Set<DidScrollListener> = new Set<DidScrollListener>();
+const didScrollListeners = new Set<DidScrollListener>();
 
 /**
  * Hook to check if the user scrolled below the specified element-selector or the main window object.
