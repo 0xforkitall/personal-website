@@ -1,10 +1,15 @@
 import { ColorTheme } from '@shared/types';
+import { ssrUtils } from './ssr-utils';
 
 class ColorThemeUtils {
     colorThemeList = Object.keys(ColorTheme);
     themeClassPrefix = 'forkitall-theme-';
 
     getCurrentTheme = (): ColorTheme | undefined => {
+        if (ssrUtils.isServer()) {
+            return undefined;
+        }
+
         const currentTheme = document.documentElement.className.split(' ').find(colorThemeUtils.classNameToTheme);
 
         return colorThemeUtils.classNameToTheme(currentTheme);
