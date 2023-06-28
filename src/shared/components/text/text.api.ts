@@ -22,7 +22,7 @@ export interface ITextProps extends HTMLAttributes<HTMLParagraphElement | HTMLHe
      * Color of the text.
      * @default white
      */
-    color?: 'white' | 'black' | 'primary';
+    color?: 'white' | 'black' | 'primary' | 'muted';
     /**
      * Custom class for the component.
      */

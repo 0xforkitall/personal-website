@@ -2,7 +2,7 @@
 @use "../../styles/breakpoints";
 
 $forkitall-text-size: ("h1", "h2", "h3", "h4", "h5", "xl", "l", "m", "s");
-$forkitall-text-color: ("black", "white", "primary");
+$forkitall-text-color: ("black", "white", "primary", "muted");
 
 :root {
   /* Headers */
