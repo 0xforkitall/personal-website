@@ -4,7 +4,7 @@ import { Layout } from '@shared';
 import '@shared/index.scss';
 import { Analytics } from '@vercel/analytics/react';
 import React, { type ReactNode } from 'react';
-import styles from './root-layout.module.css';
+import styles from './root-layout.module.scss';
 
 export interface IRootLayoutProps {
     /**
@@ -16,7 +16,7 @@ export interface IRootLayoutProps {
 export const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
     return (
         <html lang="en">
-            <body id="root">
+            <body id="root" className={styles.rootLayout}>
                 <Topbar />
                 <Layout className={styles.rootLayoutPage}>{children}</Layout>
                 <Footer />

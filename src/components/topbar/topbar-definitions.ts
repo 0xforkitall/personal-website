@@ -21,5 +21,5 @@ export interface ITopbarLink {
 
 export const topbarLinks: ITopbarLink[] = [
     { id: 'home', name: '// home', route: routes.landingPage },
-    { id: 'blog', name: '// blog', route: routes.blog, disabled: true },
+    { id: 'blog', name: '// blog', route: routes.blog, disabled: process.env.NEXT_PUBLIC_ENVIRONMENT === 'production' },
 ];

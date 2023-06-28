@@ -21,7 +21,7 @@ export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, 
     return (
         <Layout
             className={classNames(styles.skillsSectionBlock, className)}
-            gap="200"
+            gap="400"
             direction="column"
             grow="1"
             basis="0"

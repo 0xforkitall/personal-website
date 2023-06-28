@@ -1,5 +1,6 @@
-import { Container, Layout, Text } from '@shared';
-import styles from './blog-page.module.scss';
+import { Container } from '@shared';
+import { HeroSection } from './sections/hero-section';
+import { ListsSection } from './sections/lists-section';
 
 export const metadata = {
     title: '0xforkitall - Expert Blockchain Frontend Developer | Innovative Solutions for the Decentralized World',
@@ -9,10 +10,9 @@ export const metadata = {
 
 export const BlogPage = () => {
     return (
-        <Container direction="column">
-            <Layout className={styles.mainContent} alignItems="center" justifyContent="center">
-                <Text size="h1">My blog</Text>
-            </Layout>
+        <Container direction="column" gap="400">
+            <HeroSection />
+            <ListsSection />
         </Container>
     );
 };

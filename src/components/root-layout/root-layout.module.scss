@@ -1,0 +1,11 @@
+.rootLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.rootLayoutPage {
+  --0xf-topbar-height: 65px;
+  margin-top: var(--0xf-topbar-height);
+}

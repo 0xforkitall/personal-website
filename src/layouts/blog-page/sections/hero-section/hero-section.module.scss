@@ -1,0 +1,26 @@
+@use "@shared/styles/breakpoints";
+
+.heroSection {
+  background-color: var(--0xf-color-surface);
+  margin-top: var(--0xf-spacer-200);
+  border-radius: var(--0xf-global-border-radius-m);
+  overflow: hidden;
+}
+
+.newestPost {
+  background-color: var(--0xf-color-primary-100);
+  flex-basis: 60%;
+  height: 100%;
+}
+
+.latestPosts {
+  flex-basis: 40%;
+  padding: var(--0xf-spacer-100);
+}
+
+@media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {
+  .newestPost {
+    height: 400px;
+    flex-basis: auto;
+  }
+}

@@ -37,4 +37,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 -   [Phosphor icons](https://github.com/phosphor-icons/homepage)
 -   [Ethereum logo 3d](https://sketchfab.com/3d-models/ethereum-logo-3d-3b8be89e01514b48bd7a4e52582f6d50)
--   [PureSky HDRI](https://polyhaven.com/a/kloppenheim_06_puresky)
