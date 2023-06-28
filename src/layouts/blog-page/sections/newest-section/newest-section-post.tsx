@@ -2,9 +2,9 @@ import { type IBlogPost } from '@api';
 import { Layout, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
-import styles from './hero-section-post.module.scss';
+import styles from './newest-section-post.module.scss';
 
-export interface IHeroSectionPostProps {
+export interface INewestSectionPostProps {
     /**
      * Blog post to be displayed.
      */
@@ -15,11 +15,11 @@ export interface IHeroSectionPostProps {
     className?: string;
 }
 
-export const HeroSectionPost: React.FC<IHeroSectionPostProps> = ({ blogPost, className }) => {
+export const NewestSectionPost: React.FC<INewestSectionPostProps> = ({ blogPost, className }) => {
     const { title, createdAt } = blogPost;
 
     return (
-        <Layout className={classNames(styles.heroSectionPost, className)} direction="column">
+        <Layout className={classNames(styles.newestSectionPost, className)} direction="column">
             <Text size="m">{title}</Text>
             <Text size="s" className={styles.creationDate}>
                 {createdAt}

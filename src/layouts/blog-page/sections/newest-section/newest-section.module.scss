@@ -1,16 +1,22 @@
 @use "@shared/styles/breakpoints";
 
-.heroSection {
+.newestSection {
   background-color: var(--0xf-color-surface);
   margin-top: var(--0xf-spacer-200);
   border-radius: var(--0xf-global-border-radius-m);
   overflow: hidden;
+  min-height: 350px;
 }
 
 .newestPost {
   background-color: var(--0xf-color-primary-100);
   flex-basis: 60%;
   height: 100%;
+}
+
+.newestPostTitle {
+  padding: var(--0xf-spacer-100);
+  background-color: rgb(24 24 24 / 80%);
 }
 
 .latestPosts {
@@ -23,4 +29,8 @@
     height: 400px;
     flex-basis: auto;
   }
+}
+
+:global(.forkitall-theme-LIGHT) .newestPostTitle {
+  background-color: rgb(228 228 228 / 80%);
 }

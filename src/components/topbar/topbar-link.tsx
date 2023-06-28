@@ -1,6 +1,6 @@
 'use client';
 
-import { LinkNext } from '@shared';
+import { LinkNext, routerUtils } from '@shared';
 import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -25,12 +25,12 @@ export const TopbarLink: React.FC<ITopbarLinkProps> = ({ link, className }) => {
     const linkClasses = classNames(
         styles.link,
         className,
-        { [`${styles.linkActive}`]: route === pathname },
+        { [`${styles.linkActive}`]: routerUtils.matchPath(route, pathname) },
         { [`${styles.linkDisabled}`]: disabled },
     );
 
     return (
-        <LinkNext key={id} href={disabled ? '/' : route} size="m" className={linkClasses}>
+        <LinkNext key={id} href={disabled ? '/' : routerUtils.generatePath(route)} size="m" className={linkClasses}>
             {name}
         </LinkNext>
     );
