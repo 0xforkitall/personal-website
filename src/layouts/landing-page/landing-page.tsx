@@ -1,4 +1,4 @@
-import { Container } from '@shared';
+import { Page } from '@shared';
 import styles from './landing-page.module.css';
 import { AboutSection } from './sections/about-section';
 import { ContactSection } from './sections/contact-section';
@@ -13,11 +13,11 @@ export const metadata = {
 
 export const LandingPage = () => {
     return (
-        <Container direction="column">
+        <Page variant="no-spacing">
             <HomeSection />
             <AboutSection className={styles.landingPageSection} />
             <SkillsSection className={styles.landingPageSection} />
             <ContactSection className={styles.landingPageSection} />
-        </Container>
+        </Page>
     );
 };

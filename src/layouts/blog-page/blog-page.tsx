@@ -1,4 +1,4 @@
-import { Container } from '@shared';
+import { Page } from '@shared';
 import { NewestSection } from './sections/newest-section';
 
 export const metadata = {
@@ -9,8 +9,8 @@ export const metadata = {
 
 export const BlogPage = () => {
     return (
-        <Container direction="column" gap="0">
+        <Page>
             <NewestSection />
-        </Container>
+        </Page>
     );
 };

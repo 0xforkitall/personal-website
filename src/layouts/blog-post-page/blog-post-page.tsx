@@ -1,5 +1,5 @@
 import { blogService } from '@api';
-import { Container, Text } from '@shared';
+import { MarkdownParser, Page, Text } from '@shared';
 import type { Metadata } from 'next';
 
 export interface IBlogPostPageProps {
@@ -21,9 +21,10 @@ export const BlogPostPage = async (props: IBlogPostPageProps) => {
     const blogPost = await blogService.getPostBySlug(props.params.slug);
 
     return (
-        <Container direction="column">
+        <Page gap="200">
             <Text size="h2">{blogPost.title}</Text>
-            <div>{blogPost.content}</div>
-        </Container>
+            <Text size="m">{blogPost.description}</Text>
+            <MarkdownParser>{blogPost.content}</MarkdownParser>
+        </Page>
     );
 };
