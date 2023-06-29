@@ -5,5 +5,7 @@ export * from './icon';
 export * from './image';
 export * from './layout';
 export * from './link';
+export * from './markdown-parser';
+export * from './page';
 export * from './text';
 export * from './theme-switch';

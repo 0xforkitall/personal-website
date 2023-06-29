@@ -1,0 +1,12 @@
+:root {
+  --0xf-page-default-margin-top: var(--0xf-spacer-200);
+  --0xf-page-no-spacing-margin-top: 0;
+}
+
+.page--default {
+  margin-top: var(--0xf-page-default-margin-top);
+}
+
+.page--no-spacing {
+  margin-top: var(--0xf-page-no-spacing-margin-top);
+}
