@@ -9,10 +9,10 @@
   dependencies:
     eslint-config-prettier "^8.8.0"
 
-"@0xforkitall/shared-config@0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/shared-config/-/shared-config-0.2.6.tgz#a7c462fe2431d9b4d06a3872bcfef0a4cc43d164"
-  integrity sha512-sqo14mXdlhuUq1jYVfA0Ip26KBEABTzcGwpNbSW96WENpIxI+hAoHf12/Peia0ubtSEsZd160Zzj/Y5yLwWaqg==
+"@0xforkitall/shared-config@0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/shared-config/-/shared-config-0.2.7.tgz#7da1dae05f464f3c58aa734ea98ca73187a3ad21"
+  integrity sha512-tMbSw7U4lqf4YqQ0C9ZwIrERwfOSFUcx54vbzAxV03Kir6o/x+S7lxe8Tc170WgcaYp9eRjkoNg8+YSi5hQZxQ==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"

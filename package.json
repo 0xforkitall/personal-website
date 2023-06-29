@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@0xforkitall/eslint-config": "0.2.8",
-    "@0xforkitall/shared-config": "0.2.6",
+    "@0xforkitall/shared-config": "0.2.7",
     "@svgr/webpack": "8.0.1",
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
