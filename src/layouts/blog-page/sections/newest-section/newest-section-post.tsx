@@ -1,5 +1,6 @@
 import { type IBlogPost } from '@api';
-import { Layout, Text } from '@shared';
+import { routes } from '@constants/routes';
+import { Layout, LinkNext, Text, routerUtils } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import styles from './newest-section-post.module.scss';
@@ -16,14 +17,16 @@ export interface INewestSectionPostProps {
 }
 
 export const NewestSectionPost: React.FC<INewestSectionPostProps> = ({ blogPost, className }) => {
-    const { title, createdAt } = blogPost;
+    const { title, createdAt, slug } = blogPost;
 
     return (
-        <Layout className={classNames(styles.newestSectionPost, className)} direction="column">
-            <Text size="m">{title}</Text>
-            <Text size="s" className={styles.creationDate}>
-                {createdAt}
-            </Text>
-        </Layout>
+        <LinkNext href={routerUtils.generatePath(routes.blogPost, { slug })}>
+            <Layout className={classNames(styles.newestSectionPost, className)} direction="column">
+                <Text size="m">{title}</Text>
+                <Text size="s" className={styles.creationDate}>
+                    {createdAt}
+                </Text>
+            </Layout>
+        </LinkNext>
     );
 };

@@ -8,14 +8,30 @@
 }
 
 .newestPost {
-  background-color: var(--0xf-color-primary-100);
   flex-basis: 60%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.newestPost:hover .newestPostImage {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+.newestPost:hover .newestPostTitle {
+  background-color: rgb(24 24 24 / 90%);
+}
+
+.newestPostImage {
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0.8;
 }
 
 .newestPostTitle {
   padding: var(--0xf-spacer-100);
   background-color: rgb(24 24 24 / 80%);
+  z-index: 5;
+  transition: background-color 0.3s;
 }
 
 .latestPosts {
@@ -32,4 +48,7 @@
 
 :global(.forkitall-theme-LIGHT) .newestPostTitle {
   background-color: rgb(228 228 228 / 80%);
+}
+:global(.forkitall-theme-LIGHT) .newestPost:hover .newestPostTitle {
+  background-color: rgb(228 228 228 / 90%);
 }
