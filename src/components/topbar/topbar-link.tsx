@@ -20,12 +20,14 @@ export interface ITopbarLinkProps {
 
 export const TopbarLink: React.FC<ITopbarLinkProps> = ({ link, className }) => {
     const pathname = usePathname();
-    const { id, route, name, disabled } = link;
+
+    const { id, route, routeMatches, name, disabled } = link;
+    const routesToMatch = [route].concat(routeMatches ?? []);
 
     const linkClasses = classNames(
         styles.link,
         className,
-        { [`${styles.linkActive}`]: routerUtils.matchPath(route, pathname) },
+        { [`${styles.linkActive}`]: routerUtils.matchPath(routesToMatch, pathname) },
         { [`${styles.linkDisabled}`]: disabled },
     );
 

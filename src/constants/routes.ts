@@ -1,4 +1,5 @@
 export const routes = {
     landingPage: '/',
-    blog: '/blog/:slug?',
+    blog: '/blog',
+    blogPost: '/blog/:slug',
 };
