@@ -15,6 +15,8 @@ export interface IAboutSectionProps {
 }
 
 export const AboutSection: React.FC<IAboutSectionProps> = ({ className }) => {
+    const experienceYears = new Date().getFullYear() - 2016;
+
     return (
         <Layout className={classNames(styles.aboutSection, className)} gap="400" direction="column" alignItems="center">
             <FancyHeader>About me</FancyHeader>
@@ -28,16 +30,16 @@ export const AboutSection: React.FC<IAboutSectionProps> = ({ className }) => {
                     </Text>
                     <Layout gap="100" direction="column" className={styles.description}>
                         <Text size="m">
-                            With extensive experience in Frontend Development, I am a passionate Software Engineer who
-                            constantly seeks the next challenge.
+                            With over {experienceYears} years of experience in Frontend Development, I am a passionate
+                            Software Engineer who constantly seeks the next challenge.
                         </Text>
                         <Text size="m">
-                            I have a strong emphasis on innovation and have explored the fascinating world of blockchain
-                            and crypto projects, actively discovering and contributing to new solutions.
+                            I have a strong emphasis on innovation and have explored the world of blockchain and crypto
+                            projects, actively discovering and contributing to new solutions.
                         </Text>
                         <Text size="m">
-                            Join me on this exhilarating journey as we collectively unlock the boundless potential of
-                            technology.
+                            Feel free to explore my blog, where I am going to share insights, trends and my personal
+                            experiences.
                         </Text>
                     </Layout>
                 </Layout>
