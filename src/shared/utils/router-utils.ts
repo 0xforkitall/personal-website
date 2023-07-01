@@ -1,23 +1,32 @@
 import { invariantUtils, type InvariantUtils } from './invariant-utils';
 
-type PathParams<Key extends string = string> = {
-    readonly [key in Key]: string | undefined;
-};
+export interface IGeneratePathOptions {
+    /**
+     * Returns the absolute url when set to true.
+     */
+    absoluteUrl?: boolean;
+}
 
 class RouterUtils {
-    generatePath = (path: string, params: PathParams = {}) => {
-        return (
-            path
-                // Replace optional parameters with either their value or empty string
-                .replace(/\/:(\w+)\?/g, (_, key) => (params[key] ? `/${params[key]}` : ''))
-                // Replace required parameters with their value or throw error when value is missing
-                .replace(/\/:(\w+)/g, (_, key) => {
-                    const invariant: InvariantUtils['invariant'] = invariantUtils.invariant;
-                    invariant(params[key] != null, `Missing ":${key}" param`);
+    generatePath = (
+        path: string,
+        params: Record<string, string | undefined> = {},
+        options: IGeneratePathOptions = {},
+    ) => {
+        const { absoluteUrl } = options;
 
-                    return `/${params[key]}`;
-                })
-        );
+        const relativeUrl = path
+            // Replace optional parameters with either their value or empty string
+            .replace(/\/:(\w+)\?/g, (_, key) => (params[key] ? `/${params[key]}` : ''))
+            // Replace required parameters with their value or throw error when value is missing
+            .replace(/\/:(\w+)/g, (_, key) => {
+                const invariant: InvariantUtils['invariant'] = invariantUtils.invariant;
+                invariant(params[key] != null, `Missing ":${key}" param`);
+
+                return `/${params[key]}`;
+            });
+
+        return absoluteUrl ? `${process.env.NEXT_PUBLIC_HOST}${relativeUrl}` : relativeUrl;
     };
 
     matchPath = (routes: string[], pathname: string) =>

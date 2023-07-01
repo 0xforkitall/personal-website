@@ -7,8 +7,8 @@ export interface IBlogPostPageProps {
     params: { slug: string };
 }
 
-export const generateMetadata = async (props: IBlogPostPageProps): Promise<Metadata> => {
-    const blogPost = await blogService.getPostBySlug(props.params.slug);
+export const generateMetadata = (props: IBlogPostPageProps): Metadata => {
+    const blogPost = blogService.getPostBySlug(props.params.slug);
     const { createdAt, updatedAt, metadata } = blogPost;
 
     return {
@@ -18,8 +18,8 @@ export const generateMetadata = async (props: IBlogPostPageProps): Promise<Metad
     };
 };
 
-export const BlogPostPage = async (props: IBlogPostPageProps) => {
-    const blogPost = await blogService.getPostBySlug(props.params.slug);
+export const BlogPostPage = (props: IBlogPostPageProps) => {
+    const blogPost = blogService.getPostBySlug(props.params.slug);
 
     return (
         <Page direction="row" gap="100" alignItems="start">
