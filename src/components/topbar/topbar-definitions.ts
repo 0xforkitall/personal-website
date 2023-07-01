@@ -24,12 +24,6 @@ export interface ITopbarLink {
 }
 
 export const topbarLinks: ITopbarLink[] = [
-    {
-        id: 'blog',
-        name: '// blog',
-        route: routes.blog,
-        routeMatches: [routes.blogPost],
-        disabled: process.env.NEXT_PUBLIC_ENVIRONMENT === 'production',
-    },
+    { id: 'blog', name: '// blog', route: routes.blog, routeMatches: [routes.blogPost] },
     { id: 'about', name: '// about', route: routes.about },
 ];
