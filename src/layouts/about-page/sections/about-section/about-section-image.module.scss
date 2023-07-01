@@ -1,0 +1,11 @@
+.imageWrapper {
+  position: relative;
+  width: calc(100vw - var(--0xf-global-scrollbar-width));
+  height: 400px;
+  opacity: 0.1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}

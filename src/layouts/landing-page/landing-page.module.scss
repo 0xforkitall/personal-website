@@ -1,0 +1,18 @@
+@use "@shared/styles/breakpoints";
+
+.landingPage {
+  position: relative;
+}
+
+.hero {
+  position: absolute;
+  bottom: calc(100vh / 5);
+  left: var(--0xf-container-padding-left);
+  z-index: 5;
+}
+
+@media screen and (max-width: breakpoints.$forkitall-breakpoint-sm) {
+  .landingPage {
+    min-height: calc(100vh - var(--0xf-topbar-height));
+  }
+}

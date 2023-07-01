@@ -1,23 +1,44 @@
-import { Page } from '@shared';
-import styles from './landing-page.module.css';
-import { AboutSection } from './sections/about-section';
-import { ContactSection } from './sections/contact-section';
-import { HomeSection } from './sections/home-section';
-import { SkillsSection } from './sections/skills-section';
+import { Canvas } from '@components/canvas';
+import { ButtonLink, IconType, Layout, Page, Text } from '@shared';
+import type { Metadata } from 'next';
+import { LandingPageModel } from './landing-page-model';
+import styles from './landing-page.module.scss';
 
-export const metadata = {
-    title: '0xforkitall - Expert Blockchain Frontend Developer | Innovative Solutions for the Decentralized World',
+export const metadata: Metadata = {
+    title: '0xforkitall - Expert Blockchain Frontend Developer | Work with Me',
     description:
-        "Discover the expertise of 0xforkitall, a seasoned frontend developer specializing in the blockchain space. With a deep understanding of blockchain technology and its frontend intricacies, 0xforkitall offers innovative solutions for decentralized applications. Explore a portfolio showcasing 0xforkitall's exceptional skills in building intuitive and user-friendly interfaces for blockchain platforms. Harness the power of the decentralized world with 0xforkitall's expertise in frontend development. Contact 0xforkitall today to discuss your blockchain project requirements and unlock the true potential of decentralized applications.",
+        "Looking for a skilled frontend developer specializing in blockchain technology? Explore the expertise of 0xforkitall. Get in touch and collaborate on your next project. Let's build something amazing together.",
+    openGraph: { images: ['logo.png'] },
 };
 
 export const LandingPage = () => {
     return (
-        <Page variant="no-spacing">
-            <HomeSection />
-            <AboutSection className={styles.landingPageSection} />
-            <SkillsSection className={styles.landingPageSection} />
-            <ContactSection className={styles.landingPageSection} />
+        <Page variant="no-spacing" grow="1" className={styles.landingPage}>
+            <Layout direction="column" gap="400" alignItems="start" className={styles.hero}>
+                <Layout direction="column" gap="0">
+                    <Text size="h1" responsiveSize={{ sm: 'h2' }}>
+                        <Text tag="span">Hi, I&apos;m </Text>
+                        <Text tag="span" color="primary">
+                            0xforkitall
+                        </Text>
+                        <Text tag="span">,</Text>
+                    </Text>
+                    <Text size="h3" responsiveSize={{ xs: 'h5' }}>
+                        and I&apos;m a Blockchain Frontend Developer
+                    </Text>
+                </Layout>
+                <ButtonLink
+                    variant="primary"
+                    href="mailto:0xforkitall@gmail.com"
+                    target="_blank"
+                    icon={IconType.ARROW_RIGHT}
+                >
+                    Work with me
+                </ButtonLink>
+            </Layout>
+            <Canvas>
+                <LandingPageModel />
+            </Canvas>
         </Page>
     );
 };

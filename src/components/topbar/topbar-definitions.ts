@@ -24,7 +24,6 @@ export interface ITopbarLink {
 }
 
 export const topbarLinks: ITopbarLink[] = [
-    { id: 'home', name: '// home', route: routes.landingPage },
     {
         id: 'blog',
         name: '// blog',
@@ -32,4 +31,5 @@ export const topbarLinks: ITopbarLink[] = [
         routeMatches: [routes.blogPost],
         disabled: process.env.NEXT_PUBLIC_ENVIRONMENT === 'production',
     },
+    { id: 'about', name: '// about', route: routes.about },
 ];

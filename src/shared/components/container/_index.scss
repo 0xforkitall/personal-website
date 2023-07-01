@@ -24,15 +24,15 @@
 }
 
 @mixin container-style-responsive($breakpoint) {
-  padding-right: var(--0xf-container-breakpoint-#{$breakpoint}-padding-right);
-  padding-left: var(--0xf-container-breakpoint-#{$breakpoint}-padding-left);
+  :root {
+    --0xf-container-padding-right: var(--0xf-container-breakpoint-#{$breakpoint}-padding-right);
+    --0xf-container-padding-left: var(--0xf-container-breakpoint-#{$breakpoint}-padding-left);
+  }
 }
 
-.container {
-  @media screen and (max-width: breakpoints.$forkitall-breakpoint-lg) {
-    @include container-style-responsive("lg");
-  }
-  @media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {
-    @include container-style-responsive("md");
-  }
+@media screen and (max-width: breakpoints.$forkitall-breakpoint-lg) {
+  @include container-style-responsive("lg");
+}
+@media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {
+  @include container-style-responsive("md");
 }

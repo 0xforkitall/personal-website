@@ -13,11 +13,11 @@ const viewportBreakpoint = 4;
 
 const getModelPosition = (width: number, height: number) => {
     return width > viewportBreakpoint
-        ? { x: width / 2 - 0.5, y: height / 2 - 1, scale: 2, left: true }
+        ? { x: width / 2 - 1, y: height / 2 - 1, scale: 2, left: true }
         : { x: 0, y: height / 2 - 0.5, scale: 1, left: false };
 };
 
-export const HomeSectionModel: React.FC<IHomeSectionModelProps> = () => {
+export const LandingPageModel: React.FC<IHomeSectionModelProps> = () => {
     const ethereumModel = useLoader(GLTFLoader, '/assets/models/ethereum-logo.glb');
     const { currentTheme } = useColorTheme();
     const modelRef = useRef<Mesh>(null);
@@ -28,7 +28,7 @@ export const HomeSectionModel: React.FC<IHomeSectionModelProps> = () => {
 
     useFrame((_state, delta) => {
         if (modelRef.current) {
-            modelRef.current.rotation.y += delta / 2;
+            modelRef.current.rotation.y += delta / 5;
         }
     });
 
