@@ -1,4 +1,4 @@
-import { routes } from '@constants/routes';
+import { Route, routes } from '@constants/routes';
 import { personalSocials } from '@constants/socials';
 import { ButtonLink, Container, Layout, LinkNext, Text } from '@shared';
 import classNames from 'classnames';
@@ -25,7 +25,7 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => {
                     responsiveDirection={{ md: 'column' }}
                     alignItems="center"
                 >
-                    <LinkNext size="h4" color="black" href={routes.landingPage}>
+                    <LinkNext size="h4" color="black" href={routes[Route.LANDING_PAGE].url}>
                         0xforkitall
                     </LinkNext>
                     <Layout direction="row" gap="50" alignItems="center">

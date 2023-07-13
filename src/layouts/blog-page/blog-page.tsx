@@ -1,4 +1,5 @@
-import { Page } from '@shared';
+import { Route, routes } from '@constants/routes';
+import { Breadcrumbs, Page } from '@shared';
 import type { Metadata } from 'next';
 import { NewestSection } from './sections/newest-section';
 
@@ -9,9 +10,15 @@ export const metadata: Metadata = {
     openGraph: { images: ['logo.png'] },
 };
 
+const breadcrumbsRoutes = [
+    { url: routes[Route.LANDING_PAGE].url, label: routes[Route.LANDING_PAGE].label },
+    { url: routes[Route.BLOG].url, label: routes[Route.BLOG].label },
+];
+
 export const BlogPage = () => {
     return (
-        <Page>
+        <Page gap="150">
+            <Breadcrumbs routes={breadcrumbsRoutes} />
             <NewestSection />
         </Page>
     );

@@ -1,4 +1,5 @@
-import { Page } from '@shared';
+import { Route, routes } from '@constants/routes';
+import { Breadcrumbs, Layout, Page } from '@shared';
 import type { Metadata } from 'next';
 import styles from './about-page.module.scss';
 import { AboutSection } from './sections/about-section';
@@ -12,12 +13,20 @@ export const metadata: Metadata = {
     openGraph: { images: ['logo.png'] },
 };
 
+const breadcrumbsRoutes = [
+    { url: routes[Route.LANDING_PAGE].url, label: routes[Route.LANDING_PAGE].label },
+    { url: routes[Route.ABOUT].url, label: routes[Route.ABOUT].label },
+];
+
 export const AboutPage = () => {
     return (
-        <Page className={styles.aboutPage}>
-            <AboutSection className={styles.landingPageSection} />
-            <SkillsSection className={styles.landingPageSection} />
-            <ContactSection className={styles.landingPageSection} />
+        <Page className={styles.aboutPage} gap="150">
+            <Breadcrumbs routes={breadcrumbsRoutes} />
+            <Layout direction="column" gap="0">
+                <AboutSection className={styles.landingPageSection} />
+                <SkillsSection className={styles.landingPageSection} />
+                <ContactSection className={styles.landingPageSection} />
+            </Layout>
         </Page>
     );
 };

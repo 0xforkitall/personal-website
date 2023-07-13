@@ -1,5 +1,5 @@
 import { type IBlogPost } from '@api';
-import { routes } from '@constants/routes';
+import { Route, routes } from '@constants/routes';
 import { Layout, LinkNext, Text, routerUtils } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
@@ -20,7 +20,7 @@ export const NewestSectionPost: React.FC<INewestSectionPostProps> = ({ blogPost,
     const { title, createdAt, slug } = blogPost;
 
     return (
-        <LinkNext href={routerUtils.generatePath(routes.blogPost, { slug })}>
+        <LinkNext href={routerUtils.generatePath(routes[Route.BLOG_POST].url, { slug })}>
             <Layout className={classNames(styles.newestSectionPost, className)} direction="column">
                 <Text size="m">{title}</Text>
                 <Text size="s" className={styles.creationDate}>

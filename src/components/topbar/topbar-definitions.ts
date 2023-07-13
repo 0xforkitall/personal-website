@@ -1,4 +1,4 @@
-import { routes } from '@constants/routes';
+import { Route } from '@constants/routes';
 
 export interface ITopbarLink {
     /**
@@ -12,11 +12,7 @@ export interface ITopbarLink {
     /**
      * Route of the link.
      */
-    route: string;
-    /**
-     * Additional routes that keeps the link active.
-     */
-    routeMatches?: string[];
+    route: Route;
     /**
      * Disables the link when set to true.
      */
@@ -24,6 +20,6 @@ export interface ITopbarLink {
 }
 
 export const topbarLinks: ITopbarLink[] = [
-    { id: 'blog', name: '// blog', route: routes.blog, routeMatches: [routes.blogPost] },
-    { id: 'about', name: '// about', route: routes.about },
+    { id: 'blog', name: '// blog', route: Route.BLOG },
+    { id: 'about', name: '// about', route: Route.ABOUT },
 ];

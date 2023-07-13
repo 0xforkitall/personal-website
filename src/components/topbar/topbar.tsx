@@ -1,6 +1,6 @@
 'use client';
 
-import { routes } from '@constants/routes';
+import { Route, routes } from '@constants/routes';
 import { Container, Layout, LinkNext, ThemeSwitch } from '@shared';
 import { useDidScroll } from '@shared/hooks';
 import classNames from 'classnames';
@@ -30,7 +30,7 @@ export const Topbar: React.FC<ITopbarProps> = ({ elementSelector, className }) =
             justifyContent="space-between"
             alignItems="center"
         >
-            <LinkNext size="h4" href={routes.landingPage} color="primary">
+            <LinkNext size="h4" href={routes[Route.LANDING_PAGE].url} color="primary">
                 0xf
             </LinkNext>
             <Layout gap="100" direction="row" alignItems="center">

@@ -1,5 +1,5 @@
 import { blogService } from '@api';
-import { routes } from '@constants/routes';
+import { Route, routes } from '@constants/routes';
 import { Image, Layout, LinkNext, Text, routerUtils } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
@@ -25,7 +25,7 @@ export const NewestSection: React.FC<INewestSectionProps> = async ({ className }
             responsiveDirection={{ md: 'column' }}
         >
             <LinkNext
-                href={routerUtils.generatePath(routes.blogPost, { slug: newestPost.slug })}
+                href={routerUtils.generatePath(routes[Route.BLOG_POST].url, { slug: newestPost.slug })}
                 className={styles.newestPost}
             >
                 <Layout direction="column">
