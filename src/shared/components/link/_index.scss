@@ -7,13 +7,32 @@ $forkitall-link-size: text.$forkitall-text-size;
   /* Properties */
   --0xf-link-cursor: pointer;
   --0xf-link-text-decoration: none;
+  --0xf-link-text-underline-offset: var(--0xf-spacer-25);
   --0xf-link-color: inherit;
+
+  /* Disabled */
+  --0xf-link-disabled-color: var(--0xf-color-muted);
+  --0xf-link-disabled-cursor: default;
+
+  /* Hover-Underline */
+  --0xf-link-hover-underline-text-decoration: underline;
 }
 
 .link {
   cursor: var(--0xf-link-cursor);
   text-decoration: var(--0xf-link-text-decoration);
   color: var(--0xf-link-color);
+  text-underline-offset: var(--0xf-link-text-underline-offset);
+}
+
+.link--disabled {
+  color: var(--0xf-link-disabled-color);
+  cursor: var(--0xf-link-disabled-cursor);
+  pointer-events: none;
+}
+
+.link--variant-hover-underline:hover {
+  text-decoration: var(--0xf-link-hover-underline-text-decoration);
 }
 
 @each $size in $forkitall-link-size {
