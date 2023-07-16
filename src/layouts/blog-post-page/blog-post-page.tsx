@@ -19,14 +19,15 @@ export const generateMetadata = (props: IBlogPostPageProps): Metadata => {
     };
 };
 
-const breadcrumbsRoutes = [
+const buildBreadcrumbsRoutes = (blogTitle: string) => [
     { url: routes[Route.LANDING_PAGE].url, label: routes[Route.LANDING_PAGE].label },
     { url: routes[Route.BLOG].url, label: routes[Route.BLOG].label },
-    { url: routes[Route.BLOG].url, label: 'Lorem ipsum' },
+    { url: routes[Route.BLOG].url, label: blogTitle },
 ];
 
 export const BlogPostPage = (props: IBlogPostPageProps) => {
     const blogPost = blogService.getPostBySlug(props.params.slug);
+    const breadcrumbsRoutes = buildBreadcrumbsRoutes(blogPost.title);
 
     return (
         <Page gap="150">
