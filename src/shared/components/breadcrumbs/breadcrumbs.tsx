@@ -12,7 +12,13 @@ export const Breadcrumbs: React.FC<IBreadcrumbsProps> = (props) => {
         <Layout className={classNames('breadcrumbs', className)} direction="row" gap="50" alignItems="center">
             {routes.map(({ url, label }, index) => (
                 <>
-                    <LinkNext key={url} href={url} disabled={index === routes.length - 1} variant="hover-underline">
+                    <LinkNext
+                        key={url}
+                        href={url}
+                        disabled={index === routes.length - 1}
+                        variant="hover-underline"
+                        truncate={index === routes.length - 1}
+                    >
                         {label}
                     </LinkNext>
                     {index < routes.length - 1 && <Text size="m">{'>'}</Text>}
