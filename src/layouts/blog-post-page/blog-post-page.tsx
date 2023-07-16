@@ -1,6 +1,6 @@
 import { blogService } from '@api';
 import { Route, routes } from '@constants/routes';
-import { Breadcrumbs, Image, Layout, MarkdownParser, Page, Text } from '@shared';
+import { Breadcrumbs, Chip, Image, Layout, MarkdownParser, Page, Text } from '@shared';
 import type { Metadata } from 'next';
 import styles from './blog-post-page.module.scss';
 
@@ -38,13 +38,37 @@ export const BlogPostPage = (props: IBlogPostPageProps) => {
                         {blogPost.title}
                     </Text>
                     <Text size="m">{blogPost.description}</Text>
-                    <div className={styles.imageWrapper}>
+                    <div className={styles.blogImageWrapper}>
                         <Image src={blogPost.image} fill={true} objectFit="cover" alt="blog post image" />
                     </div>
                     <MarkdownParser className={styles.markdown}>{blogPost.content}</MarkdownParser>
                 </Layout>
-                <Layout className={styles.infoColumn} direction="column" gap="100">
-                    <Text size="m">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+                <Layout className={styles.infoColumn} direction="column" gap="200">
+                    <Layout
+                        className={styles.authorLayout}
+                        responsiveDirection={{ md: 'row' }}
+                        direction="column"
+                        alignItems="center"
+                        gap="100"
+                    >
+                        <Image
+                            src={blogPost.author.avatar}
+                            width={120}
+                            height={120}
+                            alt="author image"
+                            className={styles.authorImage}
+                        />
+                        <Text size="xl" fontWeight="bold" responsiveSize={{ md: 'm' }}>
+                            {blogPost.author.displayName}
+                        </Text>
+                    </Layout>
+                    <Layout className={styles.topicsList} direction="row" wrap="wrap" gap="50">
+                        {blogPost.topics.map((topic) => (
+                            <Chip key={topic} size="s">
+                                {topic}
+                            </Chip>
+                        ))}
+                    </Layout>
                 </Layout>
             </Layout>
         </Page>
