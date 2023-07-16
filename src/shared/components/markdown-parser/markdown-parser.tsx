@@ -16,10 +16,10 @@ export const MarkdownParser: React.FC<IMarkdownParserProps> = (props) => {
             rehypePlugins={[rehypeRaw, rehypeSanitize]}
             linkTarget="_blank"
             components={{
-                h1: ({ color, ...props }) => <Text size="h1" {...props} />,
-                h2: ({ color, ...props }) => <Text size="h2" {...props} />,
-                h3: ({ color, ...props }) => <Text size="h3" {...props} />,
-                h4: ({ color, ...props }) => <Text size="h4" {...props} />,
+                h1: ({ color, ...props }) => <Text size="h1" responsiveSize={{ sm: 'h2' }} {...props} />,
+                h2: ({ color, ...props }) => <Text size="h2" responsiveSize={{ sm: 'h3' }} {...props} />,
+                h3: ({ color, ...props }) => <Text size="h3" responsiveSize={{ sm: 'h4' }} {...props} />,
+                h4: ({ color, ...props }) => <Text size="h4" responsiveSize={{ sm: 'h5' }} {...props} />,
                 h5: ({ color, ...props }) => <Text size="h5" {...props} />,
                 p: ({ color, ...props }) => <Text size="m" {...props} />,
                 a: ({ color, ...props }) => <Link variant="hover-underline" color="primary" {...props} />,
