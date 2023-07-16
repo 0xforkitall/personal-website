@@ -1,4 +1,4 @@
-@use "../../styles/utils";
+@use "../../styles/typography/utils";
 @use "../text";
 
 $forkitall-link-size: text.$forkitall-text-size;
@@ -29,6 +29,10 @@ $forkitall-link-size: text.$forkitall-text-size;
   color: var(--0xf-link-disabled-color);
   cursor: var(--0xf-link-disabled-cursor);
   pointer-events: none;
+}
+
+.link--truncate {
+  @include utils.truncate();
 }
 
 .link--variant-hover-underline:hover {
