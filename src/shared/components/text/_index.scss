@@ -3,6 +3,7 @@
 
 $forkitall-text-size: ("h1", "h2", "h3", "h4", "h5", "xl", "l", "m", "s");
 $forkitall-text-color: ("black", "white", "primary", "muted");
+$forkitall-text-font-weight: ("light", "medium", "bold");
 
 :root {
   /* Headers */
@@ -67,5 +68,11 @@ $forkitall-text-color: ("black", "white", "primary", "muted");
 @each $color in $forkitall-text-color {
   .text--color-#{$color} {
     color: var(--0xf-color-#{$color});
+  }
+}
+
+@each $fontWeight in $forkitall-text-font-weight {
+  .text.text--font-weight-#{$fontWeight} {
+    font-weight: var(--0xf-font-weight-#{$fontWeight});
   }
 }

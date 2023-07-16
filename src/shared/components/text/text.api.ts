@@ -3,6 +3,7 @@ import { type HTMLAttributes } from 'react';
 
 export type TextTag = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
 export type TextSize = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'xl' | 'l' | 'm' | 's' | 'inherit';
+export type TextFontWeight = 'light' | 'medium' | 'bold';
 
 export interface ITextProps extends HTMLAttributes<HTMLParagraphElement | HTMLHeadingElement> {
     /**
@@ -10,6 +11,10 @@ export interface ITextProps extends HTMLAttributes<HTMLParagraphElement | HTMLHe
      * @default inherit
      */
     size?: TextSize;
+    /**
+     * Font weight of the text to override the one defined by the text size.
+     */
+    fontWeight?: TextFontWeight;
     /**
      * Responsive sizes for the text.
      */
