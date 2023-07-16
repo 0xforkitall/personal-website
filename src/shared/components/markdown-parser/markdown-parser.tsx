@@ -3,6 +3,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
+import { Link } from '../link';
 import { Text } from '../text';
 import type { IMarkdownParserProps } from './markdown-parser.api';
 
@@ -21,6 +22,7 @@ export const MarkdownParser: React.FC<IMarkdownParserProps> = (props) => {
                 h4: ({ color, ...props }) => <Text size="h4" {...props} />,
                 h5: ({ color, ...props }) => <Text size="h5" {...props} />,
                 p: ({ color, ...props }) => <Text size="m" {...props} />,
+                a: ({ color, ...props }) => <Link variant="hover-underline" color="primary" {...props} />,
             }}
         >
             {children}

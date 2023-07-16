@@ -13,6 +13,11 @@ export interface ILinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
      */
     color?: ITextProps['color'];
     /**
+     * Variant of the link.
+     * @default default
+     */
+    variant?: 'default' | 'hover-underline';
+    /**
      * Custom class for the component.
      */
     className?: string;
