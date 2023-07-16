@@ -32,9 +32,11 @@ export const BlogPostPage = (props: IBlogPostPageProps) => {
     return (
         <Page gap="150">
             <Breadcrumbs routes={breadcrumbsRoutes} />
-            <Layout direction="row" gap="150" alignItems="start">
+            <Layout direction="row" gap="150" alignItems="start" responsiveDirection={{ md: 'column-reverse' }}>
                 <Layout className={styles.mainColumn} direction="column" gap="200">
-                    <Text size="h2">{blogPost.title}</Text>
+                    <Text size="h2" responsiveSize={{ sm: 'h4' }}>
+                        {blogPost.title}
+                    </Text>
                     <Text size="m">{blogPost.description}</Text>
                     <div className={styles.imageWrapper}>
                         <Image src={blogPost.image} fill={true} objectFit="cover" alt="blog post image" />
