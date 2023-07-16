@@ -77,7 +77,7 @@ $forkitall-layout-flex-shrink: (0, 1);
 
   @each $breakpoint-name, $breakpoint-width in breakpoints.$forkitall-breakpoint-list {
     @media screen and (max-width: $breakpoint-width) {
-      .layout--flex-direction-#{$breakpoint-name}-#{$flex-direction} {
+      .layout.layout--flex-direction-#{$breakpoint-name}-#{$flex-direction} {
         flex-direction: $flex-direction;
       }
     }
