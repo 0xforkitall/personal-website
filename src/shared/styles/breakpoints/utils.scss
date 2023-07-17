@@ -1,0 +1,9 @@
+@use "./breakpoints";
+
+@each $breakpoint-name, $breakpoint in breakpoints.$forkitall-breakpoint-list {
+  @media screen and (max-width: $breakpoint) {
+    :root {
+      --0xf-breakpoint: #{$breakpoint-name};
+    }
+  }
+}
