@@ -1,16 +1,7 @@
-@use "@shared/styles/breakpoints";
+@use "@shared/styles/breakpoints/breakpoints";
 
 .mainColumn {
   flex-basis: 65%;
-}
-
-.infoColumn {
-  position: sticky;
-  top: calc(var(--0xf-topbar-height) + var(--0xf-spacer-100));
-  flex-basis: 35%;
-  background-color: var(--0xf-color-surface);
-  padding: var(--0xf-spacer-100);
-  border-radius: var(--0xf-global-border-radius-s);
 }
 
 .blogImageWrapper {
@@ -19,27 +10,8 @@
   position: relative;
 }
 
-.authorImage {
-  border-radius: 50%;
-}
-
 @media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {
   .mainColumn {
     flex-basis: 100%;
-  }
-
-  .infoColumn {
-    position: initial;
-    width: 100%;
-    padding: var(--0xf-spacer-50);
-  }
-
-  .authorImage {
-    width: 32px;
-    height: 32px;
-  }
-
-  .topicsList {
-    display: none;
   }
 }

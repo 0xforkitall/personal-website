@@ -1,0 +1,45 @@
+@use "@shared/styles/breakpoints/breakpoints";
+
+.infoColumn {
+  position: sticky;
+  top: calc(var(--0xf-topbar-height) + var(--0xf-spacer-100));
+  flex-basis: 35%;
+  background-color: var(--0xf-color-surface);
+  padding: var(--0xf-spacer-100);
+  border-radius: var(--0xf-global-border-radius-s);
+  border-start-start-radius: var(--0xf-global-border-radius-xl);
+  border-end-end-radius: var(--0xf-global-border-radius-xl);
+}
+
+.authorImage {
+  border-radius: 50%;
+}
+
+.infoDivider {
+  height: 1px;
+  width: 20%;
+  background-color: var(--0xf-color-primary);
+}
+
+@media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {
+  .infoColumn {
+    position: initial;
+    width: 100%;
+    padding: var(--0xf-spacer-50);
+    border-start-start-radius: var(--0xf-global-border-radius-l);
+    border-end-end-radius: var(--0xf-global-border-radius-l);
+  }
+
+  .infoDivider {
+    display: none;
+  }
+
+  .authorImage {
+    width: 32px;
+    height: 32px;
+  }
+
+  .topicsList {
+    display: none;
+  }
+}
