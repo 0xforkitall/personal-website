@@ -4,16 +4,15 @@ import classNames from 'classnames';
 import React from 'react';
 import { Button } from '../button';
 import { IconType } from '../icon';
-
-export interface IThemeSwitchProps {
-    /**
-     * Custom class for the component.
-     */
-    className?: string;
-}
+import type { IThemeSwitchProps } from './theme-switch.api';
 
 export const ThemeSwitch: React.FC<IThemeSwitchProps> = ({ className }) => {
     const { currentTheme, updateTheme } = useColorTheme();
+
+    const handleThemeSwitchClick = () => {
+        const newTheme = currentTheme === ColorTheme.DARK ? ColorTheme.LIGHT : ColorTheme.DARK;
+        updateTheme(newTheme);
+    };
 
     return (
         <Button
@@ -21,7 +20,7 @@ export const ThemeSwitch: React.FC<IThemeSwitchProps> = ({ className }) => {
             icon={currentTheme === ColorTheme.DARK ? IconType.SUN : IconType.MOON}
             variant="neutral-white"
             aria-label="switch color theme"
-            onClick={() => updateTheme(currentTheme === ColorTheme.DARK ? ColorTheme.LIGHT : ColorTheme.DARK)}
+            onClick={handleThemeSwitchClick}
         />
     );
 };
