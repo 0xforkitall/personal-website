@@ -1,4 +1,4 @@
-export class InvariantUtils {
+class InvariantUtils {
     INVARIANT_ERROR = 'Invariant';
 
     invariant = (condition: boolean, message: string): asserts condition => {
@@ -14,3 +14,7 @@ export class InvariantUtils {
 }
 
 export const invariantUtils = new InvariantUtils();
+
+// Explicit type needed because of assertion error on TypeScript
+// (see "Assertions require every name in the call target to be declared with an explicit type annotation.ts")
+export const invariant: InvariantUtils['invariant'] = invariantUtils.invariant;

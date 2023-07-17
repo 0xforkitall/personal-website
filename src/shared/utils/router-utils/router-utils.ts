@@ -1,4 +1,4 @@
-import { invariantUtils, type InvariantUtils } from './invariant-utils';
+import { invariant } from '../invariant-utils';
 
 export interface IGeneratePathOptions {
     /**
@@ -20,7 +20,6 @@ class RouterUtils {
             .replace(/\/:(\w+)\?/g, (_, key) => (params[key] ? `/${params[key]}` : ''))
             // Replace required parameters with their value or throw error when value is missing
             .replace(/\/:(\w+)/g, (_, key) => {
-                const invariant: InvariantUtils['invariant'] = invariantUtils.invariant;
                 invariant(params[key] != null, `Missing ":${key}" param`);
 
                 return `/${params[key]}`;

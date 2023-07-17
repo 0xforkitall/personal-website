@@ -1,6 +1,6 @@
-import { type IResponsiveAttribute } from '@shared/types';
+import { type IResponsiveAttribute } from '../../types';
 
-export interface IApplyResponsiveClassnamesProps<TResponsiveValue> {
+export interface IResponsiveClassnamesParams<TResponsiveValue> {
     /**
      * Prefix of the component including the component name and variant, e.g. 'layout--direction';
      */
@@ -23,7 +23,7 @@ class ResponsiveUtils {
      * @param responsiveProp The property that changes based on the breakpoint
      * @returns A list of responsive classnames, e.g. ['layout--direction-xs-row', 'layout--direction-l-column']
      */
-    responsiveClassnames = <TResponsiveValue>(params: IApplyResponsiveClassnamesProps<TResponsiveValue>): string => {
+    responsiveClassnames = <TResponsiveValue>(params: IResponsiveClassnamesParams<TResponsiveValue>): string => {
         const { prefix, prop = {}, value } = params;
 
         const defaultClassname = value ? `${prefix}-${value}` : '';
