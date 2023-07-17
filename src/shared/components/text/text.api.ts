@@ -29,6 +29,10 @@ export interface ITextProps extends HTMLAttributes<HTMLParagraphElement | HTMLHe
      */
     color?: 'white' | 'black' | 'primary' | 'muted';
     /**
+     * Truncates the text when it overflows its container when set to true.
+     */
+    truncate?: boolean;
+    /**
      * Custom class for the component.
      */
     className?: string;

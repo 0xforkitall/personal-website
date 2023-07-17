@@ -1,5 +1,5 @@
-@use "../../styles/utils";
-@use "../../styles/breakpoints";
+@use "../../styles/typography/utils";
+@use "../../styles/breakpoints/breakpoints";
 
 $forkitall-text-size: ("h1", "h2", "h3", "h4", "h5", "xl", "l", "m", "s");
 $forkitall-text-color: ("black", "white", "primary", "muted");
@@ -49,6 +49,10 @@ $forkitall-text-font-weight: ("light", "medium", "bold");
   font-size: var(--0xf-text-size-#{$size}-font-size);
   line-height: var(--0xf-text-size-#{$size}-line-height);
   font-weight: var(--0xf-text-size-#{$size}-font-weight);
+}
+
+.text--truncate {
+  @include utils.truncate();
 }
 
 @each $size in $forkitall-text-size {
