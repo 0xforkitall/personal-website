@@ -46,7 +46,7 @@ export const NewestSection: React.FC<INewestSectionProps> = async ({ className }
                 <Layout direction="column" gap="0">
                     {otherPosts.length === 0 && (
                         <Text size="m" color="muted">
-                            More posts coming soon..
+                            More blog posts coming soon 👀
                         </Text>
                     )}
                     {otherPosts.map((post) => (
