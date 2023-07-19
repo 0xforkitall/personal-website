@@ -3,6 +3,7 @@ import React from 'react';
 import { Layout } from '../layout';
 import { LinkNext } from '../link';
 import { Text } from '../text';
+import { BreadcrumbsSeo } from './breadcrumbs-seo';
 import type { IBreadcrumbsProps } from './breadcrumbs.api';
 
 export const Breadcrumbs: React.FC<IBreadcrumbsProps> = (props) => {
@@ -10,6 +11,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbsProps> = (props) => {
 
     return (
         <Layout className={classNames('breadcrumbs', className)} direction="row" gap="50" alignItems="center">
+            <BreadcrumbsSeo routes={routes} />
             {routes.map(({ url, label }, index) => (
                 <>
                     <LinkNext

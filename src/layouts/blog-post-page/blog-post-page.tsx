@@ -1,4 +1,4 @@
-import { blogService } from '@api';
+import { blogService, type IBlogPost } from '@api';
 import { Route, routes } from '@constants/routes';
 import { Breadcrumbs, Image, Layout, MarkdownParser, Page, Text } from '@shared';
 import type { Metadata } from 'next';
@@ -21,15 +21,15 @@ export const generateMetadata = (props: IBlogPostPageProps): Metadata => {
     };
 };
 
-const buildBreadcrumbsRoutes = (blogTitle: string) => [
+const buildBreadcrumbsRoutes = ({ title, slug }: IBlogPost) => [
     { url: routes[Route.LANDING_PAGE].url, label: routes[Route.LANDING_PAGE].label },
     { url: routes[Route.BLOG].url, label: routes[Route.BLOG].label },
-    { url: routes[Route.BLOG].url, label: blogTitle },
+    { url: routes[Route.BLOG_POST].url, label: title, urlParams: { slug } },
 ];
 
 export const BlogPostPage = (props: IBlogPostPageProps) => {
     const blogPost = blogService.getPostBySlug(props.params.slug);
-    const breadcrumbsRoutes = buildBreadcrumbsRoutes(blogPost.title);
+    const breadcrumbsRoutes = buildBreadcrumbsRoutes(blogPost);
 
     return (
         <Page gap="150">
