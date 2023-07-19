@@ -3,6 +3,7 @@ import { Route, routes } from '@constants/routes';
 import { Breadcrumbs, Image, Layout, MarkdownParser, Page, Text } from '@shared';
 import type { Metadata } from 'next';
 import { BlogPostPageInfo } from './blog-post-page-info';
+import { BlogPostPageSeo } from './blog-post-page-seo';
 import styles from './blog-post-page.module.scss';
 
 export interface IBlogPostPageProps {
@@ -33,6 +34,7 @@ export const BlogPostPage = (props: IBlogPostPageProps) => {
 
     return (
         <Page gap="150">
+            <BlogPostPageSeo blogPost={blogPost} />
             <Breadcrumbs routes={breadcrumbsRoutes} />
             <Layout direction="row" gap="150" alignItems="start" responsiveDirection={{ md: 'column-reverse' }}>
                 <Layout className={styles.mainColumn} direction="column" gap="200">
