@@ -1,11 +1,8 @@
 ---
 id: '0'
 slug: 'my-first-blog-post-exploring-web-development-crypto-personal-journey'
-title: >
-    My First Blog Post: Who, What, Why and Next Steps
-description: >
-    Check my first blog post where I introduce myself, share my experiences as a Software Engineer in the crypto space
-    and discuss my future plans for this website and blog.
+title: 'My First Blog Post: Who, What, Why and Next Steps'
+description: 'Check my first blog post where I introduce myself, share my experiences as a Software Engineer in the crypto space and discuss my future plans for this website and blog.'
 image: '/assets/blog/posts/my-first-blog-post-exploring-web-development-crypto-personal-journey/cover.jpg'
 author:
     id: '0'
@@ -18,12 +15,8 @@ topics:
     - Web Development
     - DeFi
 metadata:
-    title: >
-        0xforkitall | My First Blog Post: Exploring Web Development, Crypto and Personal Journey
-    description: >
-        Join me on my blog as I delve into web development, share insights from working in the crypto space and document
-        my personal journey. Stay connected and get involved in the conversation. Discover the challenges, lessons
-        learned and technical details behind building an open-source website.
+    title: '0xforkitall | My First Blog Post: Exploring Web Development, Crypto and Personal Journey'
+    description: 'Join me on my blog as I delve into web development, share insights from working in the crypto space and document my personal journey. Stay connected and get involved in the conversation. Discover the challenges, lessons learned and technical details behind building an open-source website.'
     image: '/assets/blog/posts/my-first-blog-post-exploring-web-development-crypto-personal-journey/cover.jpg'
 createdAt: '2023-07-19T10:40:00Z'
 updatedAt: '2023-07-19T10:40:00Z'
