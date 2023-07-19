@@ -1,15 +1,13 @@
 import { Route, routes } from '@constants/routes';
-import { Breadcrumbs, Page } from '@shared';
+import { Breadcrumbs, Page, metadataUtils } from '@shared';
 import type { Metadata } from 'next';
 import { NewestSection } from './sections/newest-section';
 
-export const metadata: Metadata = {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_HOST!),
+export const metadata: Metadata = metadataUtils.generate({
     title: '0xforkitall - Crypto, Blockchain, NFT, and Frontend Development Insights',
     description:
         'Explore the in-depth technical information and implementation details about crypto, blockchain, NFTs, and frontend development by 0xforkitall, an expert frontend blockchain developer. Stay updated with the latest insights and advancements in the world of blockchain technology, cryptocurrencies, and frontend development strategies.',
-    openGraph: { images: ['/logo.png'] },
-};
+});
 
 const breadcrumbsRoutes = [
     { url: routes[Route.LANDING_PAGE].url, label: routes[Route.LANDING_PAGE].label },

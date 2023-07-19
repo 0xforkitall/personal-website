@@ -1,6 +1,6 @@
 import { blogService, type IBlogPost } from '@api';
 import { Route, routes } from '@constants/routes';
-import { Breadcrumbs, Image, Layout, MarkdownParser, Page, Text } from '@shared';
+import { Breadcrumbs, Image, Layout, MarkdownParser, metadataUtils, Page, Text } from '@shared';
 import type { Metadata } from 'next';
 import { BlogPostPageInfo } from './blog-post-page-info';
 import { BlogPostPageSeo } from './blog-post-page-seo';
@@ -14,12 +14,11 @@ export const generateMetadata = (props: IBlogPostPageProps): Metadata => {
     const blogPost = blogService.getPostBySlug(props.params.slug);
     const { createdAt, updatedAt, metadata } = blogPost;
 
-    return {
-        metadataBase: new URL(process.env.NEXT_PUBLIC_HOST!),
+    return metadataUtils.generate({
         title: metadata.title,
         description: metadata.description,
         openGraph: { type: 'article', publishedTime: createdAt, modifiedTime: updatedAt, images: [metadata.image] },
-    };
+    });
 };
 
 const buildBreadcrumbsRoutes = ({ title, slug }: IBlogPost) => [

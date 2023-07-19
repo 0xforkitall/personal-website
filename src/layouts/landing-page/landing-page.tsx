@@ -1,16 +1,14 @@
 import { Canvas } from '@components/canvas';
-import { ButtonLink, IconType, Layout, Page, Text } from '@shared';
+import { ButtonLink, IconType, Layout, Page, Text, metadataUtils } from '@shared';
 import type { Metadata } from 'next';
 import { LandingPageModel } from './landing-page-model';
 import styles from './landing-page.module.scss';
 
-export const metadata: Metadata = {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_HOST!),
+export const metadata: Metadata = metadataUtils.generate({
     title: '0xforkitall - Expert Blockchain Frontend Developer | Work with Me',
     description:
         "Looking for a skilled frontend developer specializing in blockchain technology? Explore the expertise of 0xforkitall. Get in touch and collaborate on your next project. Let's build something amazing together.",
-    openGraph: { images: ['/logo.png'] },
-};
+});
 
 export const LandingPage = () => {
     return (
