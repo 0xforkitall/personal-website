@@ -14,6 +14,7 @@ export const generateMetadata = (props: IBlogPostPageProps): Metadata => {
     const { createdAt, updatedAt, metadata } = blogPost;
 
     return {
+        metadataBase: new URL(process.env.NEXT_PUBLIC_HOST!),
         title: metadata.title,
         description: metadata.description,
         openGraph: { type: 'article', publishedTime: createdAt, modifiedTime: updatedAt, images: [metadata.image] },

@@ -5,10 +5,11 @@ import { LandingPageModel } from './landing-page-model';
 import styles from './landing-page.module.scss';
 
 export const metadata: Metadata = {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_HOST!),
     title: '0xforkitall - Expert Blockchain Frontend Developer | Work with Me',
     description:
         "Looking for a skilled frontend developer specializing in blockchain technology? Explore the expertise of 0xforkitall. Get in touch and collaborate on your next project. Let's build something amazing together.",
-    openGraph: { images: ['logo.png'] },
+    openGraph: { images: ['/logo.png'] },
 };
 
 export const LandingPage = () => {

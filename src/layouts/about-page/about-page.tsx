@@ -7,10 +7,11 @@ import { ContactSection } from './sections/contact-section';
 import { SkillsSection } from './sections/skills-section';
 
 export const metadata: Metadata = {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_HOST!),
     title: '0xforkitall - Expert Blockchain Frontend Developer | About Me',
     description:
         "Learn more about 0xforkitall, a frontend developer and blockchain specialist. Discover my skills, experience, and passion for building innovative web solutions. Let's connect and explore opportunities to work together.",
-    openGraph: { images: ['logo.png'] },
+    openGraph: { images: ['/logo.png'] },
 };
 
 const breadcrumbsRoutes = [
