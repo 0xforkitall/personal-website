@@ -22,7 +22,7 @@ export const AboutSection: React.FC<IAboutSectionProps> = ({ className }) => {
             <FancyHeader>About me</FancyHeader>
             <Layout gap="500" direction="row" responsiveDirection={{ md: 'column' }} className={styles.aboutWrapper}>
                 <div className={styles.aboutImage}>
-                    <Image src="/assets/images/profile-image.png" alt="profile image" fill={true} />
+                    <Image src="/assets/blog/authors/0xforkitall.png" alt="profile image" fill={true} />
                 </div>
                 <Layout gap="300" direction="column">
                     <Text size="h3" responsiveSize={{ xs: 'h5' }}>
