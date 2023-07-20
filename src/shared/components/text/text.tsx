@@ -17,16 +17,7 @@ const sizeToTag: Record<TextSize, TextTag> = {
 };
 
 export const Text: React.FC<ITextProps> = (props) => {
-    const {
-        className,
-        tag,
-        size,
-        responsiveSize,
-        color = 'white',
-        fontWeight = 'medium',
-        truncate,
-        ...otherProps
-    } = props;
+    const { className, tag, size, responsiveSize, color = 'white', fontWeight, truncate, ...otherProps } = props;
     const Tag = tag ?? sizeToTag[size ?? 'm'];
 
     const responsiveSizeClassnames = responsiveUtils.responsiveClassnames({

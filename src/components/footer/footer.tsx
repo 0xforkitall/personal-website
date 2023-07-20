@@ -25,7 +25,7 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => {
                     responsiveDirection={{ md: 'column' }}
                     alignItems="center"
                 >
-                    <LinkNext size="h4" color="black" href={routes[Route.LANDING_PAGE].url}>
+                    <LinkNext size="h4" color="white" href={routes[Route.LANDING_PAGE].url}>
                         0xforkitall
                     </LinkNext>
                     <Layout direction="row" gap="50" alignItems="center">
@@ -34,7 +34,7 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => {
                                 key={id}
                                 href={link}
                                 target="_blank"
-                                variant="neutral-black"
+                                variant="neutral-white"
                                 icon={icon}
                                 aria-label={`${id} link`}
                             />

@@ -16,7 +16,7 @@ export interface ILinkBaseProps {
      * Variant of the link.
      * @default default
      */
-    variant?: 'default' | 'hover-underline';
+    variant?: 'default' | 'hover-underline' | 'underline';
     /**
      * Disables the link when set to true.
      * @default false

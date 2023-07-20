@@ -22,7 +22,7 @@ export const MarkdownParser: React.FC<IMarkdownParserProps> = (props) => {
                 h4: ({ color, ...props }) => <Text size="h4" responsiveSize={{ sm: 'h5' }} {...props} />,
                 h5: ({ color, ...props }) => <Text size="h5" {...props} />,
                 p: ({ color, ...props }) => <Text size="m" {...props} />,
-                a: ({ color, ...props }) => <Link variant="hover-underline" color="primary" {...props} />,
+                a: ({ color, ...props }) => <Link variant="underline" {...props} />,
             }}
         >
             {children}

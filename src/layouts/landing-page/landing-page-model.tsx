@@ -24,7 +24,7 @@ export const LandingPageModel: React.FC<IHomeSectionModelProps> = () => {
 
     const { width, height } = useThree((state) => state.viewport);
     const { x, y, scale, left } = getModelPosition(width, height);
-    const lightIntensity = currentTheme === ColorTheme.DARK ? 10 : 80;
+    const lightIntensity = currentTheme === ColorTheme.DARK ? 10 : 50;
 
     useFrame((_state, delta) => {
         if (modelRef.current) {
@@ -34,7 +34,7 @@ export const LandingPageModel: React.FC<IHomeSectionModelProps> = () => {
 
     return (
         <>
-            <pointLight position={[-10, -10, -10]} color="#33ff33" intensity={lightIntensity} />
+            <pointLight position={[-10, -10, -10]} color="#48cc90" intensity={lightIntensity} />
             <pointLight position={[10, 10, 10]} color="#36e2e2" intensity={lightIntensity} />
             <Center bottom={true} left={left} position={[x, y, 0]}>
                 <mesh ref={modelRef}>

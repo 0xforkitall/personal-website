@@ -29,12 +29,14 @@ export const SkillsSectionBlock: React.FC<ISkillsSectionBlockProps> = ({ skill, 
         >
             <Layout gap="100" direction="column" alignItems="center">
                 <Layout className={styles.skillIconWrapper} alignItems="center" justifyContent="center">
-                    <Icon icon={icon} color="primary" />
+                    <Icon icon={icon} />
                 </Layout>
-                <Text size="h4" responsiveSize={{ xs: 'h5' }}>
+                <Text size="h4" fontWeight="bold" responsiveSize={{ xs: 'h5' }}>
                     {name}
                 </Text>
-                <Text size="m">{description}</Text>
+                <Text size="m" color="muted">
+                    {description}
+                </Text>
             </Layout>
             <Layout gap="50" direction="row" wrap="wrap" justifyContent="start" fullWidth={true}>
                 {topics.map((topic) => (

@@ -6,7 +6,7 @@
   height: 180px;
   position: relative;
   background-color: var(--0xf-color-surface);
-  border-radius: var(--0xf-global-border-radius-l);
+  border-radius: 50%;
   flex-shrink: 0;
   overflow: hidden;
   animation: glow 1.5s ease-in-out infinite alternate;

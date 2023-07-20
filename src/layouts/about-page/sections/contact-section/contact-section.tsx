@@ -20,12 +20,11 @@ export const ContactSection: React.FC<IContactSectionProps> = ({ className }) =>
             <Layout className={classNames(styles.contactBlock, styles.contactBlockEnd)} />
             <Layout gap="200" direction="column" alignItems="center" className={styles.contactSectionContent}>
                 <Layout gap="50" direction="column">
-                    <Text size="h3" className={styles.contactHeader}>
+                    <Text size="h3" fontWeight="bold" className={styles.contactHeader}>
                         Get in touch
                     </Text>
-                    <Text size="l">
-                        Ready to join forces? Simply drop me an email, and let&apos;s have a chat about your exciting
-                        idea!
+                    <Text size="l" color="muted">
+                        Ready to join forces? Just drop me an email, and let&apos;s have a chat about your idea!
                     </Text>
                 </Layout>
                 <ButtonLink

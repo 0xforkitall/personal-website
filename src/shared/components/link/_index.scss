@@ -13,9 +13,6 @@ $forkitall-link-size: text.$forkitall-text-size;
   /* Disabled */
   --0xf-link-disabled-color: var(--0xf-color-muted);
   --0xf-link-disabled-cursor: default;
-
-  /* Hover-Underline */
-  --0xf-link-hover-underline-text-decoration: underline;
 }
 
 .link {
@@ -35,8 +32,11 @@ $forkitall-link-size: text.$forkitall-text-size;
   @include utils.truncate();
 }
 
+.link--variant-underline {
+  text-decoration: underline;
+}
 .link--variant-hover-underline:hover {
-  text-decoration: var(--0xf-link-hover-underline-text-decoration);
+  text-decoration: underline;
 }
 
 @each $size in $forkitall-link-size {

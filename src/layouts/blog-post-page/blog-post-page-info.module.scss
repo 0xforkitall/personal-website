@@ -3,7 +3,7 @@
 .infoColumn {
   position: sticky;
   top: calc(var(--0xf-topbar-height) + var(--0xf-spacer-100));
-  flex-basis: 35%;
+  flex-basis: 38%;
   background-color: var(--0xf-color-surface);
   padding: var(--0xf-spacer-100);
   border-radius: var(--0xf-global-border-radius-s);
@@ -18,7 +18,7 @@
 .infoDivider {
   height: 1px;
   width: 20%;
-  background-color: var(--0xf-color-primary);
+  background-color: var(--0xf-color-divider);
 }
 
 @media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {

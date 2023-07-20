@@ -1,20 +1,13 @@
 .forkitall-theme-LIGHT:root {
-  /* Primary colors */
-  --0xf-color-primary-100: #d0e0d0;
-  --0xf-color-primary-300: #72a372;
-  --0xf-color-primary-500: #146614;
-  --0xf-color-primary-600: #105210;
-  --0xf-color-primary-700: #0c3d0c;
-  --0xf-color-primary-900: #041404;
-
   /* Aliases */
   --0xf-color-inherit: inherit;
 
   --0xf-color-white: var(--0xf-color-gray-950);
   --0xf-color-black: var(--0xf-color-gray-50);
-  --0xf-color-muted: var(--0xf-color-gray-500);
+  --0xf-color-muted: var(--0xf-color-gray-600);
 
   --0xf-color-surface: var(--0xf-color-gray-100);
+  --0xf-color-divider: var(--0xf-color-gray-300);
 
   --0xf-color-body-background-color: var(--0xf-color-gray-50);
   --0xf-color-body-color: var(--0xf-color-gray-950);

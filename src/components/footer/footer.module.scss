@@ -1,6 +1,6 @@
 .footer {
   margin-top: var(--0xf-spacer-500);
-  background-color: var(--0xf-color-primary);
+  background-color: var(--0xf-color-surface);
   border-top-left-radius: var(--0xf-global-border-radius-l);
   border-top-right-radius: var(--0xf-global-border-radius-l);
 }
@@ -11,4 +11,5 @@
 
 .footerCopyright {
   background-color: var(--0xf-color-body-background-color);
+  padding: var(--0xf-spacer-25) 0;
 }
