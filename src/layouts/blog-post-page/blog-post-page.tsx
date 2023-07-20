@@ -17,7 +17,8 @@ export const generateMetadata = (props: IBlogPostPageProps): Metadata => {
     return metadataUtils.generate({
         title: metadata.title,
         description: metadata.description,
-        openGraph: { type: 'article', publishedTime: createdAt, modifiedTime: updatedAt, images: [metadata.image] },
+        image: metadata.image,
+        openGraph: { type: 'article', publishedTime: createdAt, modifiedTime: updatedAt },
     });
 };
 

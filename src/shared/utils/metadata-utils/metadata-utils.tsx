@@ -22,18 +22,22 @@ export interface IGenerateMetadataParams {
 }
 
 class MetadataUtils {
-    generate = ({ title, description, image = '/logo.png', openGraph }: IGenerateMetadataParams): Metadata => ({
-        metadataBase: new URL(process.env.NEXT_PUBLIC_HOST!),
-        title,
-        description,
-        openGraph: { images: [image], ...openGraph },
-        twitter: {
-            card: 'summary',
+    generate = ({ title, description, image = '/logo.png', openGraph }: IGenerateMetadataParams): Metadata => {
+        const twitterImage = routerUtils.generatePath(image, undefined, { absoluteUrl: true });
+
+        return {
+            metadataBase: new URL(process.env.NEXT_PUBLIC_HOST!),
             title,
             description,
-            images: [routerUtils.generatePath(image, undefined, { absoluteUrl: true })],
-        },
-    });
+            openGraph: { images: [image], ...openGraph },
+            twitter: {
+                card: 'summary',
+                title,
+                description,
+                images: [twitterImage],
+            },
+        };
+    };
 }
 
 export const metadataUtils = new MetadataUtils();
