@@ -17,8 +17,20 @@ const sizeToTag: Record<TextSize, TextTag> = {
 };
 
 export const Text: React.FC<ITextProps> = (props) => {
-    const { className, tag, size, responsiveSize, color = 'white', fontWeight, truncate, ...otherProps } = props;
+    const {
+        className,
+        tag,
+        size,
+        responsiveSize,
+        color = 'white',
+        colorValue,
+        fontWeight,
+        truncate,
+        ...otherProps
+    } = props;
     const Tag = tag ?? sizeToTag[size ?? 'm'];
+
+    const processedColor = colorValue != null ? (colorValue > 0 ? 'success' : 'muted') : color;
 
     const responsiveSizeClassnames = responsiveUtils.responsiveClassnames({
         prefix: 'text--size',
@@ -30,7 +42,7 @@ export const Text: React.FC<ITextProps> = (props) => {
         <Tag
             className={classNames(
                 'text',
-                `text--color-${color}`,
+                `text--color-${processedColor}`,
                 { [`text--font-weight-${fontWeight}`]: fontWeight != null },
                 { 'text--truncate': truncate },
                 responsiveSizeClassnames,

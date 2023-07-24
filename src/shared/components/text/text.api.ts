@@ -27,7 +27,11 @@ export interface ITextProps extends HTMLAttributes<HTMLParagraphElement | HTMLHe
      * Color of the text.
      * @default white
      */
-    color?: 'white' | 'black' | 'primary' | 'muted';
+    color?: 'white' | 'black' | 'primary' | 'muted' | 'success' | 'error' | 'warning';
+    /**
+     * Sets the success or muted color depending if the value is positive or negative when set overriding the color prop.
+     */
+    colorValue?: number;
     /**
      * Truncates the text when it overflows its container when set to true.
      */
