@@ -1,6 +1,6 @@
 'use client';
 
-import { type IBlogPost } from '@api';
+import { type IBlogPost } from '@api/blog-service';
 import { Chip, DateFormat, Image, Layout, Text, formatUtils, useBreakpoint } from '@shared';
 import { useEffect, useState } from 'react';
 import styles from './blog-post-page-info.module.scss';

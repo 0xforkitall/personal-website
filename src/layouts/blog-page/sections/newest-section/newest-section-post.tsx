@@ -1,4 +1,4 @@
-import { type IBlogPost } from '@api';
+import { type IBlogPost } from '@api/blog-service';
 import { Route, routes } from '@constants/routes';
 import { DateFormat, Layout, LinkNext, Text, formatUtils, routerUtils } from '@shared';
 import classNames from 'classnames';

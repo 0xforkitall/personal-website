@@ -1,4 +1,4 @@
-import { blogService } from '@api';
+import { blogService } from '@api/blog-service';
 
 export const generateBlogPostPageStaticParams = async () => {
     const posts = blogService.getAllPosts();

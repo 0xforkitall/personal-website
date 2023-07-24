@@ -1,4 +1,4 @@
-import { blogService } from '@api';
+import { blogService } from '@api/blog-service';
 import { Route, routes } from '@constants/routes';
 import { Image, Layout, LinkNext, Text, routerUtils } from '@shared';
 import classNames from 'classnames';

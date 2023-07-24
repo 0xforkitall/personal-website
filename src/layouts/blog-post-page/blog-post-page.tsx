@@ -1,4 +1,4 @@
-import { blogService, type IBlogPost } from '@api';
+import { blogService, type IBlogPost } from '@api/blog-service';
 import { Route, routes } from '@constants/routes';
 import { Breadcrumbs, Image, Layout, MarkdownParser, metadataUtils, Page, Text } from '@shared';
 import type { Metadata } from 'next';

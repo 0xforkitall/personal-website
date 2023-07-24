@@ -1,6 +1,6 @@
 'use client';
 
-import { type IBlogPost } from '@api';
+import { type IBlogPost } from '@api/blog-service';
 import { Route, routes } from '@constants/routes';
 import { routerUtils } from '@shared';
 import { ArticleJsonLd } from 'next-seo';
