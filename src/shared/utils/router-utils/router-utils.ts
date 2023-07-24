@@ -5,6 +5,10 @@ export interface IGeneratePathOptions {
      * Returns the absolute url when set to true.
      */
     absoluteUrl?: boolean;
+    /**
+     * Appends the specified query parameters when set.
+     */
+    query?: Record<string, string | number> | URLSearchParams;
 }
 
 class RouterUtils {
@@ -13,9 +17,9 @@ class RouterUtils {
         params: Record<string, string | undefined> = {},
         options: IGeneratePathOptions = {},
     ) => {
-        const { absoluteUrl } = options;
+        const { absoluteUrl, query } = options;
 
-        const relativeUrl = path
+        let url = path
             // Replace optional parameters with either their value or empty string
             .replace(/\/:(\w+)\?/g, (_, key) => (params[key] ? `/${params[key]}` : ''))
             // Replace required parameters with their value or throw error when value is missing
@@ -25,7 +29,20 @@ class RouterUtils {
                 return `/${params[key]}`;
             });
 
-        return absoluteUrl ? `${process.env.NEXT_PUBLIC_HOST}${relativeUrl}` : relativeUrl;
+        if (query) {
+            const parsedParams =
+                query instanceof URLSearchParams
+                    ? query
+                    : Object.keys(query).reduce((obj, key) => ({ ...obj, [key]: query[key]?.toString() }), {});
+            const queryParams = new URLSearchParams(parsedParams).toString();
+            url = `${url}?${queryParams}`;
+        }
+
+        if (absoluteUrl) {
+            url = `${process.env.NEXT_PUBLIC_HOST}${url}`;
+        }
+
+        return url;
     };
 
     matchPath = (routes: string[], pathname: string) =>
