@@ -24,26 +24,26 @@
   --0xf-color-gray-900: #181818;
   --0xf-color-gray-950: #0c0c0c;
 
-  /* Yellow colors */
-  --0xf-color-yellow-100: #fffbd8;
-  --0xf-color-yellow-300: #fff389;
-  --0xf-color-yellow-500: #ffeb3b;
-  --0xf-color-yellow-700: #998d23;
-  --0xf-color-yellow-900: #332f0c;
-
   /* Orange colors */
-  --0xf-color-orange-100: #ffeacc;
-  --0xf-color-orange-300: #ffc166;
-  --0xf-color-orange-500: #ff9800;
-  --0xf-color-orange-700: #995b00;
-  --0xf-color-orange-900: #331e00;
+  --0xf-color-orange-100: #ffedd5;
+  --0xf-color-orange-300: #fdba74;
+  --0xf-color-orange-500: #f97316;
+  --0xf-color-orange-700: #c2410c;
+  --0xf-color-orange-900: #7c2d12;
 
   /* Red colors */
-  --0xf-color-red-100: #fdd9d7;
-  --0xf-color-red-300: #f88e86;
-  --0xf-color-red-500: #f44336;
-  --0xf-color-red-700: #922820;
-  --0xf-color-red-900: #310d0b;
+  --0xf-color-red-100: #fee2e2;
+  --0xf-color-red-300: #fca5a5;
+  --0xf-color-red-500: #ef4444;
+  --0xf-color-red-700: #b91c1c;
+  --0xf-color-red-900: #7f1d1d;
+
+  /* Green colors */
+  --0xf-color-red-100: #dcfce7;
+  --0xf-color-red-300: #86efac;
+  --0xf-color-red-500: #22c55e;
+  --0xf-color-red-700: #15803d;
+  --0xf-color-red-900: #14532d;
 
   /* Aliases */
   --0xf-color-inherit: inherit;
@@ -55,6 +55,10 @@
   --0xf-color-primary: var(--0xf-color-primary-500);
   --0xf-color-surface: var(--0xf-color-gray-900);
   --0xf-color-divider: var(--0xf-color-gray-700);
+
+  --0xf-color-success: var(--0xf-color-red-500);
+  --0xf-color-error: var(--0xf-color-red-500);
+  --0xf-color-warning: var(--0xf-color-orange-500);
 
   --0xf-color-body-background-color: var(--0xf-color-black);
   --0xf-color-body-color: var(--0xf-color-white);
