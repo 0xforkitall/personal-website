@@ -1,4 +1,5 @@
 import { tokenService } from '@api/token-service/token-service';
+import { InfiniteCarousel } from '@components/infinite-carousel';
 import { Layout } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
@@ -32,11 +33,11 @@ export const TokenPrices: React.FC<ITokenPricesProps> = async ({ className }) =>
 
     return (
         <Layout className={classNames(styles.tokenPrices, className)}>
-            <Layout className={styles.tokenList} direction="row" gap="500">
+            <InfiniteCarousel direction="row" gap="500">
                 {tokenPrices.map((token) => (
                     <Token key={token.id} token={token} />
                 ))}
-            </Layout>
+            </InfiniteCarousel>
         </Layout>
     );
 };

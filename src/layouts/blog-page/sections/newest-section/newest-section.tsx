@@ -35,6 +35,7 @@ export const NewestSection: React.FC<INewestSectionProps> = async ({ className }
                         alt="newest post image"
                         fill={true}
                         objectFit="cover"
+                        priority={true}
                     />
                     <div className={styles.newestPostTitle}>
                         <Text size="l">{newestPost.title}</Text>
