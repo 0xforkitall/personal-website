@@ -1,0 +1,14 @@
+.infiniteCarousel {
+  position: relative;
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(var(--0xf-infinite-carousel-width));
+  }
+}
