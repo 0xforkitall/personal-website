@@ -1,5 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    images: {
+        domains: ['s2.coinmarketcap.com'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 's2.coinmarketcap.com',
+                pathname: '/static/img',
+                port: '',
+            },
+        ],
+    },
+
     webpack(config) {
         const svgLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'));
 

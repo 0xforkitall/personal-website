@@ -14,7 +14,6 @@ export const Image: React.FC<IImageProps> = (props) => {
                 `image--object-position-${objectPosition}`,
                 className,
             )}
-            unoptimized={process.env.NEXT_PUBLIC_ENVIRONMENT === 'development'}
             {...otherProps}
         />
     );
