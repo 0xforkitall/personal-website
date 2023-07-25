@@ -1,0 +1,10 @@
+.tokenPrices {
+  position: relative;
+  width: 100vw;
+  left: calc(((100vw - min(var(--0xf-container-max-width), 100vw)) / 2 * -1) - var(--0xf-container-padding-left));
+  overflow: auto;
+}
+
+.tokenList {
+  position: relative;
+}

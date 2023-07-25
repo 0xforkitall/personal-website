@@ -1,3 +1,4 @@
+import { TokenPrices } from '@components/token-prices';
 import { Route, routes } from '@constants/routes';
 import { Breadcrumbs, Page, metadataUtils } from '@shared';
 import type { Metadata } from 'next';
@@ -18,6 +19,7 @@ export const BlogPage = () => {
     return (
         <Page gap="150">
             <Breadcrumbs routes={breadcrumbsRoutes} />
+            <TokenPrices />
             <NewestSection />
         </Page>
     );
