@@ -1,4 +1,5 @@
 import type { IToken } from '@api/token-service';
+import { logger } from '@server/utils/logger';
 import { ServerError } from '@server/utils/server-error';
 import { ServiceBase } from '@shared';
 import { NextResponse, type NextRequest } from 'next/server';
@@ -24,6 +25,7 @@ class CmcService extends ServiceBase {
 
             return NextResponse.json(parsedData);
         } catch (error: unknown) {
+            logger.error(`CmcService: Error fetching tokens`, error);
             const serverError = new ServerError({ message: 'unknown-error', code: 500 });
 
             return NextResponse.json(serverError, { status: serverError.code });
