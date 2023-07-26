@@ -1,6 +1,11 @@
 .infiniteCarousel {
   position: relative;
   animation: scroll 60s linear infinite;
+  cursor: pointer;
+}
+
+.infiniteCarousel:hover {
+  animation-play-state: paused;
 }
 
 @keyframes scroll {
