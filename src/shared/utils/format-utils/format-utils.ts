@@ -1,19 +1,45 @@
 import { formatOptionsDate } from './format-options-date';
-import { DateFormat } from './format-utils.api';
+import { DateFormat, type IFormatNumberOptions } from './format-utils.api';
 
 class FormatUtils {
     private locale = 'en-GB';
-    private cache: Record<string, Intl.DateTimeFormat> = {};
+    private currency = 'USD';
+
+    private dateCache: Record<string, Intl.DateTimeFormat> = {};
+    private numberCache: Record<string, Intl.NumberFormat> = {};
 
     formatDate = (date: string, format = DateFormat.DATE_TIME_LONG) => {
-        const cacheKey = `${this.locale}-${format}`;
+        const cacheKey = `date/${this.locale}/${format}`;
         const wrappedDate = new Date(date);
 
-        if (!this.cache[cacheKey]) {
-            this.cache[cacheKey] = Intl.DateTimeFormat(this.locale, formatOptionsDate[format]);
+        if (!this.dateCache[cacheKey]) {
+            this.dateCache[cacheKey] = Intl.DateTimeFormat(this.locale, formatOptionsDate[format]);
         }
 
-        return this.cache[cacheKey]!.format(wrappedDate);
+        return this.dateCache[cacheKey]!.format(wrappedDate);
+    };
+
+    formatNumber = (value: string | number, options: IFormatNumberOptions = {}) => {
+        const { fractionDigits = 2, isCurrency, isPercent } = options;
+
+        const parsedValue = typeof value === 'string' ? parseFloat(value) : value;
+        const processedValue = isPercent ? parsedValue / 100 : parsedValue;
+
+        const style = isCurrency ? 'currency' : isPercent ? 'percent' : 'decimal';
+
+        const cacheKey = `number/${style}/${this.locale}/${fractionDigits}`;
+
+        if (!this.numberCache[cacheKey]) {
+            this.numberCache[cacheKey] = new Intl.NumberFormat(this.locale, {
+                style,
+                currency: this.currency,
+                currencyDisplay: 'narrowSymbol',
+                maximumFractionDigits: fractionDigits,
+                minimumFractionDigits: fractionDigits,
+            });
+        }
+
+        return this.numberCache[cacheKey]!.format(processedValue);
     };
 }
 
