@@ -27,7 +27,7 @@ const getTokens = async () => {
 export const TokenPrices: React.FC<ITokenPricesProps> = async ({ className }) => {
     const { data: tokenPrices, isError } = await getTokens();
 
-    if (isError || tokenPrices == null) {
+    if (Boolean(isError) || tokenPrices == null) {
         return null;
     }
 
