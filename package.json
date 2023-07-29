@@ -6,9 +6,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev --port 3001",
-    "build": "next build",
+    "build": "next build --no-lint",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "prettify": "prettier . --check",
+    "prettify:fix": "prettier . --write",
+    "type-check": "tsc --noEmit",
+    "deploy": "vercel deploy --prebuilt",
     "postinstall": "husky install"
   },
   "dependencies": {
@@ -44,7 +49,8 @@
     "husky": "8.0.3",
     "lint-staged": "13.2.3",
     "prettier": "2.8.8",
-    "prettier-plugin-organize-imports": "3.2.2"
+    "prettier-plugin-organize-imports": "3.2.2",
+    "vercel": "^31.2.0"
   },
   "keywords": [
     "nextjs",
