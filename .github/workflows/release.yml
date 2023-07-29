@@ -86,6 +86,6 @@ jobs:
       - name: Setup environment variables
         run: yarn vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
       - name: Prepare Vercel build
-        run: yarn vercel build --token=${{ secrets.VERCEL_TOKEN }}
+        run: yarn vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy NextJs application
         run: yarn deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
