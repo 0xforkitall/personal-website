@@ -36,7 +36,7 @@ About a month ago, I made the decision to start building a blog to share my expe
 
 ### Next steps
 
-Apart from continuously improving the website and blog (e.g., adding internationalization, improving the design, adding more interactive sections), I will be writing a blog post detailing the website's development process, the technologies I used and other technical details. I will also implement a comment functionality, enabling everyone to ask questions and share their experiences directly on the blog posts.
+Apart from continuously improving the website and blog (e.g. adding internationalization, improving the design, adding more interactive sections), I will be writing a blog post detailing the website's development process, the technologies I used and other technical details. I will also implement a comment functionality, enabling everyone to ask questions and share their experiences directly on the blog posts.
 
 That concludes my first blog post! I hope you'll enjoy the upcoming content, feel free to connect with me through my socials to stay updated:
 
