@@ -24,7 +24,7 @@ export const LandingPageModel: React.FC<IHomeSectionModelProps> = () => {
 
     const { width, height } = useThree((state) => state.viewport);
     const { x, y, scale, left } = getModelPosition(width, height);
-    const lightIntensity = currentTheme === ColorTheme.DARK ? 10 : 80;
+    const lightIntensity = currentTheme === ColorTheme.DARK ? 5000 : 40000;
 
     useFrame((_state, delta) => {
         if (modelRef.current) {

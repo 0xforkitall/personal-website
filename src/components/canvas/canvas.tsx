@@ -17,5 +17,5 @@ export interface ICanvasProps {
 }
 
 export const Canvas: React.FC<ICanvasProps> = ({ className, children }) => {
-    return <ThreeCanvas className={classNames(styles.homeSectionModel, className)}>{children}</ThreeCanvas>;
+    return <ThreeCanvas className={classNames(styles.canvas, className)}>{children}</ThreeCanvas>;
 };
