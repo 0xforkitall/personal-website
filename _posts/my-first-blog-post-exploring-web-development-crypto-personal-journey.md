@@ -26,15 +26,15 @@ Hello everyone and welcome to my first blog post! In case you've landed directly
 
 As of today, I am still working full-time as a Software Engineer for a crypto start-up, and I will be improving this website and writing blog posts as a side project.
 
-### What
+##### What
 
 I will be using this blog to share insights and personal experiences about web development, working in the crypto space as a Software Engineer and the lessons I've learned along the way. I've decided to open-source the entire website and blog, so feel free to check or fork the [codebase](https://github.com/0xforkitall/personal-website) and share your feedback on how it can be improved and optimized!
 
-### Why
+##### Why
 
 About a month ago, I made the decision to start building a blog to share my experiences and insights about the crypto world. While I could have chosen blog platforms like Medium, Mirror or similar options, I decided to take on the challenge of building my own website and blog from scratch. This allowed me to enhance and showcase my skills in web development.
 
-### Next steps
+##### Next steps
 
 Apart from continuously improving the website and blog (e.g. adding internationalization, improving the design, adding more interactive sections), I will be writing a blog post detailing the website's development process, the technologies I used and other technical details. I will also implement a comment functionality, enabling everyone to ask questions and share their experiences directly on the blog posts.
 
