@@ -1,5 +1,8 @@
 .markdown-parser {
-  p {
+  p,
+  pre,
+  ol,
+  ul {
     margin-bottom: var(--0xf-spacer-100);
   }
 
@@ -8,6 +11,7 @@
   h3,
   h4,
   h5 {
+    margin-top: var(--0xf-spacer-200);
     margin-bottom: var(--0xf-spacer-50);
   }
 }

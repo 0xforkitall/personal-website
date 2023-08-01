@@ -1,6 +1,7 @@
 export * from './breadcrumbs';
 export * from './button';
 export * from './chip';
+export * from './code-block';
 export * from './container';
 export * from './icon';
 export * from './image';
