@@ -37,7 +37,7 @@ export const BlogPostPage = (props: IBlogPostPageProps) => {
             <BlogPostPageSeo blogPost={blogPost} />
             <Breadcrumbs routes={breadcrumbsRoutes} />
             <Layout direction="row" gap="150" alignItems="start" responsiveDirection={{ md: 'column-reverse' }}>
-                <Layout className={styles.mainColumn} direction="column" gap="200">
+                <Layout className={styles.mainColumn} direction="column" gap="200" shrink="1">
                     <Text size="h2" responsiveSize={{ sm: 'h4' }}>
                         {blogPost.title}
                     </Text>
