@@ -3,6 +3,7 @@
   --0xf-font-size-base: 20px;
   --0xf-font-size-inherit: inherit;
 
+  --0xf-font-size-75: calc(var(--0xf-font-size-base) * 3 / 4); // 12px
   --0xf-font-size-87: calc(var(--0xf-font-size-base) * 7 / 8); // 14px
   --0xf-font-size-100: var(--0xf-font-size-base); // 16px
   --0xf-font-size-125: calc(var(--0xf-font-size-base) * 5 / 4); // 20px

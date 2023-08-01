@@ -1,5 +1,10 @@
+@use "../../styles/breakpoints/breakpoints";
+
 :root {
   /* Properties */
+  --0xf-code-block-font-size: var(--0xf-font-size-87);
+  --0xf-code-block-breakpoint-md-font-size: var(--0xf-font-size-75);
+
   --0xf-code-block-border: 1px solid var(--0xf-color-divider);
 
   /* Inline variant */
@@ -8,10 +13,17 @@
 }
 
 .code-block {
+  font-size: var(--0xf-code-block-font-size);
   border: var(--0xf-code-block-border);
 }
 
 .code-block--inline {
   background-color: var(--0xf-code-block-inline-background-color);
   border: var(--0xf-code-block-inline-border);
+}
+
+@media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {
+  .code-block {
+    font-size: var(--0xf-code-block-breakpoint-md-font-size);
+  }
 }

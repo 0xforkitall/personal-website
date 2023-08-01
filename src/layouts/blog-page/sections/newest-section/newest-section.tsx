@@ -13,10 +13,12 @@ export interface INewestSectionProps {
     className?: string;
 }
 
+const maxNewestPosts = 4;
+
 export const NewestSection: React.FC<INewestSectionProps> = async ({ className }) => {
     const blogPosts = await blogService.getAllPosts();
     const newestPost = blogPosts[0]!;
-    const otherPosts = blogPosts.slice(1, 4);
+    const otherPosts = blogPosts.slice(1, maxNewestPosts);
 
     return (
         <Layout
