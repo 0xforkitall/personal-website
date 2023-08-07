@@ -1,8 +1,7 @@
 'use client';
 
 import { Route, routes } from '@constants/routes';
-import { Container, Layout, LinkNext, ThemeSwitch } from '@shared';
-import { useDidScroll } from '@shared/hooks';
+import { Container, Layout, LinkNext, ThemeSwitch, useDidScroll } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import { topbarLinks } from './topbar-definitions';
