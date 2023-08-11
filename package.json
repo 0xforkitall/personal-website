@@ -17,18 +17,18 @@
     "postinstall": "husky install"
   },
   "dependencies": {
-    "@react-three/drei": "9.80.1",
+    "@react-three/drei": "9.80.2",
     "@react-three/fiber": "8.13.6",
-    "@vercel/analytics": "1.0.1",
+    "@vercel/analytics": "1.0.2",
     "classnames": "2.3.2",
     "gray-matter": "4.0.3",
-    "next": "13.4.12",
+    "next": "13.4.13",
     "next-seo": "6.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "8.0.7",
     "react-syntax-highlighter": "15.5.0",
-    "sass": "1.64.2",
+    "sass": "1.65.1",
     "three": "0.155.0",
     "typescript": "5.1.6"
   },
@@ -36,16 +36,16 @@
     "@0xforkitall/eslint-config-nextjs": "0.1.4",
     "@0xforkitall/shared-config": "0.2.11",
     "@svgr/webpack": "8.0.1",
-    "@types/node": "20.4.8",
-    "@types/react": "18.2.18",
+    "@types/node": "20.4.10",
+    "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "@types/react-syntax-highlighter": "15.5.7",
     "@types/three": "0.155.0",
-    "eslint": "8.46.0",
+    "eslint": "8.47.0",
     "husky": "8.0.3",
     "lint-staged": "13.2.3",
     "prettier": "3.0.1",
-    "vercel": "31.2.2"
+    "vercel": "31.2.3"
   },
   "keywords": [
     "nextjs",
