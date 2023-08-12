@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@0xforkitall/eslint-config-nextjs": "0.1.4",
-    "@0xforkitall/shared-config": "0.2.11",
+    "@0xforkitall/shared-config": "1.0.2",
     "@svgr/webpack": "8.0.1",
     "@types/node": "20.4.10",
     "@types/react": "18.2.20",
