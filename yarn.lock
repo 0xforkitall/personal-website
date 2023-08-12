@@ -24,10 +24,10 @@
     eslint-plugin-react-hooks "^4.6.0"
     eslint-plugin-testing-library "^5.11.0"
 
-"@0xforkitall/shared-config@0.2.11":
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/shared-config/-/shared-config-0.2.11.tgz#b7dc8f374efedc11447b92ffe4f2c16df366aad6"
-  integrity sha512-EPDUUmCJDEPkLMyAcogFjUupUwWm1dPSzruntU7dIBZfynp2b34MbSKzr+tj+GME1mlrx9SbappHj9faZ8cRAg==
+"@0xforkitall/shared-config@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/shared-config/-/shared-config-1.0.2.tgz#a9372af778d084569e6ab522c8ef45f3ccd07f30"
+  integrity sha512-u4XjktI4WkMgQ5+xT1lsFdJsJg9R3BlMInnhQvw7KL6fkiSLYuomhIIU3Hp2h/MKW7M7iT8WWpN5XMQf1FSyaQ==
   dependencies:
     prettier-plugin-organize-imports "^3.2.2"
 
