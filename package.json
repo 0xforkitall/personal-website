@@ -5,6 +5,7 @@
   "description": "NextJs application to showcase my skills",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev --port 3001",
     "build": "next build --no-lint",
     "start": "next start",
@@ -13,10 +14,11 @@
     "prettify": "prettier . --check",
     "prettify:fix": "prettier . --write",
     "type-check": "tsc --noEmit",
-    "deploy": "vercel deploy --prebuilt",
-    "postinstall": "husky install"
+    "deploy": "vercel deploy --prebuilt"
   },
   "dependencies": {
+    "@0xforkitall/ui-kit": "^0.2.0",
+    "@0xforkitall/ui-kit-nextjs": "^0.2.0",
     "@react-three/drei": "9.80.2",
     "@react-three/fiber": "8.13.6",
     "@vercel/analytics": "1.0.2",

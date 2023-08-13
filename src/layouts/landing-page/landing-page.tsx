@@ -1,5 +1,6 @@
+import { ButtonLink, IconType, Layout, Page, Text } from '@0xforkitall/ui-kit';
+import { metadataUtils } from '@0xforkitall/ui-kit-nextjs';
 import { Canvas } from '@components/canvas';
-import { ButtonLink, IconType, Layout, Page, Text, metadataUtils } from '@shared';
 import type { Metadata } from 'next';
 import { LandingPageModel } from './landing-page-model';
 import styles from './landing-page.module.scss';

@@ -1,4 +1,4 @@
-import { ButtonLink, Layout, Text } from '@shared';
+import { ButtonLink, Layout, Text } from '@0xforkitall/ui-kit';
 import classNames from 'classnames';
 import React from 'react';
 import styles from './contact-section.module.scss';

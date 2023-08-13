@@ -1,8 +1,8 @@
 'use client';
 
+import { routerUtils } from '@0xforkitall/ui-kit';
 import { type IBlogPost } from '@api/blog-service';
 import { Route, routes } from '@constants/routes';
-import { routerUtils } from '@shared';
 import { ArticleJsonLd } from 'next-seo';
 
 export interface IBlogPostPageSeoProps {

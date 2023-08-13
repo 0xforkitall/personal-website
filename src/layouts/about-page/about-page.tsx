@@ -1,5 +1,6 @@
+import { Breadcrumbs, Layout, Page } from '@0xforkitall/ui-kit';
+import { metadataUtils } from '@0xforkitall/ui-kit-nextjs';
 import { Route, routes } from '@constants/routes';
-import { Breadcrumbs, Layout, Page, metadataUtils } from '@shared';
 import type { Metadata } from 'next';
 import styles from './about-page.module.scss';
 import { AboutSection } from './sections/about-section';

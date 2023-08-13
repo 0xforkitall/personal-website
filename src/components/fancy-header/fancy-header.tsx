@@ -1,4 +1,4 @@
-import { Text } from '@shared';
+import { Text } from '@0xforkitall/ui-kit';
 import classNames from 'classnames';
 import React, { type ReactNode } from 'react';
 import styles from './fancy-header.module.scss';

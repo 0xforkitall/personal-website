@@ -1,6 +1,6 @@
+import { Layout } from '@0xforkitall/ui-kit';
 import { tokenService } from '@api/token-service/token-service';
 import { InfiniteCarousel } from '@components/infinite-carousel';
-import { Layout } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import { Token } from './token';

@@ -1,7 +1,7 @@
+import { ServiceBase } from '@0xforkitall/ui-kit';
 import type { IToken } from '@api/token-service';
 import { logger } from '@server/utils/logger';
 import { ServerError } from '@server/utils/server-error';
-import { ServiceBase } from '@shared';
 import { NextResponse, type NextRequest } from 'next/server';
 import type { ICmcResponse, ICmcToken } from './domain';
 

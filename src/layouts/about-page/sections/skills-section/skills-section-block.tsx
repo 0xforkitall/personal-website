@@ -1,4 +1,4 @@
-import { Chip, Icon, Layout, Text } from '@shared';
+import { Chip, Icon, Layout, Text } from '@0xforkitall/ui-kit';
 import classNames from 'classnames';
 import React from 'react';
 import type { ISkill } from './skills-definition';

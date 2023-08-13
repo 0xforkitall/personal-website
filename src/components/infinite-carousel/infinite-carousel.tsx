@@ -1,6 +1,6 @@
 'use client';
 
-import { Layout, type ILayoutProps } from '@shared';
+import { Layout, type ILayoutProps } from '@0xforkitall/ui-kit';
 import classNames from 'classnames';
 import React, { useEffect, useRef } from 'react';
 import styles from './infinite-carousel.module.scss';

@@ -1,4 +1,4 @@
-import { Layout, Text } from '@shared';
+import { Layout, Text } from '@0xforkitall/ui-kit';
 import classNames from 'classnames';
 import React from 'react';
 import styles from './lists-section.module.scss';

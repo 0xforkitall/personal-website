@@ -1,5 +1,5 @@
+import { Layout } from '@0xforkitall/ui-kit';
 import { FancyHeader } from '@components/fancy-header';
-import { Layout } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import { skillList } from './skills-definition';
