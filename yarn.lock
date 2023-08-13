@@ -2,18 +2,18 @@
 # yarn lockfile v1
 
 
-"@0xforkitall/eslint-config-nextjs@0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/eslint-config-nextjs/-/eslint-config-nextjs-0.1.4.tgz#1137fe1f7292d78541d162a79a2a7037e9e34127"
-  integrity sha512-hcE6k9/PKo98YNBSpAxB+a6K9cVWBxjbc2BzG5m0C54Dd8HjYzbAOLt5KXSWUEb/ML6phmFBEMk2Drjxlw7HIQ==
+"@0xforkitall/eslint-config-nextjs@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/eslint-config-nextjs/-/eslint-config-nextjs-1.1.0.tgz#6a1ac07eb9e7f865dd428de13531274763da304b"
+  integrity sha512-m0ppEYEN/FrtZX//exiU1VIsL03YeLetHIk4kUHkk1tMIWwMl5dNl9RwC0dpWY0D88S1zjHgkvWtq1Xv2r3plg==
   dependencies:
-    "@0xforkitall/eslint-config" "^0.2.13"
+    "@0xforkitall/eslint-config" "^1.1.0"
     "@next/eslint-plugin-next" "^13.4.12"
 
-"@0xforkitall/eslint-config@^0.2.13":
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/eslint-config/-/eslint-config-0.2.13.tgz#8bf5bc2e1278f37750e69414487ca2ef0f5cfd1e"
-  integrity sha512-J3BGRcuY63SNyuH96otacu1bwuWjwp0+KBOyeYjyrZLrLoxXq0JfIKrzeADLdHklMMPVK5tVAY6uCvCI1A3WSg==
+"@0xforkitall/eslint-config@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/eslint-config/-/eslint-config-1.1.0.tgz#4b58bfe2fca3b749360606d492b5e6a756f356e9"
+  integrity sha512-Hfaieh0jOLL78LstqaxSsj1mC64wLWtGm24QMFl+ItLfnFARABud/sINN+gMzNEYmEJlWgG9IaA1kqjUJtqa7w==
   dependencies:
     "@typescript-eslint/eslint-plugin" ">= 5"
     "@typescript-eslint/parser" ">= 5"
