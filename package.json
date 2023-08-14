@@ -17,8 +17,8 @@
     "deploy": "vercel deploy --prebuilt"
   },
   "dependencies": {
-    "@0xforkitall/ui-kit": "^0.2.0",
-    "@0xforkitall/ui-kit-nextjs": "^0.2.0",
+    "@0xforkitall/ui-kit": "0.3.1",
+    "@0xforkitall/ui-kit-nextjs": "0.3.1",
     "@react-three/drei": "9.80.2",
     "@react-three/fiber": "8.13.6",
     "@vercel/analytics": "1.0.2",
