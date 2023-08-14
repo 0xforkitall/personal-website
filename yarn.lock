@@ -31,21 +31,21 @@
   dependencies:
     prettier-plugin-organize-imports "^3.2.2"
 
-"@0xforkitall/ui-kit-nextjs@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/ui-kit-nextjs/-/ui-kit-nextjs-0.3.1.tgz#a01ad90b62f740dbde08e7029d9cbca3098ccbf7"
-  integrity sha512-c6BRohGpY1M96tqJJ9t2xFZ9wiULhYgxih04D9owl3l8C8LkYJc1AqwUArqI08/Nq7r2Y7lQFCy7bPDZbFy7+g==
+"@0xforkitall/ui-kit-nextjs@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/ui-kit-nextjs/-/ui-kit-nextjs-0.3.2.tgz#27df0c2f6414cc613ec8d05c38a4f14f6a27e420"
+  integrity sha512-ZdiG080Lk6wB1oubLXDHWT3+lwI0X1IzpaGCvurtQIkQBaoUTxy5m07RzR3l8yJxRaAO7G2C75IK8qi6g856iw==
   dependencies:
-    "@0xforkitall/ui-kit" "^0.3.1"
+    "@0xforkitall/ui-kit" "^0.3.2"
     next "^13.4.13"
     next-seo "^6.1.0"
     react "^18.2.0"
     react-dom "^18.2.0"
 
-"@0xforkitall/ui-kit@0.3.1", "@0xforkitall/ui-kit@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/ui-kit/-/ui-kit-0.3.1.tgz#e549b55ce8de2ae634f03050a01b4e6bf4e2591d"
-  integrity sha512-twvbUIaz8plegiymbOWM7TG4jBkdO26yDGJCf+jpeR7sS5gJtl1J//pMZHRbYfMlk8LFDI10H6VAbIhYT6vPWw==
+"@0xforkitall/ui-kit@0.3.2", "@0xforkitall/ui-kit@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/ui-kit/-/ui-kit-0.3.2.tgz#31685b8b2c093b5fa1d203e07260928a8056b13e"
+  integrity sha512-nDF0jvaPHggnSq+SB+8B3ZgxWHpAMQKW8j5g90V+AULGj/5BGuv8RusjrjBYA8Wsf4veQS0R4OjvBH473H4dIA==
   dependencies:
     classnames "^2.3.2"
     react "^18.2.0"
