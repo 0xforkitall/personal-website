@@ -1,8 +1,8 @@
 'use client';
 
+import { ColorTheme, useColorTheme } from '@0xforkitall/ui-kit';
 import { Center } from '@react-three/drei';
 import { useFrame, useLoader, useThree } from '@react-three/fiber';
-import { ColorTheme, useColorTheme } from '@shared';
 import React, { useRef } from 'react';
 import { type Mesh } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';

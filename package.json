@@ -5,6 +5,7 @@
   "description": "NextJs application to showcase my skills",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev --port 3001",
     "build": "next build --no-lint",
     "start": "next start",
@@ -13,21 +14,19 @@
     "prettify": "prettier . --check",
     "prettify:fix": "prettier . --write",
     "type-check": "tsc --noEmit",
-    "deploy": "vercel deploy --prebuilt",
-    "postinstall": "husky install"
+    "deploy": "vercel deploy --prebuilt"
   },
   "dependencies": {
+    "@0xforkitall/ui-kit": "0.3.2",
+    "@0xforkitall/ui-kit-nextjs": "0.3.2",
     "@react-three/drei": "9.80.2",
     "@react-three/fiber": "8.13.6",
     "@vercel/analytics": "1.0.2",
     "classnames": "2.3.2",
     "gray-matter": "4.0.3",
     "next": "13.4.13",
-    "next-seo": "6.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-markdown": "8.0.7",
-    "react-syntax-highlighter": "15.5.0",
     "sass": "1.65.1",
     "three": "0.155.0",
     "typescript": "5.1.6"
@@ -39,7 +38,6 @@
     "@types/node": "20.4.10",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
-    "@types/react-syntax-highlighter": "15.5.7",
     "@types/three": "0.155.0",
     "eslint": "8.47.0",
     "husky": "8.0.3",

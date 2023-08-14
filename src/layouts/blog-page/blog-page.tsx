@@ -1,6 +1,7 @@
+import { Breadcrumbs, Page } from '@0xforkitall/ui-kit';
+import { metadataUtils } from '@0xforkitall/ui-kit-nextjs';
 import { TokenPrices } from '@components/token-prices';
 import { Route, routes } from '@constants/routes';
-import { Breadcrumbs, Page, metadataUtils } from '@shared';
 import type { Metadata } from 'next';
 import { NewestSection } from './sections/newest-section';
 

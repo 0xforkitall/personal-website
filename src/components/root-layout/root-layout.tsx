@@ -1,7 +1,8 @@
+import { Layout } from '@0xforkitall/ui-kit';
+import '@0xforkitall/ui-kit-nextjs/styles.scss';
+import '@0xforkitall/ui-kit/styles.scss';
 import { Footer } from '@components/footer';
 import { Topbar } from '@components/topbar';
-import { Layout } from '@shared';
-import '@shared/index.scss';
 import { Analytics } from '@vercel/analytics/react';
 import React, { type ReactNode } from 'react';
 import styles from './root-layout.module.scss';

@@ -1,7 +1,8 @@
 'use client';
 
+import { routerUtils } from '@0xforkitall/ui-kit';
+import { Link } from '@0xforkitall/ui-kit-nextjs';
 import { routes, type Route } from '@constants/routes';
-import { LinkNext, routerUtils } from '@shared';
 import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
 import React, { useMemo } from 'react';
@@ -47,13 +48,13 @@ export const TopbarLink: React.FC<ITopbarLinkProps> = ({ link, className }) => {
     );
 
     return (
-        <LinkNext
+        <Link
             key={id}
             href={disabled ? '/' : routerUtils.generatePath(routes[route].url)}
             size="m"
             className={linkClasses}
         >
             {name}
-        </LinkNext>
+        </Link>
     );
 };

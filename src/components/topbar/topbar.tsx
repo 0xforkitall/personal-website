@@ -1,7 +1,8 @@
 'use client';
 
+import { Container, Layout, ThemeSwitch, useDidScroll } from '@0xforkitall/ui-kit';
+import { Link } from '@0xforkitall/ui-kit-nextjs';
 import { Route, routes } from '@constants/routes';
-import { Container, Layout, LinkNext, ThemeSwitch, useDidScroll } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import { topbarLinks } from './topbar-definitions';
@@ -29,9 +30,9 @@ export const Topbar: React.FC<ITopbarProps> = ({ elementSelector, className }) =
             justifyContent="space-between"
             alignItems="center"
         >
-            <LinkNext size="h4" href={routes[Route.LANDING_PAGE].url} color="primary">
+            <Link size="h4" href={routes[Route.LANDING_PAGE].url} color="primary">
                 0xf
-            </LinkNext>
+            </Link>
             <Layout gap="100" direction="row" alignItems="center">
                 <Layout gap="200" direction="row">
                     {topbarLinks.map((link) => (

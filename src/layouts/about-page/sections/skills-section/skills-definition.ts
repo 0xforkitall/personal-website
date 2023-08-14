@@ -1,4 +1,4 @@
-import { IconType } from '@shared';
+import { IconType } from '@0xforkitall/ui-kit';
 
 export interface ISkill {
     /**

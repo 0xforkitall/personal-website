@@ -1,4 +1,4 @@
-import type { IServiceBaseQueryParams } from '@shared';
+import type { IServiceBaseQueryParams } from '@0xforkitall/ui-kit';
 
 export interface IGetTokensParams extends IServiceBaseQueryParams<IGetTokensQueryParams> {}
 

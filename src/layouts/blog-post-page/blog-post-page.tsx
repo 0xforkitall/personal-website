@@ -1,6 +1,7 @@
+import { Breadcrumbs, Layout, MarkdownParser, Page, Text } from '@0xforkitall/ui-kit';
+import { Image, metadataUtils } from '@0xforkitall/ui-kit-nextjs';
 import { blogService, type IBlogPost } from '@api/blog-service';
 import { Route, routes } from '@constants/routes';
-import { Breadcrumbs, Image, Layout, MarkdownParser, metadataUtils, Page, Text } from '@shared';
 import type { Metadata } from 'next';
 import { BlogPostPageInfo } from './blog-post-page-info';
 import { BlogPostPageSeo } from './blog-post-page-seo';

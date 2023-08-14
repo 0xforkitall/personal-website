@@ -1,6 +1,6 @@
+import { routerUtils } from '@0xforkitall/ui-kit';
 import { blogService } from '@api/blog-service';
 import { Route, routes } from '@constants/routes';
-import { routerUtils } from '@shared';
 
 export default async function sitemap() {
     const posts = blogService.getAllPosts();

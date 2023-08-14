@@ -1,6 +1,7 @@
+import { ButtonLink, Container, Layout, Text } from '@0xforkitall/ui-kit';
+import { Link } from '@0xforkitall/ui-kit-nextjs';
 import { Route, routes } from '@constants/routes';
 import { personalSocials } from '@constants/socials';
-import { ButtonLink, Container, Layout, LinkNext, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import styles from './footer.module.scss';
@@ -25,9 +26,9 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => {
                     responsiveDirection={{ md: 'column' }}
                     alignItems="center"
                 >
-                    <LinkNext size="h4" color="white" href={routes[Route.LANDING_PAGE].url}>
+                    <Link size="h4" color="white" href={routes[Route.LANDING_PAGE].url}>
                         0xforkitall
-                    </LinkNext>
+                    </Link>
                     <Layout direction="row" gap="50" alignItems="center">
                         {personalSocials.map(({ id, link, icon }) => (
                             <ButtonLink

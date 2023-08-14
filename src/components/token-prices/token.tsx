@@ -1,5 +1,6 @@
+import { Layout, Text, formatUtils } from '@0xforkitall/ui-kit';
+import { Image } from '@0xforkitall/ui-kit-nextjs';
 import type { IToken } from '@api/token-service';
-import { Image, Layout, Text, formatUtils } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import styles from './token.module.scss';

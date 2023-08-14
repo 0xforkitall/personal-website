@@ -1,4 +1,4 @@
-import { ServiceBase } from '@shared';
+import { ServiceBase } from '@0xforkitall/ui-kit';
 import type { IToken } from './domain';
 import type { IGetTokensParams } from './token-service.api';
 

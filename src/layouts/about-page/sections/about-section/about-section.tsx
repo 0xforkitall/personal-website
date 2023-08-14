@@ -1,7 +1,8 @@
 'use client';
 
+import { Layout, Text } from '@0xforkitall/ui-kit';
+import { Image } from '@0xforkitall/ui-kit-nextjs';
 import { FancyHeader } from '@components/fancy-header';
-import { Image, Layout, Text } from '@shared';
 import classNames from 'classnames';
 import React from 'react';
 import { AboutSectionImage } from './about-section-image';
