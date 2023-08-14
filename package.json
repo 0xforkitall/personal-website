@@ -19,7 +19,7 @@
   "dependencies": {
     "@0xforkitall/ui-kit": "0.3.2",
     "@0xforkitall/ui-kit-nextjs": "0.3.2",
-    "@react-three/drei": "9.80.2",
+    "@react-three/drei": "9.80.3",
     "@react-three/fiber": "8.13.6",
     "@vercel/analytics": "1.0.2",
     "classnames": "2.3.2",
@@ -32,10 +32,10 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@0xforkitall/eslint-config-nextjs": "1.1.0",
-    "@0xforkitall/shared-config": "1.0.2",
+    "@0xforkitall/eslint-config-nextjs": "1.1.1",
+    "@0xforkitall/shared-config": "1.1.0",
     "@svgr/webpack": "8.0.1",
-    "@types/node": "20.4.10",
+    "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "@types/three": "0.155.0",
