@@ -42,7 +42,18 @@
     react "^18.2.0"
     react-dom "^18.2.0"
 
-"@0xforkitall/ui-kit@0.3.2", "@0xforkitall/ui-kit@^0.3.2":
+"@0xforkitall/ui-kit@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/ui-kit/-/ui-kit-0.4.0.tgz#5cce2e0ed6b7a9fd59be4041e155b69fac053ca0"
+  integrity sha512-zcrd4uCybwZxmknReMYJmOh763CcB2EV4oHG7Xe9VN+81os2KxsXyvLIE0BGyvoil0uJTyAfANG7qWUIQAbozA==
+  dependencies:
+    classnames "^2.3.2"
+    react "^18.2.0"
+    react-dom "^18.2.0"
+    react-markdown "^8.0.7"
+    react-syntax-highlighter "^15.5.0"
+
+"@0xforkitall/ui-kit@^0.3.2":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@0xforkitall/ui-kit/-/ui-kit-0.3.2.tgz#31685b8b2c093b5fa1d203e07260928a8056b13e"
   integrity sha512-nDF0jvaPHggnSq+SB+8B3ZgxWHpAMQKW8j5g90V+AULGj/5BGuv8RusjrjBYA8Wsf4veQS0R4OjvBH473H4dIA==
