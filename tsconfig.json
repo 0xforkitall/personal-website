@@ -11,6 +11,6 @@
     ],
     "strictNullChecks": true
   },
-  "include": ["src", ".eslintrc.js", "**/*.config.js", "public/*.js", ".next/types/**/*.ts"],
+  "include": ["src", ".eslintrc.js", "next-env.d.ts", "**/*.config.js", "public/*.js", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
