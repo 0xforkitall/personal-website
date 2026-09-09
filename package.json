@@ -20,7 +20,7 @@
     "@0xforkitall/ui-kit": "^0.4.1",
     "@0xforkitall/ui-kit-nextjs": "^0.4.1",
     "@react-three/drei": "^9.80.4",
-    "@react-three/fiber": "^8.13.7",
+    "@react-three/fiber": "^9.7.0",
     "@vercel/analytics": "^1.0.2",
     "classnames": "^2.3.2",
     "gray-matter": "^4.0.3",
